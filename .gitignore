@@ -1,0 +1,36 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# VS Code
+.vscode/
+
+# Latex / Pandoc / Build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+!BookForge_Final_Print.pdf
+*.tex
+!templates/*.tex
+
+# Project Specific
+data/output/intermediates/
+data/output/debug.tex
+data/output/error_log.txt
+generate_book_now.py
+regenerate_final.py
+_analyze.py
+suhbook.cls
+
+# OS
+.DS_Store
+Thumbs.db
