@@ -451,6 +451,25 @@ def main(
                     if not any(k in heading_text for k in ["chapter ", "unit ", "module ", "part "]):
                         sec["level"] = 2
 
+    # 3.6 Resolve Image Tags & Generate Diagrams (PHASE 3 Integration)
+    from src.resolver import resolve_art_tags
+    print("🎨 Resolving and Generating AI Diagrams from JSON Structure...")
+    def process_node(node):
+        if isinstance(node, dict):
+            if "text" in node and isinstance(node["text"], str):
+                original = node["text"]
+                if "NEW_DIAGRAM" in original:
+                    new_text = resolve_art_tags(original)
+                    if new_text != original:
+                        node["text"] = new_text
+            for v in node.values():
+                process_node(v)
+        elif isinstance(node, list):
+            for item in node:
+                process_node(item)
+
+    process_node(full_structure)
+
     # 4. Save JSON structure (json_path already declared above at checkpoint section)
     json_path.write_text(json.dumps(full_structure, indent=2), encoding="utf-8")
     print(f"📄 JSON saved: {json_path}")
