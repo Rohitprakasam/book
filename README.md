@@ -1,8 +1,8 @@
-# BookForge 5.0 — The Unified Engine 📚🚀
+# BookEducate 5.0 — The Unified Engine 📚🚀
 
 **Turn raw PDFs into comprehensive, expanded engineering textbooks using AI.**
 
-BookForge 5.0 is a fault-tolerant, high-fidelity pipeline that deconstructs technical source material, expands it via an AI research swarm, and reassembles it into a professional, typeset PDF using LaTeX.
+BookEducate 5.0 is a fault-tolerant, high-fidelity pipeline that deconstructs technical source material, expands it via an AI research swarm, and reassembles it into a professional, typeset PDF using LaTeX.
 
 ## ✨ Key Features (v5.0)
 
@@ -19,8 +19,8 @@ BookForge 5.0 is a fault-tolerant, high-fidelity pipeline that deconstructs tech
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-org/bookforge.git
-    cd bookforge
+    git clone https://github.com/your-org/bookeducate.git
+    cd bookeducate
     ```
 
 2.  **Activate Virtual Environment:**
@@ -88,7 +88,7 @@ python main.py --phase 4
 
 - `src/`: Core logic modules (agents, chunker, renderer, etc.)
 - `src/config.py`: **[NEW]** Centralized configuration and path management.
-- `templates/`: LaTeX (`bookforge.latex`) and class files (`suhbook.cls`).
+- `templates/`: LaTeX (`bookeducate.latex`) and class files (`suhbook.cls`).
 - `data/output/`: All generated artifacts (logs, JSON, .tex, .pdf).
 - `clear_data.py`: Run this to purge the output directory and start fresh.
 

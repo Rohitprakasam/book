@@ -1,5 +1,5 @@
 """
-Clear BookForge build artifacts and output to free space or start fresh.
+Clear BookEducate build artifacts and output to free space or start fresh.
 Aligns with main.py / src layout: data/output and pipeline state.
 """
 

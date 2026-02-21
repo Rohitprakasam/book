@@ -1,1 +1,1 @@
-# BookForge AI — Source Package
+# BookEducate AI — Source Package

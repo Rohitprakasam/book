@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — Agent Node Functions (Expansion Swarm)
+BookEducate 5.0 — Agent Node Functions (Expansion Swarm)
 =======================================================
 Three LangGraph nodes forming the per-chunk expansion loop:
     analyst_node → drafter_node → critic_node (→ loop or END)

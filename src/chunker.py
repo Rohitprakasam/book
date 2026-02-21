@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — Multi-Strategy Manuscript Chunker
+BookEducate 5.0 — Multi-Strategy Manuscript Chunker
 ===================================================
 Splits ``tagged_manuscript.txt`` into logical, LLM-friendly chunks
 using a cascading strategy:

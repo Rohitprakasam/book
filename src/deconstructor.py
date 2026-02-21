@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — The Deconstructor (Phase 1)
+BookEducate 5.0 — The Deconstructor (Phase 1)
 =============================================
 Ingests a PDF, extracts all text and images, and produces a single
 ``tagged_manuscript.txt`` where every extracted image is replaced with

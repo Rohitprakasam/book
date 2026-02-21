@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — LangGraph Compilation & Routing
+BookEducate 5.0 — LangGraph Compilation & Routing
 =================================================
 Per-chunk expansion pipeline with a conditional critic loop
 and low-effort detection:

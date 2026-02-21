@@ -1,5 +1,5 @@
 """
-BookForge — Visual Triage (Phase 1c)
+BookEducate — Visual Triage (Phase 1c)
 =====================================
 Classifies extracted images as KEEP / DISCARD / TRANSCRIBE using Gemini Vision.
 Uses google.genai (new SDK) to match requirements.txt.

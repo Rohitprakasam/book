@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — Shared Configuration
+BookEducate 5.0 — Shared Configuration
 ======================================
 Centralised path constants and settings used across all modules.
 """

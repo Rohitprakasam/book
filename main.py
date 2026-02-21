@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — Master Orchestrator
+BookEducate 5.0 — Master Orchestrator
 =====================================
 Chains all four phases into a single end-to-end pipeline:
 
@@ -87,14 +87,14 @@ def main(
     style_path: str = None,
     start_phase: int = 1,
 ) -> None:
-    """Run the full BookForge 5.0 pipeline."""
+    """Run the full BookEducate 5.0 pipeline."""
     start_time = time.time()
     total = 0
     style_config = {}
 
     print()
     print("╔══════════════════════════════════════════════════════════╗")
-    print("║          📖  BOOKFORGE 5.0 — UNIFIED ENGINE           ║")
+    print("║          📖  BOOKEDUCATE 5.0 — UNIFIED ENGINE           ║")
     print("║       Document Deconstruction & Reassembly Engine       ║")
     print("╚══════════════════════════════════════════════════════════╝")
     print()
@@ -500,8 +500,8 @@ def main(
             print(f"   ⚠️ LaTeX render error: {e} — skipping chapter")
 
     # 6. Build LaTeX document
-    tex_out = OUTPUT_DIR / "BookForge.tex"
-    template_path = BASE_DIR / "templates" / "bookforge.latex"
+    tex_out = OUTPUT_DIR / "BookEducate.tex"
+    template_path = BASE_DIR / "templates" / "bookeducate.latex"
     if not template_path.exists():
         print(f"❌ LaTeX Template not found at {template_path}")
         return
@@ -549,8 +549,8 @@ def main(
     latex_body = re.sub(r'\\(t[a-zA-Z]*)', fix_t_command, latex_body)
 
     full_latex = template_content.replace("$body$", latex_body)
-    full_latex = full_latex.replace("$title$", "BookForge Book")
-    full_latex = full_latex.replace("$author$", "BookForge Engine")
+    full_latex = full_latex.replace("$title$", "BookEducate Book")
+    full_latex = full_latex.replace("$author$", "BookEducate Engine")
     full_latex = full_latex.replace("$date$", "\\today")
     # Clean any remaining $variable$ Pandoc tokens
     full_latex = re.sub(r'\$[a-zA-Z_-]+\$', '', full_latex)
@@ -560,7 +560,7 @@ def main(
 
     # 7. Compile PDF (Fix #20: use separate variable name)
     print("🚀 Compiling PDF with pdflatex...")
-    output_pdf = OUTPUT_DIR / "BookForge.pdf"
+    output_pdf = OUTPUT_DIR / "BookEducate.pdf"
     try:
         # Run twice for TOC/refs
         for pass_num in (1, 2):
@@ -578,7 +578,7 @@ def main(
             size_mb = output_pdf.stat().st_size / (1024 * 1024)
             print(f"\n✅ PDF Compiled: {output_pdf} ({size_mb:.2f} MB)")
         else:
-            print("\n❌ PDF file was not created. Check BookForge.log for details.")
+            print("\n❌ PDF file was not created. Check BookEducate.log for details.")
             log_file = tex_out.with_suffix('.log')
             if log_file.exists():
                 # Show last 20 lines of log
@@ -603,7 +603,7 @@ def main(
 
     print()
     print("╔══════════════════════════════════════════════════════════╗")
-    print("║              🎉  BOOKFORGE COMPLETE  🎉                 ║")
+    print("║              🎉  BOOKEDUCATE COMPLETE  🎉                 ║")
     print("╠══════════════════════════════════════════════════════════╣")
     print(f"║  ⏱️  Total time: {minutes}m {seconds}s")
     print(f"║  📄  Chunks processed: {total}")
@@ -617,7 +617,7 @@ def main(
 # CLI ENTRY POINT
 # ──────────────────────────────────────────────
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="BookForge 5.0 Pipeline")
+    parser = argparse.ArgumentParser(description="BookEducate 5.0 Pipeline")
     parser.add_argument("pdf_input", help="Path to input PDF", nargs='?')
     parser.add_argument("--style", help="Path to Style Reference PDF", default=None)
     parser.add_argument(

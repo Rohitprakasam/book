@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — Style Manager (Phase 1)
+BookEducate 5.0 — Style Manager (Phase 1)
 =======================================
 Analyzes a Style Reference Guide (PDF) to extract visual identity rules
 (colors, fonts, illustration style) as a JSON object.

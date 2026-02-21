@@ -18,7 +18,7 @@ venv/
 *.fdb_latexmk
 *.synctex.gz
 *.pdf
-!BookForge_Final_Print.pdf
+!BookEducate_Final_Print.pdf
 *.tex
 !templates/*.tex
 

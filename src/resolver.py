@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — The Art Department (Phase 3)
+BookEducate 5.0 — The Art Department (Phase 3)
 ==============================================
 Post-processes the expanded manuscript by resolving placeholder tags:
 

@@ -1,5 +1,5 @@
 """
-BookForge — Structurer Node (Phase 4)
+BookEducate — Structurer Node (Phase 4)
 ======================================
 Converts expanded text chunks into structured JSON for LaTeX rendering.
 Uses LiteLLM with Gemini API support.

@@ -1,5 +1,5 @@
 """
-BookForge 5.0 — LangGraph State Definition
+BookEducate 5.0 — LangGraph State Definition
 ============================================
 TypedDict for the per-chunk expansion pipeline:
     analyst → drafter → critic (with conditional loop)
