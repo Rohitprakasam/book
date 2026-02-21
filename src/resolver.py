@@ -249,7 +249,8 @@ def generate_textbook_diagram(subject: str, theme_config: dict, save_path: Path)
     base_delay = 5
 
     primary_model = os.getenv("IMAGE_MODEL", "gemini-2.5-flash-image")
-    fallback_models = ["imagen-3.0-generate-001", "imagen-3.0-fast-generate-001", "imagen-4.0-fast-generate-001"]
+    fallback_env = os.getenv("IMAGE_MODEL_FALLBACKS", "imagen-3.0-generate-001,imagen-3.0-fast-generate-001,imagen-4.0-fast-generate-001")
+    fallback_models = [m.strip() for m in fallback_env.split(",") if m.strip()]
     
     current_model = primary_model
     fallback_index = 0
