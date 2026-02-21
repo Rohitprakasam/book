@@ -11,7 +11,8 @@ BookForge 5.0 is a fault-tolerant, high-fidelity pipeline that deconstructs tech
 - **Dynamic Personas:** Configure the subject matter (e.g., Hydraulics, 5G, Thermodynamics) and the AI's persona via environment variables.
 - **LaTeX Typesetting:** Direct-to-LaTeX rendering for publication-quality engineering books, with support for complex math ($\LaTeX$) and tcolorbox examples.
 - **Centralized Config:** New `src/config.py` manages all paths and settings, reducing duplication and improving maintainability.
-- **Robust Asset Resolution:** Enhanced "Art Department" handles image extraction, vision-based transcription, and AI-generated textbook diagrams.
+- **Robust Asset Resolution:** Enhanced "Art Department" handles image extraction, vision-based transcription, and autonomous recursive AI-generated textbook diagrams natively.
+- **Intelligent Structure:** Built-in "Heading Demotion" algorithm automatically converts fragmented AI chunks back into flawless, realistic Chapter structures.
 
 ## 🛠️ Installation
 
@@ -44,7 +45,7 @@ BookForge 5.0 is a fault-tolerant, high-fidelity pipeline that deconstructs tech
     ```env
     GOOGLE_API_KEY=your_key_here
     DEFAULT_MODEL=gemini/gemini-2.0-flash
-    IMAGE_MODEL=imagen-4.0-fast-generate-001
+    IMAGE_MODEL=gemini-2.5-flash
 
     # Customise the output
     BOOK_SUBJECT=Hydraulics and Pneumatics
@@ -73,9 +74,9 @@ python main.py --resume
 ### 🎯 Pipeline Phases
 
 1. **Deconstructor:** (Phase 1) Extracts text and images from source PDF.
-2. **Expansion Swarm:** (Phase 2) Expands content using AI agents.
-3. **Art Department:** (Phase 3) Resolves and enhances diagrams.
-4. **Typesetting:** (Phase 4) Generates LaTeX and compiles final PDF.
+2. **Expansion Swarm:** (Phase 2) Expands content using multi-agent LLMs.
+3. **Art Department:** (Phase 3) Resolves source documents and transforms graphics.
+4. **Typesetting (Unified):** (Phase 4) Recursively resolves all missing AI diagrams, demotes hallucinated chapters for structural integrity, and compiles publication-ready LaTeX PDFs.
 
 Example: Run only the typesetting phase:
 
