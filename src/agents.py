@@ -204,7 +204,8 @@ Expansion Rules:
 3. Step-by-Step: If a mathematical formula is present, scramble the variables to ensure copyright compliance, derive it from first principles, and provide 2 step-by-step example problems. DO NOT invent fake formulas.
 
 4. Art Direction Rules:
-   Whenever a visual aid is necessary to explain a complex mechanism, insert an Image Request block in exact JSON format. DO NOT use Markdown image links.
+   - If the source text contains `[ORIGINAL_ASSET: filepath]` tags, YOU MUST PRESERVE THEM EXACTLY AS THEY ARE in your expanded output. Do not alter or remove them.
+   - Whenever an entirely NEW visual aid is necessary to explain a complex mechanism, insert an Image Request block in exact JSON format. DO NOT use standard Markdown image links.
    - "caption": A short, title-case name for the figure (e.g., "Figure 1.2: Hydraulic Gear Pump").
    - "subject": A detailed visual description for the artist.
    - "type": "technical illustration", "schematic", or "graph".

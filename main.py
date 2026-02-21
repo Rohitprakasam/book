@@ -461,12 +461,19 @@ def main(
                         sec["level"] = 2
 
     # 3.6 Resolve Image Tags & Generate Diagrams (PHASE 3 Integration)
-    from src.resolver import resolve_art_tags
+    from src.resolver import resolve_art_tags, resolve_original_assets
     print("🎨 Resolving and Generating AI Diagrams from JSON Structure...")
     def process_node(node):
         if isinstance(node, dict):
             if "text" in node and isinstance(node["text"], str):
                 original = node["text"]
+                # 1. Resolve ORIGINAL PDF Extractions
+                if "ORIGINAL_ASSET" in original:
+                    new_text = resolve_original_assets(original)
+                    if new_text != original:
+                        original = new_text
+                        node["text"] = new_text
+                # 2. Resolve AI Generated Diagrams
                 if "NEW_DIAGRAM" in original:
                     new_text = resolve_art_tags(original)
                     if new_text != original:
