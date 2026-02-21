@@ -99,7 +99,16 @@ def main(
     print("╚══════════════════════════════════════════════════════════╝")
     print()
 
-    if start_phase > 1:
+    print()
+
+    if start_phase == 1:
+        print("   🧹 Starting fresh run. Purging previous book data to prevent cross-contamination...")
+        from clear_data import clear_directory
+        clear_directory(OUTPUT_DIR)
+        clear_directory(BASE_DIR / "data" / "chroma_db")
+        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        print()
+    elif start_phase > 1:
         print(f"   ⏩  Skipping to Phase {start_phase} (checkpoint/flag)")
         print()
 
