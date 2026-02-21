@@ -20,8 +20,8 @@ MAX_CHUNK_CHARS = int(os.getenv("MAX_CHUNK_CHARS", "4000"))
 
 
 def _split_by_chapter(text: str) -> list[str]:
-    """Strategy A: Split on 'Chapter' headings."""
-    parts = re.split(r"(?=^(?:Chapter |CHAPTER ))", text, flags=re.MULTILINE)
+    """Strategy A: Split on 'Chapter', 'Unit', 'Module', or 'Part' headings."""
+    parts = re.split(r"(?=^(?:Chapter |CHAPTER |Unit |UNIT |Module |MODULE |Part |PART ))", text, flags=re.MULTILINE)
     return [p.strip() for p in parts if p.strip()]
 
 

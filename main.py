@@ -327,6 +327,7 @@ def main(
     if start_phase > 3:
         saved = load_state()
         total = saved.get("total_chunks", 0)
+        style_config = saved.get("style_config", {})
 
     from src.structurer import structurer_node
     from src.renderer_latex import render_page_latex
@@ -475,7 +476,7 @@ def main(
                         node["text"] = new_text
                 # 2. Resolve AI Generated Diagrams
                 if "NEW_DIAGRAM" in original:
-                    new_text = resolve_art_tags(original)
+                    new_text = resolve_art_tags(original, style_config)
                     if new_text != original:
                         node["text"] = new_text
             for v in node.values():
