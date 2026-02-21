@@ -166,9 +166,9 @@ def render_section_latex(section: Dict[str, Any]) -> str:
         prob_stmt = auto_balance_braces(render_mixed_content_latex(section.get("problem_statement", "")))
         steps = section.get("solution_steps") or []
         
-        # Using tcolorbox environments defined in template
+        # Using standard breakable environment defined in template
         latex = [
-            f"\\begin{{exampleproblem}}[title={{{title}}}]",
+            f"\\begin{{exampleproblem}}[{title}]",
             f"\\textbf{{Problem Statement:}} {prob_stmt}",
             "",
             "\\begin{solution}"

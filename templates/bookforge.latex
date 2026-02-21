@@ -63,38 +63,20 @@
 \newcounter{none}
 
 % =========================================================
-% 4. STYLE DEFINITIONS (TCOLORBOX)
+% 4. STYLE DEFINITIONS (SAFE BREAKABLE)
 % =========================================================
-\usepackage{tcolorbox}
-% \tcbuselibrary{breakable} % Removed due to missing pdfcol package
+% Removed tcolorbox entirely to prevent TeX capacity exceeded errors 
+% when a generated box is taller than a single page (unbreakable).
 
-% Example Problem Box (Mimics .example-problem CSS)
-\newtcolorbox{exampleproblem}[1][]{
-    colback=blue!5!white,
-    colframe=blue!75!black,
-    fonttitle=\bfseries\large,
-    sharp corners,
-    boxrule=0.5mm,
-    leftrule=2mm, % Thick left border like CSS
-    arc=2mm,
-    #1 % Accept key-value options including title={}
-    % breakable % Allow page breaks (Removed)
-}
+% Example Problem Environment
+\newenvironment{exampleproblem}[1][]
+    {\vspace{1em}\noindent\rule{\textwidth}{1pt}\par\noindent\textbf{#1}\par\vspace{0.5em}}
+    {\vspace{1em}}
 
-% Solution Box (Mimics .solution CSS)
-\newtcolorbox{solution}{
-    colback=white,
-    colframe=gray!50!white,
-    title={\textit{Solution:}},
-    coltitle=black,
-    fonttitle=\itshape,
-    boxrule=0.5pt,
-    leftrule=0.5pt,
-    sharp corners,
-    detach title,
-    before upper={\tcbtitle\par\sffamily},
-    subtitle style={boxrule=0pt, colback=white}
-}
+% Solution Environment
+\newenvironment{solution}
+    {\vspace{0.5em}\noindent\textit{Solution:}\par}
+    {\vspace{0.5em}\noindent\rule{\textwidth}{0.5pt}\par}
 
 
 % =========================================================

@@ -487,13 +487,6 @@ def main(
         print(f"   ⚠️ Auto-balancing: inserting {net_braces} missing closing braces.")
         latex_body += "}\n" * net_braces
 
-    full_latex = template_content.replace("$body$", latex_body)
-    full_latex = full_latex.replace("$title$", "BookForge Book")
-    full_latex = full_latex.replace("$author$", "BookForge Engine")
-    full_latex = full_latex.replace("$date$", "\\today")
-    # Clean any remaining $variable$ Pandoc tokens
-    full_latex = re.sub(r'\$[a-zA-Z_-]+\$', '', full_latex)
-
     # Clean stray \n or \t incorrectly output by the LLM as text
     def fix_n_command(match):
         cmd = match.group(1)
@@ -502,11 +495,18 @@ def main(
     
     def fix_t_command(match):
         cmd = match.group(1)
-        valid = ['tau', 'text', 'textbf', 'textit', 'texttt', 'theta', 'times', 'tilde', 'tan', 'top', 'triangle', 'to', 'today', 'tag', 'textwidth', 'textheight', 'tfrac', 'thickapprox', 'thicksim']
+        valid = ['tau', 'text', 'textbf', 'textit', 'texttt', 'theta', 'times', 'tilde', 'tan', 'top', 'triangle', 'to', 'today', 'tag', 'textwidth', 'textheight', 'tfrac', 'thickapprox', 'thicksim', 'textasciicircum', 'textasciitilde']
         return '\\' + cmd if cmd in valid else ' ' + cmd[1:]
 
-    full_latex = re.sub(r'\\(n[a-zA-Z]*)', fix_n_command, full_latex)
-    full_latex = re.sub(r'\\(t[a-zA-Z]*)', fix_t_command, full_latex)
+    latex_body = re.sub(r'\\(n[a-zA-Z]*)', fix_n_command, latex_body)
+    latex_body = re.sub(r'\\(t[a-zA-Z]*)', fix_t_command, latex_body)
+
+    full_latex = template_content.replace("$body$", latex_body)
+    full_latex = full_latex.replace("$title$", "BookForge Book")
+    full_latex = full_latex.replace("$author$", "BookForge Engine")
+    full_latex = full_latex.replace("$date$", "\\today")
+    # Clean any remaining $variable$ Pandoc tokens
+    full_latex = re.sub(r'\$[a-zA-Z_-]+\$', '', full_latex)
 
     tex_out.write_text(full_latex, encoding="utf-8")
     print(f"✅ LaTeX Generated: {tex_out}")
