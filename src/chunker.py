@@ -1,5 +1,5 @@
 """
-BookForge 4.0 — Multi-Strategy Manuscript Chunker
+BookForge 5.0 — Multi-Strategy Manuscript Chunker
 ===================================================
 Splits ``tagged_manuscript.txt`` into logical, LLM-friendly chunks
 using a cascading strategy:
@@ -14,7 +14,9 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-MAX_CHUNK_CHARS = 4000  # Target ceiling per chunk
+import os
+
+MAX_CHUNK_CHARS = int(os.getenv("MAX_CHUNK_CHARS", "4000"))
 
 
 def _split_by_chapter(text: str) -> list[str]:
@@ -41,12 +43,30 @@ def _split_by_length(text: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
 
     for para in paragraphs:
         para_len = len(para)
-        if current_len + para_len > max_chars and current:
-            chunks.append("\n\n".join(current))
-            current = []
-            current_len = 0
-        current.append(para)
-        current_len += para_len + 2  # +2 for the "\n\n" join
+        
+        # New safe logic:
+        # 1. If current buffer + para fits, append it
+        if current_len + para_len <= max_chars:
+            current.append(para)
+            current_len += para_len + 2
+        else:
+            # 2. If buffer is not empty, flush it first
+            if current:
+                chunks.append("\n\n".join(current))
+                current = []
+                current_len = 0
+            
+            # 3. Now handle the PARA itself
+            # If the para *alone* is too big, force split it
+            if len(para) > max_chars:
+                # Naive hard split by char count to prevent infinite loop
+                for i in range(0, len(para), max_chars):
+                    sub_chunk = para[i:i+max_chars]
+                    chunks.append(sub_chunk)
+            else:
+                # Otherwise, it fits in a fresh chunk
+                current.append(para)
+                current_len = len(para) + 2
 
     if current:
         chunks.append("\n\n".join(current))

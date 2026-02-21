@@ -1,15 +1,33 @@
+"""
+BookForge — Visual Triage (Phase 1c)
+=====================================
+Classifies extracted images as KEEP / DISCARD / TRANSCRIBE using Gemini Vision.
+Uses google.genai (new SDK) to match requirements.txt.
+"""
+
+from __future__ import annotations
+
 import os
 import re
 import json
 import time
-import google.generativeai as genai
+from pathlib import Path
+
 from PIL import Image
 
-# Initialize the Vision Model (Gemini 1.5 Flash is highly recommended for fast, cheap image sorting)
-# Make sure your GEMINI_API_KEY is set in your environment variables
-api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-genai.configure(api_key=api_key)
-vision_model = genai.GenerativeModel('gemini-1.5-flash')
+# Project-root-relative paths (work regardless of CWD)
+_BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = _BASE_DIR / "data" / "output"
+DEFAULT_CACHE_DIR = str(OUTPUT_DIR / "assets" / "extracted_images")
+TRANSCRIBED_MATH_PATH = OUTPUT_DIR / "transcribed_math.json"
+
+# Optional: use google.genai for vision triage
+try:
+    from google import genai
+    from google.genai import types
+    HAS_GENAI = True
+except ImportError:
+    HAS_GENAI = False
 
 TRIAGE_PROMPT = """You are the Art Director for a professional Engineering Textbook.
 Analyze the provided image extracted from a raw PDF. Classify it strictly as KEEP, DISCARD, or TRANSCRIBE.
@@ -30,29 +48,60 @@ Output ONLY a raw JSON object with no markdown wrappers:
 OCR_PROMPT = """Extract the mathematical equations or table from this image. 
 Output ONLY valid LaTeX code. For math, wrap in \\[ and \\]. Do not include ```latex wrappers or any conversational text."""
 
-def process_images(cache_dir="data/output/assets/"):
+
+def _get_vision_client():
+    """Return a configured genai Client if API key is set."""
+    if not HAS_GENAI:
+        return None
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if not api_key:
+        return None
+    return genai.Client(api_key=api_key)
+
+
+def _generate_content_with_image(client, model: str, prompt: str, image_path: str) -> str:
+    """Call Gemini Vision with one image. Returns response text."""
+    with open(image_path, "rb") as f:
+        image_bytes = f.read()
+    # Determine mime type from extension
+    ext = Path(image_path).suffix.lower()
+    mime = "image/png" if ext == ".png" else "image/jpeg"
+    contents = [
+        types.Content(
+            parts=[
+                types.Part.from_bytes(data=image_bytes, mime_type=mime),
+                types.Part.from_text(text=prompt),
+            ]
+        )
+    ]
+    response = client.models.generate_content(model=model, contents=contents)
+    return response.text if hasattr(response, "text") and response.text else ""
+
+
+def process_images(cache_dir: str | None = None) -> list[str]:
     """Scans extracted images, filters garbage, and OCRs trapped math."""
+    cache_dir = cache_dir or DEFAULT_CACHE_DIR
     if not os.path.exists(cache_dir):
         print("No image cache found. Skipping triage.")
         return []
 
     transcribed_assets = {}
     discarded_images = []
+    client = _get_vision_client()
+    model = os.getenv("GEMINI_VISION_MODEL", "gemini-2.0-flash")
 
     print("🔍 Starting Visual Triage Agent...")
 
     for filename in os.listdir(cache_dir):
-        if not filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+        if not filename.lower().endswith((".png", ".jpg", ".jpeg")):
             continue
-            
-        # NEW: Throttle to prevent "429 Too Many Requests"
+
         time.sleep(2.0)
-        
         filepath = os.path.join(cache_dir, filename)
-        
+
         try:
             img = Image.open(filepath)
-            
+
             # 1. Hardware Filter: Delete tiny artifacts without wasting API tokens
             if img.width < 80 or img.height < 80:
                 print(f"🗑️ DISCARD: {filename} (Artifact too small)")
@@ -61,15 +110,21 @@ def process_images(cache_dir="data/output/assets/"):
                 discarded_images.append(filename)
                 continue
 
-            # 2. Vision API Triage
-            response = vision_model.generate_content([TRIAGE_PROMPT, img])
-            result_text = response.text.strip().replace('```json', '').replace('```', '')
-            try:
-                result = json.loads(result_text)
-            except json.JSONDecodeError:
-                result = {"decision": "KEEP", "reason": "JSON Error"}
+            # 2. Vision API Triage (or default KEEP if no API)
+            if client:
+                try:
+                    result_text = _generate_content_with_image(
+                        client, model, TRIAGE_PROMPT, filepath
+                    )
+                    result_text = result_text.strip().replace("```json", "").replace("```", "")
+                    result = json.loads(result_text)
+                except (json.JSONDecodeError, Exception) as e:
+                    print(f"⚠️ Triage API error for {filename}: {e}. Defaulting to KEEP.")
+                    result = {"decision": "KEEP", "reason": "API error"}
+            else:
+                result = {"decision": "KEEP", "reason": "No GEMINI_API_KEY"}
 
-            decision = result.get("decision", "KEEP") # Default to keep if confused
+            decision = result.get("decision", "KEEP")
 
             if decision == "DISCARD":
                 print(f"🗑️ DISCARD: {filename} - {result.get('reason')}")
@@ -79,14 +134,21 @@ def process_images(cache_dir="data/output/assets/"):
 
             elif decision == "TRANSCRIBE":
                 print(f"🧮 TRANSCRIBE: Rescuing math from {filename}...")
-                ocr_response = vision_model.generate_content([OCR_PROMPT, img])
-                extracted_latex = ocr_response.text.strip()
-                
-                # Save the LaTeX and delete the useless image file
+                if client:
+                    try:
+                        extracted_latex = _generate_content_with_image(
+                            client, model, OCR_PROMPT, filepath
+                        )
+                        extracted_latex = extracted_latex.strip()
+                    except Exception as e:
+                        print(f"⚠️ OCR failed for {filename}: {e}")
+                        extracted_latex = ""
+                else:
+                    extracted_latex = ""
                 transcribed_assets[filename] = extracted_latex
                 img.close()
                 os.remove(filepath)
-                discarded_images.append(filename) # Treat as discarded for the markdown cleaner
+                discarded_images.append(filename)
 
             else:
                 print(f"✅ KEEP: {filename} - {result.get('reason')}")
@@ -95,32 +157,32 @@ def process_images(cache_dir="data/output/assets/"):
         except Exception as e:
             print(f"⚠️ Error analyzing {filename}: {e}. Defaulting to KEEP.")
 
-    # 3. Save Transcribed Math to a JSON file so the Drafter can inject it later
+    # 3. Save Transcribed Math so the Drafter can inject it later
     if transcribed_assets:
-        with open("data/output/transcribed_math.json", "w", encoding="utf-8") as f:
-            json.dump(transcribed_assets, f, indent=4)
+        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        TRANSCRIBED_MATH_PATH.write_text(
+            json.dumps(transcribed_assets, indent=4), encoding="utf-8"
+        )
         print(f"💾 Saved {len(transcribed_assets)} rescued math equations.")
 
     return discarded_images
 
-def clean_manuscript(manuscript_path, discarded_images):
+
+def clean_manuscript(manuscript_path: str | Path, discarded_images: list[str]) -> None:
     """Removes [ORIGINAL_ASSET] tags for images that were deleted or transcribed."""
+    manuscript_path = Path(manuscript_path)
     try:
-        with open(manuscript_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
+        content = manuscript_path.read_text(encoding="utf-8")
         for filename in discarded_images:
-            # Matches tags like [ORIGINAL_ASSET: page1_img1.png]
-            pattern = r'\[ORIGINAL_ASSET:\s*.*?' + re.escape(filename) + r'\]'
-            content = re.sub(pattern, '', content)
-
-        with open(manuscript_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+            pattern = r"\[ORIGINAL_ASSET:\s*.*?" + re.escape(filename) + r"\]"
+            content = re.sub(pattern, "", content)
+        manuscript_path.write_text(content, encoding="utf-8")
         print(f"🧹 Cleaned manuscript. Removed {len(discarded_images)} dead tags.")
     except FileNotFoundError:
         print(f"⚠️ Manuscript file not found: {manuscript_path}")
 
+
 if __name__ == "__main__":
-    # Test execution
     discarded = process_images()
-    clean_manuscript("data/output/tagged_manuscript.txt", discarded)
+    manuscript_path = OUTPUT_DIR / "tagged_manuscript.txt"
+    clean_manuscript(manuscript_path, discarded)

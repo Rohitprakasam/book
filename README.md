@@ -1,86 +1,101 @@
-# BookForge 📚🚀
+# BookForge 5.0 — The Unified Engine 📚🚀
 
-**Turn raw PDFs into comprehensive, expanded textbooks using AI.**
+**Turn raw PDFs into comprehensive, expanded engineering textbooks using AI.**
 
-BookForge is an intelligent pipeline that deconstructs source material (PDFs), expands the content by **5x** using a "First-Principles" AI swarm, and republishes it as a polished HTML5 website or a print-ready PDF.
+BookForge 5.0 is a fault-tolerant, high-fidelity pipeline that deconstructs technical source material, expands it via an AI research swarm, and reassembles it into a professional, typeset PDF using LaTeX.
 
-## ✨ Features
+## ✨ Key Features (v5.0)
 
--   **Deep Content Expansion:** Uses a LangGraph swarm (Analyst, Drafter, Critic) to analyze and expand every topic.
--   **Math-Aware:** Perfect rendering of complex equations using MathJax (HTML) and LaTeX (PDF).
--   **Multi-Format Output:**
-    -   **HTML5:** Instant, responsive, and searchable (Zero compile time).
-    -   **PDF:** High-quality print output via Headless Edge (bypassing LaTeX errors).
--   **Visuals:** Integrated "Art Department" to propose and generate diagrams (Gemini 2.5 Flash Image).
+- **Fault-Tolerant Pipeline:** Built-in checkpointing (`pipeline_state.json`) ensures that if an error occurs, you can resume exactly where you left off.
+- **AI Expansion Swarm:** Uses a multi-agent graph (Analyst, Drafter, Critic) based on LangGraph for high-accuracy technical content expansion.
+- **Dynamic Personas:** Configure the subject matter (e.g., Hydraulics, 5G, Thermodynamics) and the AI's persona via environment variables.
+- **LaTeX Typesetting:** Direct-to-LaTeX rendering for publication-quality engineering books, with support for complex math ($\LaTeX$) and tcolorbox examples.
+- **Centralized Config:** New `src/config.py` manages all paths and settings, reducing duplication and improving maintainability.
+- **Robust Asset Resolution:** Enhanced "Art Department" handles image extraction, vision-based transcription, and AI-generated textbook diagrams.
 
 ## 🛠️ Installation
 
 1.  **Clone the repository:**
+
     ```bash
-    git clone https://github.com/yourusername/bookforge.git
+    git clone https://github.com/your-org/bookforge.git
     cd bookforge
     ```
 
-2.  **Create a virtual environment:**
+2.  **Activate Virtual Environment:**
+
     ```bash
-    python -m venv venv
     .\venv\Scripts\activate  # Windows
-    # source venv/bin/activate # Mac/Linux
     ```
 
-3.  **Install dependencies:**
+3.  **Install Dependencies:**
+
     ```bash
     pip install -r requirements.txt
     ```
 
 4.  **Install System Requirements:**
-    -   **Pandoc:** Required for document conversion. [Install Pandoc](https://pandoc.org/installing.html)
-    -   **Microsoft Edge:** Required for HTML-to-PDF conversion.
+    - **MiKTeX / TeX Live:** Required for LaTeX PDF generation. [Install MiKTeX](https://miktex.org/howto/install-miktex)
+    - **Pandoc:** Used for text processing and template rendering. [Install Pandoc](https://pandoc.org/installing.html)
 
 5.  **Configure Environment:**
-    Create a `.env` file in the root directory:
+    Copy `.env.example` to `.env` and fill in your keys:
+
     ```env
-    GEMINI_API_KEY=your_google_ai_key_here
-    DEFAULT_MODEL=gemini-1.5-flash
-    IMAGE_MODEL=gemini-2.5-flash-image
+    GOOGLE_API_KEY=your_key_here
+    DEFAULT_MODEL=gemini/gemini-2.0-flash
+    IMAGE_MODEL=imagen-4.0-fast-generate-001
+
+    # Customise the output
+    BOOK_SUBJECT=Hydraulics and Pneumatics
+    BOOK_PERSONA=Elite Professor of Mechanical Engineering
+    MAX_CHUNK_CHARS=8000
     ```
 
 ## 🚀 Usage
 
-### 1. Generate the Book
-Run the main pipeline to ingest your PDF and generate the expanded draft:
+### ▶️ Standard Workflow
+
+To process a new book from scratch:
+
 ```bash
-python main.py --file "path/to/your/source.pdf"
+python main.py "path/to/your/source.pdf"
 ```
 
-### 2. Publish as HTML (Recommended)
-Generate a clean, responsive HTML version of the book:
-```bash
-python publish_html.py
-```
-*Output:* `data/output/BookForge_Final.html`
+### 🔁 Resuming Progress
 
-### 3. Convert to PDF
-Convert the HTML version to a PDF using the headless browser engine:
-```bash
-python pdf_printer.py
-```
-*Output:* `data/output/BookForge_Final_Print.pdf`
+If the pipeline stops (e.g., rate limits or crash), resume effortlessly:
 
-### 4. Cleanup
-Remove temporary build files and intermediates to save space:
 ```bash
-python cleanup.py
+python main.py --resume
 ```
 
-## 📂 Project Structure
+### 🎯 Pipeline Phases
 
--   `src/`: Core logic (Agents, Publisher, Resolver).
--   `templates/`: CSS and LaTeX templates.
--   `data/`: Input PDFs and generated Output.
--   `main.py`: Pipeline orchestrator.
--   `publish_html.py`: HTML generator script.
--   `pdf_printer.py`: PDF converter script.
+1. **Deconstructor:** (Phase 1) Extracts text and images from source PDF.
+2. **Expansion Swarm:** (Phase 2) Expands content using AI agents.
+3. **Art Department:** (Phase 3) Resolves and enhances diagrams.
+4. **Typesetting:** (Phase 4) Generates LaTeX and compiles final PDF.
+
+Example: Run only the typesetting phase:
+
+```bash
+python main.py --phase 4
+```
+
+## 📁 File Structure
+
+- `src/`: Core logic modules (agents, chunker, renderer, etc.)
+- `src/config.py`: **[NEW]** Centralized configuration and path management.
+- `templates/`: LaTeX (`bookforge.latex`) and class files (`suhbook.cls`).
+- `data/output/`: All generated artifacts (logs, JSON, .tex, .pdf).
+- `clear_data.py`: Run this to purge the output directory and start fresh.
+
+## ⚙️ Advanced Configuration
+
+- **Chunk Size:** Increase `MAX_CHUNK_CHARS` for models with larger context windows to reduce API calls.
+- **Revision Loop:** Controlled by `MAX_REVISIONS` in `src/config.py` (Default: 3).
 
 ## 📄 License
+
 MIT License.

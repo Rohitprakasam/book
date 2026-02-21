@@ -1,5 +1,5 @@
 """
-BookForge 4.0 — Style Manager (Phase 1)
+BookForge 5.0 — Style Manager (Phase 1)
 =======================================
 Analyzes a Style Reference Guide (PDF) to extract visual identity rules
 (colors, fonts, illustration style) as a JSON object.
@@ -12,7 +12,6 @@ Usage
 
 import os
 import json
-import base64
 from pathlib import Path
 
 # Try importing google-genai; handle missing dependency gracefully
@@ -24,6 +23,9 @@ except ImportError:
     HAS_GENAI = False
 
 import fitz  # PyMuPDF
+
+# Project-root-relative paths (optional; style output can be in memory only)
+_BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 def extract_style(guide_path: str) -> dict:
@@ -63,7 +65,7 @@ def extract_style(guide_path: str) -> dict:
         img_data = pix.tobytes("png")
         
         # 2. Call Gemini for visual analysis
-        client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+        client = genai.Client(api_key=os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY"))
         
         prompt = """
         You are an expert Art Director and Layout Designer. I am providing you with a visual sample from a target Style_Reference_Guide. Your task is to extract its exact visual identity so the system can replicate it programmatically.

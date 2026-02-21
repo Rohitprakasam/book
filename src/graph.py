@@ -1,5 +1,5 @@
 """
-BookForge 4.0 — LangGraph Compilation & Routing
+BookForge 5.0 — LangGraph Compilation & Routing
 =================================================
 Per-chunk expansion pipeline with a conditional critic loop
 and low-effort detection:
@@ -35,7 +35,7 @@ def _should_revise(state: BookState) -> str:
 
     if feedback.upper().startswith("APPROVED"):
         return END
-    if revision_count > MAX_REVISIONS:
+    if revision_count >= MAX_REVISIONS:
         print(f"[Router] Hit revision cap ({revision_count}). Moving on.")
         return END
 

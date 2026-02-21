@@ -1,5 +1,5 @@
 """
-BookForge 4.0 — The Deconstructor (Phase 1)
+BookForge 5.0 — The Deconstructor (Phase 1)
 =============================================
 Ingests a PDF, extracts all text and images, and produces a single
 ``tagged_manuscript.txt`` where every extracted image is replaced with
@@ -16,13 +16,16 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
+import hashlib
+
 import fitz  # PyMuPDF
 
 
 # ──────────────────────────────────────────────
-# CONFIGURATION
+# CONFIGURATION (project-root-relative; works regardless of CWD)
 # ──────────────────────────────────────────────
-OUTPUT_DIR = Path("data/output")
+_BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = _BASE_DIR / "data" / "output"
 ASSETS_DIR = OUTPUT_DIR / "assets"
 MANUSCRIPT_PATH = OUTPUT_DIR / "tagged_manuscript.txt"
 
@@ -56,12 +59,8 @@ def deconstruct(pdf_path: str) -> str:
 
     for page_num, page in enumerate(doc):
         # --- Extract images on this page ---
-        # page_images = _extract_images(doc, page, page_num, image_counter)
-        # image_counter += len(page_images)
-        # --- Extract images on this page ---
-        # page_images = _extract_images(doc, page, page_num, image_counter)
-        # image_counter += len(page_images)
-        page_images = []  # Empty list to bypass image logic
+        page_images = _extract_images(doc, page, page_num, image_counter)
+        image_counter += len(page_images)
 
         # --- Extract text blocks with positions ---
         text_blocks = page.get_text("blocks")  # (x0, y0, x1, y1, text, block_no, block_type)
@@ -97,6 +96,17 @@ def deconstruct(pdf_path: str) -> str:
 
     # --- Write the tagged manuscript ---
     manuscript = "\n".join(manuscript_parts).strip()
+    
+    # RISK CHECK: Empty PDF
+    if len(manuscript) < 100:
+        error_msg = (
+            f"CRITICAL ERROR: Extracted text is suspiciously short ({len(manuscript)} chars).\n"
+            "This likely means the PDF is SCANNED (images only) and has no text layer.\n"
+            "We cannot process this file without OCR. Please provide a text-based PDF."
+        )
+        print(f"[Deconstructor] ❌ {error_msg}")
+        raise ValueError(error_msg)
+
     MANUSCRIPT_PATH.write_text(manuscript, encoding="utf-8")
 
     print(f"[Deconstructor] Extracted {image_counter} images to {ASSETS_DIR}")
@@ -113,15 +123,18 @@ def _extract_images(
 ) -> list[dict]:
     """
     Extract all images from a page and save them to the assets directory.
-
-    Returns a list of dicts with keys: 'filename', 'tag', 'y_pos'.
+    Filters out small artifacts (<100px) similar to extract.py.
     """
+    # Filter constants (from extract.py)
+    MIN_WIDTH = 100
+    MIN_HEIGHT = 100
+    MIN_PIXELS = 10000
+    
     results = []
     image_list = page.get_images(full=True)
 
     for img_idx, img_info in enumerate(image_list):
         xref = img_info[0]
-        img_num = counter_start + img_idx
 
         try:
             pix = fitz.Pixmap(doc, xref)
@@ -129,23 +142,44 @@ def _extract_images(
             # Convert CMYK / other color spaces to RGB
             if pix.n - pix.alpha > 3:
                 pix = fitz.Pixmap(fitz.csRGB, pix)
+                
+            # --- Size Filter (Integration of extract.py logic) ---
+            if pix.width < MIN_WIDTH or pix.height < MIN_HEIGHT:
+                print(f"  Size skip: {pix.width}x{pix.height} (too small)")
+                continue
+            
+            if (pix.width * pix.height) < MIN_PIXELS:
+                print(f"  Size skip: {pix.width}x{pix.height} (area too small)")
+                continue
 
-            filename = f"page{page_num + 1}_img{img_num + 1}.png"
-            save_path = ASSETS_DIR / filename
+            # Calculate hash for unique ID (shortened to 6 chars)
+            img_data = pix.tobytes()
+            img_hash = hashlib.md5(img_data).hexdigest()[:6]
+
+            # Filename Format: pg{page_num}_img{img_idx}_{hash}.png
+            filename = f"pg{page_num + 1}_img{img_idx + 1}_{img_hash}.png"
+            
+            # Subdirectory for extracted images
+            extract_dir = ASSETS_DIR / "extracted_images"
+            extract_dir.mkdir(parents=True, exist_ok=True)
+            
+            save_path = extract_dir / filename
             pix.save(str(save_path))
             pix = None  # free memory
 
             # Try to find the image position on the page
             y_pos = _get_image_y_pos(page, xref, img_idx)
 
-            tag = f"[ORIGINAL_ASSET: /assets/{filename}]"
+            # Tag Format: [ORIGINAL_ASSET:extracted_images/filename]
+            tag = f"[ORIGINAL_ASSET:extracted_images/{filename}]"
+            
             results.append({
                 "filename": filename,
                 "tag": tag,
                 "y_pos": y_pos,
             })
 
-            print(f"  → Saved {filename}")
+            print(f"  → Saved {filename} ({img_info[2]}x{img_info[3]})")
 
         except Exception as e:
             print(f"  ⚠ Skipped image xref={xref} on page {page_num + 1}: {e}")
@@ -160,11 +194,13 @@ def _get_image_y_pos(page: fitz.Page, xref: int, fallback_idx: int) -> float:
     Falls back to a heuristic if position cannot be determined.
     """
     try:
+        image_block_idx = 0
         for img_block in page.get_text("dict")["blocks"]:
             if img_block.get("type") == 1:  # image block
-                # Match by checking if this image block corresponds to our xref
-                bbox = img_block.get("bbox", (0, 0, 0, 0))
-                return bbox[1]  # y0
+                if image_block_idx == fallback_idx:
+                    bbox = img_block.get("bbox", (0, 0, 0, 0))
+                    return bbox[1]  # y0
+                image_block_idx += 1
     except Exception:
         pass
 
