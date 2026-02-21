@@ -245,15 +245,20 @@ def generate_textbook_diagram(subject: str, theme_config: dict, save_path: Path)
     print(f"  🎨 Generating: \"{subject[:50]}…\"")
 
     import time
-    max_retries = 3
-    base_delay = 30
+    max_retries = 4
+    base_delay = 5
+
+    primary_model = os.getenv("IMAGE_MODEL", "gemini-2.5-flash-image")
+    fallback_models = ["imagen-3.0-generate-001", "imagen-3.0-fast-generate-001", "imagen-4.0-fast-generate-001"]
+    
+    current_model = primary_model
+    fallback_index = 0
 
     for attempt in range(max_retries + 1):
         try:
-            target_model = os.getenv("IMAGE_MODEL", "gemini-2.5-flash-image")
-
+            print(f"  🎨 Generating (Model: {current_model}): \"{subject[:50]}…\"")
             response = client.models.generate_images(
-                model=target_model,
+                model=current_model,
                 prompt=full_prompt,
                 config=types.GenerateImagesConfig(
                     number_of_images=1,
@@ -273,24 +278,26 @@ def generate_textbook_diagram(subject: str, theme_config: dict, save_path: Path)
         except Exception as e:
             error_str = str(e)
 
-            # Check for Rate Limits (429)
-            if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
-                if attempt < max_retries:
+            # Check for Rate Limits (429), Quota Exhaustion, or Model Not Found
+            if any(k in error_str for k in ["429", "RESOURCE_EXHAUSTED", "404", "NOT_FOUND", "quota"]):
+                # Switch model if fallbacks are available
+                if fallback_index < len(fallback_models):
+                    current_model = fallback_models[fallback_index]
+                    fallback_index += 1
+                    print(f"  🔄 Limit/Error hit. Switching model to {current_model} (Attempt {attempt+1}/{max_retries})...")
+                    time.sleep(2)
+                    continue
+                # If out of fallbacks, do regular backoff
+                elif attempt < max_retries:
                     delay = base_delay * (attempt + 1)
-                    print(f"  ⏳ Rate limit hit. Retrying in {delay}s (Attempt {attempt+1}/{max_retries})...")
+                    print(f"  ⏳ Rate limit hit on all models. Retrying in {delay}s (Attempt {attempt+1}/{max_retries})...")
                     time.sleep(delay)
                     continue
                 else:
-                    print(f"  ❌ Image Gen Failed after {max_retries} retries (Rate Limit): {error_str[:100]}...")
+                    print(f"  ❌ Image Gen Failed after {max_retries} retries: {error_str[:100]}...")
                     return False
 
             print(f"  ❌ Image Generation Failed: {error_str[:200]}...")
-
-            # Check for 404 Model Not Found to fail fast
-            if "404" in error_str or "NOT_FOUND" in error_str:
-                print("  ⚠️  Critical Model Error: Skipping further image generation for this run.")
-                return False
-
             return False
 
     return False
