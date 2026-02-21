@@ -121,11 +121,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Basic Hydraulic System\", \"subject\": \"Schematic of a basic hydraulic system showing a pump, reservoir, control valve, cylinder, and connecting lines.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 1.1: Basic Hydraulic System](/data/output/assets/ai_generated/ai_Schematic_of_a_basic_hydraulic.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Laminar vs. Turbulent Flow\", \"subject\": \"Illustration of Laminar vs. Turbulent Flow in a pipe, showing velocity profiles. Laminar flow shows smooth, parallel streamlines, while turbulent flow shows chaotic and swirling streamlines.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.2: Laminar vs. Turbulent Flow](/data/output/assets/ai_generated/ai_Illustration_of_Laminar_vs__Tu.png)"
         },
         {
           "type": "heading",
@@ -553,15 +553,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Gear Pump\", \"subject\": \"Cross-sectional view of a gear pump, labeling key components (gears, housing, inlet, outlet).\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.3: Gear Pump](/data/output/assets/ai_generated/ai_Cross_sectional_view_of_a_gear.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.4: Vane Pump\", \"subject\": \"Cross-sectional view of a vane pump, labeling key components (vanes, rotor, cam ring, inlet, outlet).\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.4: Vane Pump](/data/output/assets/ai_generated/ai_Cross_sectional_view_of_a_vane.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.5: Piston Pump\", \"subject\": \"Cross-sectional view of a piston pump (axial or radial), labeling key components (pistons, cylinder block, swashplate/eccentric).\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.5: Piston Pump](/data/output/assets/ai_generated/ai_Cross_sectional_view_of_a_pist.png)"
         },
         {
           "type": "heading",
@@ -842,7 +842,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Types of Cylinders:"
         },
         {
@@ -855,7 +855,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Construction:"
         },
         {
@@ -864,7 +864,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Applications:"
         },
         {
@@ -873,7 +873,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Hydraulic Cushioning:"
         },
         {
@@ -955,7 +955,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.5: ANSI Symbols\", \"subject\": \"Fluid Power ANSI Symbols for various components (pump, cylinder, DCV, FCV, PCV, reservoir). Group symbols logically for clarity.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 2.5: ANSI Symbols](/data/output/assets/ai_generated/ai_Fluid_Power_ANSI_Symbols_for_v.png)"
         },
         {
           "type": "example_problem",
@@ -1200,7 +1200,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Pneumatic Systems: Principles and Maintenance"
         },
         {
@@ -2146,7 +2146,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Wireless Communication Systems: A Modern Engineering Perspective"
         },
         {
@@ -2569,7 +2569,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Wireless Communication Systems: Principles and Applications"
         }
       ]
@@ -3331,7 +3331,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Bulk Modulus:"
         },
         {
@@ -3361,7 +3361,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Viscosity:"
         }
       ]
@@ -3679,7 +3679,7 @@
       "sections": [
         {
           "type": "paragraph",
-          "text": "Valve characteristics such as pressure drop, response time, and leakage are important considerations in hydraulic system design. Pressure drop across a valve represents an energy loss and can affect system efficiency. Response time refers to the time it takes for a valve to switch from one position to another, which can impact system performance, especially in high-speed applications. Leakage can also reduce system efficiency and cause environmental concerns.\n\nThe relationship between flow rate ($Q$) and pressure drop ($\\Delta P$) across a valve orifice is described by the orifice equation:\n\n$$Q = C_d A \\sqrt{\\frac{2 \\Delta P}{\\rho}}$$\n\nWhere:\n\n*   $Q$ is the flow rate through the orifice.\n*   $C_d$ is the discharge coefficient, a dimensionless factor that accounts for the non-ideal flow conditions through the orifice.\n*   $A$ is the area of the orifice.\n*   $\\Delta P$ is the pressure drop across the orifice.\n*   $\\rho$ is the density of the hydraulic fluid.\n\nValve gain, in simple terms, is how much the output of the valve changes for a small change in the input signal. It is important for stability analysis and control system design.\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 4.8: Pressure Relief Valve\", \"subject\": \"Cutaway view of a pressure relief valve, showing the poppet, the spring, the pressure adjustment screw, the inlet port, the outlet port (connected to the reservoir), and the fluid flow path when the valve is open. Add labels to identify the components.\", \"type\": \"technical illustration\"}]\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 4.9: 4-Way Directional Control Valve\", \"subject\": \"Schematic symbol and cutaway view of a 4-way, 3-position directional control valve. Show the spool, the ports (P, T, A, B), and the different flow paths in each position of the spool. The cutaway view should illustrate how the spool position controls the flow of fluid to and from the actuator.\", \"type\": \"schematic\"}]\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 4.10: Flow Control Valve\", \"subject\": \"Di"
+          "text": "Valve characteristics such as pressure drop, response time, and leakage are important considerations in hydraulic system design. Pressure drop across a valve represents an energy loss and can affect system efficiency. Response time refers to the time it takes for a valve to switch from one position to another, which can impact system performance, especially in high-speed applications. Leakage can also reduce system efficiency and cause environmental concerns.\n\nThe relationship between flow rate ($Q$) and pressure drop ($\\Delta P$) across a valve orifice is described by the orifice equation:\n\n$$Q = C_d A \\sqrt{\\frac{2 \\Delta P}{\\rho}}$$\n\nWhere:\n\n*   $Q$ is the flow rate through the orifice.\n*   $C_d$ is the discharge coefficient, a dimensionless factor that accounts for the non-ideal flow conditions through the orifice.\n*   $A$ is the area of the orifice.\n*   $\\Delta P$ is the pressure drop across the orifice.\n*   $\\rho$ is the density of the hydraulic fluid.\n\nValve gain, in simple terms, is how much the output of the valve changes for a small change in the input signal. It is important for stability analysis and control system design.\n\n![Figure 4.8: Pressure Relief Valve](/data/output/assets/ai_generated/ai_Cutaway_view_of_a_pressure_rel.png)\n\n![Figure 4.9: 4-Way Directional Control Valve](/data/output/assets/ai_generated/ai_Schematic_symbol_and_cutaway_v.png)\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 4.10: Flow Control Valve\", \"subject\": \"Di"
         }
       ]
     },
@@ -3854,7 +3854,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Wireless Communication Systems"
         },
         {
@@ -3886,11 +3886,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Electromagnetic Spectrum\", \"subject\": \"A visual representation of the electromagnetic spectrum, highlighting the frequency ranges used for different wireless communication technologies (e.g., radio waves, microwaves, infrared, visible light, etc.). Indicate typical applications for each band, such as radio for AM/FM broadcasting, microwaves for satellite communication, and infrared for remote controls.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.1: Electromagnetic Spectrum](/data/output/assets/ai_generated/ai_A_visual_representation_of_the.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Wireless Communication System Block Diagram\", \"subject\": \"A high-level block diagram illustrating the key components of a wireless communication system, including the transmitter (with components like encoder, modulator, and amplifier), the channel (representing the wireless propagation environment), and the receiver (with components like amplifier, demodulator, and decoder). Show signal flow from the source to the destination.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 1.2: Wireless Communication System Block Diagram](/data/output/assets/ai_generated/ai_A_high_level_block_diagram_ill.png)"
         },
         {
           "type": "example_problem",
@@ -4299,7 +4299,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Fluid Power Principles and Hydraulic Pumps"
         },
         {
@@ -4344,7 +4344,7 @@
       "sections": [
         {
           "type": "paragraph",
-          "text": "This equation highlights the compressibility of gases and its impact on system response. A change in pressure or temperature will result in a change in volume, which can affect the accuracy and stability of pneumatic actuators. For hydraulic fluids, compressibility is quantified by the bulk modulus ($K$), which relates the change in pressure ($dP$) to the fractional change in volume ($dV/V$):\n\n$$K = -V\\frac{dP}{dV}$$\n\nA higher bulk modulus indicates a less compressible fluid, leading to more precise control. The transient response of a pneumatic system can be characterized by its time constant ($\\tau$), which represents the time it takes for the system to reach approximately 63.2% of its final value after a step change in input. The time constant is proportional to the volume ($V$) of the cylinder and inversely proportional to the volumetric flow rate ($Q$):\n\n$$\\tau = \\frac{V}{Q}$$\n\nA smaller time constant indicates a faster response.\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Fluid Transport vs. Fluid Power\", \"subject\": \"Block diagram contrasting a fluid transport system (e.g., water distribution network with pumps and pipes) with a fluid power system (e.g., hydraulic press with pump, valve, and cylinder). Highlight the unidirectional flow in transport and closed-loop control in power systems.\", \"type\": \"schematic\"}]\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Pneumatic System Schematic\", \"subject\": \"Pneumatic system schematic showing an air compressor, air receiver (reservoir), pressure regulator, directional control valve, lubricator, filter, and a double-acting pneumatic cylinder. Arrows indicate airflow direction.\", \"type\": \"schematic\"}]\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 2.3: Hydraulic System Schematic\", \"subject\": \"Hydraulic system schematic showing a pump, reservoir, pressure relief valve, directional control valve, filter, and a double-acting hydraulic cylinder. Arrows indicate fluid flow direction.\", \"type\": \"schematic\"}]\n\n\\begin{exampleproblem}{Example Problem 1"
+          "text": "This equation highlights the compressibility of gases and its impact on system response. A change in pressure or temperature will result in a change in volume, which can affect the accuracy and stability of pneumatic actuators. For hydraulic fluids, compressibility is quantified by the bulk modulus ($K$), which relates the change in pressure ($dP$) to the fractional change in volume ($dV/V$):\n\n$$K = -V\\frac{dP}{dV}$$\n\nA higher bulk modulus indicates a less compressible fluid, leading to more precise control. The transient response of a pneumatic system can be characterized by its time constant ($\\tau$), which represents the time it takes for the system to reach approximately 63.2% of its final value after a step change in input. The time constant is proportional to the volume ($V$) of the cylinder and inversely proportional to the volumetric flow rate ($Q$):\n\n$$\\tau = \\frac{V}{Q}$$\n\nA smaller time constant indicates a faster response.\n\n![Figure 2.1: Fluid Transport vs. Fluid Power](/data/output/assets/ai_generated/ai_Block_diagram_contrasting_a_fl.png)\n\n![Figure 2.2: Pneumatic System Schematic](/data/output/assets/ai_generated/ai_Pneumatic_system_schematic_sho.png)\n\n![Figure 2.3: Hydraulic System Schematic](/data/output/assets/ai_generated/ai_Hydraulic_system_schematic_sho.png)\n\n\\begin{exampleproblem}{Example Problem 1"
         }
       ]
     },
@@ -4577,7 +4577,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Simple Hydraulic Circuit Illustrating Pascal's Law\", \"subject\": \"A schematic diagram of a hydraulic system with two pistons of different sizes connected by a fluid-filled line. A force is applied to the smaller piston, creating pressure that is transmitted to the larger piston, resulting in a larger force output. Include pressure gauges to show equal pressure throughout the system.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 1.1: Simple Hydraulic Circuit Illustrating Pascal's Law](/data/output/assets/ai_generated/ai_A_schematic_diagram_of_a_hydra.png)"
         },
         {
           "type": "paragraph",
@@ -4871,7 +4871,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Cross-Sectional View of a Gear Pump\", \"subject\": \"A detailed cross-sectional view of a gear pump, illustrating the meshing gears, inlet port, outlet port, and fluid flow path. Highlight the gear teeth and the tight clearances between the gears and the pump housing.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.2: Cross-Sectional View of a Gear Pump](/data/output/assets/ai_generated/ai_A_detailed_cross_sectional_vie.png)"
         },
         {
           "type": "paragraph",
@@ -6058,7 +6058,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Simple Hydraulic Circuit\", \"subject\": \"Schematic diagram of a simple hydraulic circuit with a pump, pressure relief valve, directional control valve, and linear actuator. Label key components and flow paths.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 3.1: Simple Hydraulic Circuit](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_simple_.png)"
         },
         {
           "type": "paragraph",
@@ -7268,7 +7268,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Fluid Power Systems and Applications: The Sky Tram Case Study"
         },
         {
@@ -7288,11 +7288,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Basic Hydraulic System\", \"subject\": \"A schematic diagram of a basic hydraulic system, including a pump, reservoir, control valve, cylinder, and connecting lines. All components are labeled, and the flow direction is indicated with arrows. The pump is driven by an electric motor.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 1.1: Basic Hydraulic System](/data/output/assets/ai_generated/ai_A_schematic_diagram_of_a_basic.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Pascal's Law Illustration\", \"subject\": \"An illustration of Pascal's Law, showing a container filled with fluid. Multiple pistons of different sizes are inserted into the container. A force applied to a small piston creates pressure in the fluid, which is then transmitted to the larger pistons, resulting in a larger force output. Arrows indicate the pressure acting equally in all directions.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.2: Pascal's Law Illustration](/data/output/assets/ai_generated/ai_An_illustration_of_Pascal_s_La.png)"
         },
         {
           "type": "paragraph",
@@ -8608,7 +8608,7 @@
       "sections": [
         {
           "type": "paragraph",
-          "text": "Pneumatic systems are commonly employed in positioning and clamping operations, particularly in automated assembly lines, robotic systems, and packaging machinery. The inherent safety of using compressed air, compared to high-pressure hydraulics, makes pneumatic systems a preferred choice in environments where operator safety is paramount. Air preparation is a crucial aspect of pneumatic system design. Before compressed air can be used in a pneumatic circuit, it must be filtered to remove contaminants, regulated to maintain a constant pressure, and lubricated to reduce friction and wear on the components. This is typically achieved using an FRL (Filter, Regulator, Lubricator) unit, which ensures that the air is clean, dry, and properly lubricated before it enters the pneumatic circuit.\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Pneumatic Pick-and-Place Robot Circuit\", \"subject\": \"A pneumatic circuit for a pick-and-place robot arm. The diagram includes multiple cylinders for linear motion and rotary actuators for joint movement. The diagram should show the air compressor, FRL unit, directional control valves, and cylinders, with clear indication of air flow paths.\", \"type\": \"schematic\"}]\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Pneumatic Cylinder Cross-Sections\", \"subject\": \"Cross-sectional views of both single-acting and double-acting pneumatic cylinders. The diagrams should clearly illustrate the differences in their construction and operation, including the piston, cylinder body, ports, and springs (if applicable).\", \"type\": \"technical illustration\"}]\n\n[NEW_DIAGRAM: {\"caption\": \"Figure 3.3: FRL Unit Schematic\", \"subject\": \"A schematic of an FRL (Filter, Regulator, Lubricator) unit. The diagram should show the internal components of each section (filter element, regulator valve, lubricator nozzle) and their respective functions in air preparation.\", \"type\": \"schematic\"}]\n\nThe force exerted by a pneumatic cylinder is given by:\n$$F = P_a \\cdot A$$\nwhere $F$ is the force,"
+          "text": "Pneumatic systems are commonly employed in positioning and clamping operations, particularly in automated assembly lines, robotic systems, and packaging machinery. The inherent safety of using compressed air, compared to high-pressure hydraulics, makes pneumatic systems a preferred choice in environments where operator safety is paramount. Air preparation is a crucial aspect of pneumatic system design. Before compressed air can be used in a pneumatic circuit, it must be filtered to remove contaminants, regulated to maintain a constant pressure, and lubricated to reduce friction and wear on the components. This is typically achieved using an FRL (Filter, Regulator, Lubricator) unit, which ensures that the air is clean, dry, and properly lubricated before it enters the pneumatic circuit.\n\n*[Image generation failed for: A pneumatic circuit for a pick-and-place robot arm. The diagram includes multiple cylinders for linear motion and rotary actuators for joint movement. The diagram should show the air compressor, FRL unit, directional control valves, and cylinders, with clear indication of air flow paths.]*\n\n![Figure 3.2: Pneumatic Cylinder Cross-Sections](/data/output/assets/ai_generated/ai_Cross_sectional_views_of_both_.png)\n\n![Figure 3.3: FRL Unit Schematic](/data/output/assets/ai_generated/ai_A_schematic_of_an_FRL__Filter_.png)\n\nThe force exerted by a pneumatic cylinder is given by:\n$$F = P_a \\cdot A$$\nwhere $F$ is the force,"
         }
       ]
     },
@@ -8952,7 +8952,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.1: Basic Hydraulic System Schematic\", \"subject\": \"A schematic diagram of a basic hydraulic system including a pump drawing fluid from a reservoir, a pressure relief valve protecting the system from overpressure, a directional control valve directing flow to a double-acting cylinder, and connecting lines. Each component should be clearly labeled, including the fluid flow direction using arrows.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 5.1: Basic Hydraulic System Schematic](/data/output/assets/ai_generated/ai_A_schematic_diagram_of_a_basic.png)"
         },
         {
           "type": "paragraph",
@@ -9389,11 +9389,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.4: Hydraulic Jack System Lifting a Bridge Beam\", \"subject\": \"A diagram illustrating a hydraulic jack system lifting a bridge beam for replacement. The diagram should show the hydraulic jack, the pump unit, control valves, and the supporting structure. Arrows should indicate the direction of hydraulic fluid flow and the lifting force.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 5.4: Hydraulic Jack System Lifting a Bridge Beam](/data/output/assets/ai_generated/ai_A_diagram_illustrating_a_hydra.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.5: Movable Bridge Hydraulic System\", \"subject\": \"A schematic diagram of a hydraulic system for a movable bridge, showing the hydraulic cylinders responsible for lifting the bridge section, the pumps that supply the hydraulic fluid, the control valves that regulate the flow, and the overall control system. The diagram should illustrate the interconnectedness of the components and the flow of hydraulic power.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 5.5: Movable Bridge Hydraulic System](/data/output/assets/ai_generated/ai_A_schematic_diagram_of_a_hydra.png)"
         },
         {
           "type": "paragraph",
@@ -9792,7 +9792,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Hoist Cylinder and Lowering Valve\", \"subject\": \"A schematic diagram showing a hoist cylinder lifting a load, with a lowering valve controlling the descent. Label the hoist cylinder, piston, load, lowering valve, and hydraulic lines. Show the direction of fluid flow during both lifting and lowering.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 1.3: Hoist Cylinder and Lowering Valve](/data/output/assets/ai_generated/ai_A_schematic_diagram_showing_a_.png)"
         },
         {
           "type": "example_problem",
@@ -11173,7 +11173,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 9.3: Open-Loop Control System Block Diagram\", \"subject\": \"Block diagram of a generic open-loop control system, showing the controller, actuator, and process.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 9.3: Open-Loop Control System Block Diagram](/data/output/assets/ai_generated/ai_Block_diagram_of_a_generic_ope.png)"
         },
         {
           "type": "heading",
@@ -11186,7 +11186,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 9.4: Closed-Loop Control System Block Diagram\", \"subject\": \"Block diagram of a generic closed-loop control system, showing the controller, actuator, process, sensor, and feedback loop. Highlight the difference between negative and positive feedback\", \"type\": \"schematic\"}]"
+          "text": "![Figure 9.4: Closed-Loop Control System Block Diagram](/data/output/assets/ai_generated/ai_Block_diagram_of_a_generic_clo.png)"
         },
         {
           "type": "heading",
@@ -11209,7 +11209,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 9.5: Fluidic AND Gate Schematic\", \"subject\": \"Schematic diagram of a fluidic AND gate implemented with fluidic elements.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 9.5: Fluidic AND Gate Schematic](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_fluidic.png)"
         },
         {
           "type": "paragraph",
@@ -11217,7 +11217,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 9.6: Ladder Logic Example for PLC-Controlled Hydraulic System\", \"subject\": \"A ladder logic diagram example for a simple PLC-controlled hydraulic system.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 9.6: Ladder Logic Example for PLC-Controlled Hydraulic System](/data/output/assets/ai_generated/ai_A_ladder_logic_diagram_example.png)"
         },
         {
           "type": "paragraph",
@@ -11898,7 +11898,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.3: Hydraulic Cylinder Leakage Paths\", \"subject\": \"A cutaway view of a hydraulic cylinder, highlighting potential leakage paths around the piston seal. Show pressure distribution and leakage flow direction with arrows indicating the direction of leakage. The high-pressure side of the piston should be clearly labeled, as well as the low-pressure side.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 2.3: Hydraulic Cylinder Leakage Paths](/data/output/assets/ai_generated/ai_A_cutaway_view_of_a_hydraulic_.png)"
         },
         {
           "type": "heading",
@@ -11919,7 +11919,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.4: Tractor Hydraulic System\", \"subject\": \"Simplified schematic of a hydraulic system used in an agricultural tractor for lifting a plough. The diagram includes a hydraulic pump, a control valve, a hydraulic cylinder, and a plough attached to the cylinder. Arrows indicate the flow of hydraulic fluid.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 2.4: Tractor Hydraulic System](/data/output/assets/ai_generated/ai_Simplified_schematic_of_a_hydr.png)"
         },
         {
           "type": "heading",
@@ -11962,7 +11962,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Open-Loop Control:"
         },
         {
@@ -12021,7 +12021,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Open-Loop Control:"
         },
         {
@@ -12052,11 +12052,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Fluid Logic Control System Block Diagram\", \"subject\": \"Block diagram showing the basic components of a fluid logic control system, including sensors, fluid logic elements, actuators, and the fluid power supply.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.1: Fluid Logic Control System Block Diagram](/data/output/assets/ai_generated/ai_Block_diagram_showing_the_basi.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.2: Fluid Pressure Representing Logical States\", \"subject\": \"A schematic diagram illustrating how fluid pressure represents logical states (ON/OFF). Include a pressure gauge indicating high pressure as 'ON' and low pressure as 'OFF'.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.2: Fluid Pressure Representing Logical States](/data/output/assets/ai_generated/ai_A_schematic_diagram_illustrati.png)"
         },
         {
           "type": "paragraph",
@@ -12378,15 +12378,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.3: Spool Valve Cross-Section\", \"subject\": \"Cross-sectional diagram of a typical spool valve, showing the spool, ports, and control signals. Clearly label the inlet, outlet, control pressure inputs, and spool.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 4.3: Spool Valve Cross-Section](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_t.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.4: Poppet Valve Cross-Section\", \"subject\": \"Cross-sectional diagram of a poppet valve, illustrating the valve seat, poppet, and control pressure. Label the inlet, outlet, spring, and poppet clearly.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 4.4: Poppet Valve Cross-Section](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_p.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.5: Diaphragm Valve Cross-Section\", \"subject\": \"Cross-sectional diagram of a diaphragm valve, showing the diaphragm, valve body, and control pressure. Include labels for the inlet, outlet, diaphragm, and control pressure chamber.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 4.5: Diaphragm Valve Cross-Section](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_d.png)"
         },
         {
           "type": "paragraph",
@@ -12584,15 +12584,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.6: Wall Attachment Fluidic Amplifier\", \"subject\": \"Schematic diagram of a wall attachment fluidic amplifier, showing the supply nozzle, control ports, output ports, and the Coanda effect. Label the supply jet, control ports, output channels, and the wall attachment region.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.6: Wall Attachment Fluidic Amplifier](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_wall_at.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.7: Vortex Amplifier\", \"subject\": \"Schematic diagram of a vortex amplifier, illustrating the supply port, control port, output port, and the vortex chamber. Label the supply flow, control flow, vortex chamber, and output.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.7: Vortex Amplifier](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_vortex_.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.8: Turbulence Amplifier\", \"subject\": \"Illustration of how a turbulence amplifier works, contrasting laminar and turbulent flow states. Show a schematic diagram with a supply jet, a control jet, and an output sensor. Illustrate both laminar flow (no control jet) and turbulent flow (with control jet).\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.8: Turbulence Amplifier](/data/output/assets/ai_generated/ai_Illustration_of_how_a_turbulen.png)"
         },
         {
           "type": "paragraph",
@@ -12818,19 +12818,19 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.9: Fluidic AND Gate\", \"subject\": \"Schematic diagram of a fluidic AND gate, showing the input and output channels and the internal mechanism. Illustrate how both inputs must be high pressure for the output to be high pressure.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.9: Fluidic AND Gate](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_fluidic.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.10: Fluidic OR Gate\", \"subject\": \"Schematic diagram of a fluidic OR gate, showing the input and output channels and the internal mechanism. Illustrate how either input being high pressure results in a high-pressure output.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.10: Fluidic OR Gate](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_fluidic.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.11: Fluidic FLIP-FLOP\", \"subject\": \"Schematic diagram of a fluidic FLIP-FLOP, showing the SET, RESET, and output channels and the internal mechanism. Highlight internal feedback loops. Explain that it maintains state.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.11: Fluidic FLIP-FLOP](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_fluidic.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.12: Truth Tables for Fluid Logic Gates\", \"subject\": \"Truth table representation of AND, OR, NAND, NOR gates with fluidic pressure levels representing logical states. Use 'H' for high pressure and 'L' for low pressure.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 4.12: Truth Tables for Fluid Logic Gates](/data/output/assets/ai_generated/ai_Truth_table_representation_of_.png)"
         },
         {
           "type": "paragraph",
@@ -13469,7 +13469,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.5: Viscosity vs. Temperature for Hydraulic Fluids\", \"subject\": \"Graph showing the relationship between viscosity and temperature for different hydraulic fluids with varying viscosity indices. Label the axes and show example curves.\", \"type\": \"graph\"}]"
+          "text": "![Figure 5.5: Viscosity vs. Temperature for Hydraulic Fluids](/data/output/assets/ai_generated/ai_Graph_showing_the_relationship.png)"
         },
         {
           "type": "equation",
@@ -13497,7 +13497,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.6: Functions of Hydraulic Fluid\", \"subject\": \"Cross-sectional diagram of a hydraulic system highlighting the different functions of the hydraulic fluid (power transmission, lubrication, cooling, sealing).\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 5.6: Functions of Hydraulic Fluid](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_h.png)"
         },
         {
           "type": "paragraph",
@@ -13575,7 +13575,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Identify Given Parameters:"
         },
         {
@@ -13638,7 +13638,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Identify Given Parameters:"
         },
         {
@@ -13741,11 +13741,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.7: Chemical Structure of Petroleum-Based Oil\", \"subject\": \"Chemical structure of a typical petroleum-based oil molecule. Show the different types of hydrocarbon chains (paraffinic, naphthenic, aromatic).\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 5.7: Chemical Structure of Petroleum-Based Oil](/data/output/assets/ai_generated/ai_Chemical_structure_of_a_typica.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.8: Hydraulic Filter\", \"subject\": \"Cutaway diagram of a hydraulic filter showing the filtration mechanism and the types of contaminants that are removed.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 5.8: Hydraulic Filter](/data/output/assets/ai_generated/ai_Cutaway_diagram_of_a_hydraulic.png)"
         },
         {
           "type": "example_problem",
@@ -14067,7 +14067,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Momentum Change:"
         },
         {
@@ -14124,7 +14124,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Total Force:"
         },
         {
@@ -14143,7 +14143,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "5. Pressure:"
         },
         {
@@ -14197,7 +14197,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Substituting into the Pressure Equation:"
         },
         {
@@ -14364,12 +14364,12 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Properties of Hydraulics fluids"
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "VISCOSITY:"
         },
         {
@@ -14628,7 +14628,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Simple Wireless Communication Link\", \"subject\": \"A diagram depicting a wireless communication link. It shows a transmitter with an antenna sending a signal through a propagation path with obstacles to a receiver with an antenna. Annotations indicate Tx Power (Pt), Rx Power (Pr), distance (d), and antenna gains (Gt and Gr).\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.1: Simple Wireless Communication Link](/data/output/assets/ai_generated/ai_A_diagram_depicting_a_wireless.png)"
         },
         {
           "type": "paragraph",
@@ -14863,7 +14863,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Power Consumption in a Wireless Device\", \"subject\": \"A pie chart illustrating the distribution of power consumption in a typical wireless device (e.g., smartphone), highlighting the percentage of power lost due to frictional losses (heat dissipation from electronic components, mechanical friction in moving parts) compared to other power-consuming elements such as the display, processor, and RF circuitry.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 2.1: Power Consumption in a Wireless Device](/data/output/assets/ai_generated/ai_A_pie_chart_illustrating_the_d.png)"
         },
         {
           "type": "example_problem",
@@ -15595,7 +15595,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Saybolt Viscosimeter\", \"subject\": \"Cross-sectional diagram of a Saybolt viscometer with labels for all key components: inner chamber, outer chamber, heating element, thermostat, orifice, receiving flask, and thermometer.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 2.2: Saybolt Viscosimeter](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_S.png)"
         },
         {
           "type": "paragraph",
@@ -15607,7 +15607,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.3: Capillary Viscometer\", \"subject\": \"Schematic diagram showing a capillary viscometer, labeling pressure sensor, capillary tube, reservoir, and fluid flow direction.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram showing a capillary viscometer, labeling pressure sensor, capillary tube, reservoir, and fluid flow direction.]*"
         },
         {
           "type": "paragraph",
@@ -16513,7 +16513,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Different types of hydraulic fluids"
         }
       ]
@@ -16528,7 +16528,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Introduction to Fluid Power and Hydraulic Systems"
         },
         {
@@ -16908,7 +16908,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Pipe Section Diagram\", \"subject\": \"Schematic of a pipe section with annotations showing the parameters relevant to the Darcy-Weisbach equation (length L, diameter D, flow velocity v, and pressure drop \u0394P). Highlight the friction factor fD and indicate its relationship to the pipe wall roughness.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 2.1: Pipe Section Diagram](/data/output/assets/ai_generated/ai_Schematic_of_a_pipe_section_wi.png)"
         }
       ]
     },
@@ -17642,11 +17642,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Water Glycol Solution Microstructure\", \"subject\": \"A microscopic representation of a water glycol solution, illustrating the intermolecular interactions between water and glycol molecules. Depict the hydrogen bonding network and the distribution of the two components.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A microscopic representation of a water glycol solution, illustrating the intermolecular interactions between water and glycol molecules. Depict the hydrogen bonding network and the distribution of the two components.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Hydraulic System Schematic with Water Glycol Fluid\", \"subject\": \"A simplified hydraulic system diagram showcasing the key components (pump, reservoir, valve, actuator) with water glycol solution as the working fluid. Highlight material choices compatible with water glycol.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A simplified hydraulic system diagram showcasing the key components (pump, reservoir, valve, actuator) with water glycol solution as the working fluid. Highlight material choices compatible with water glycol.]*"
         }
       ]
     },
@@ -17665,7 +17665,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Section: Operating Temperature Range and Material Compatibility"
         },
         {
@@ -17814,11 +17814,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Corrosion of Zinc in Water Glycol\", \"subject\": \"A visual representation of a zinc component submerged in a water glycol solution, showing the corrosion process. Include close-up views of the corroded surface.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A visual representation of a zinc component submerged in a water glycol solution, showing the corrosion process. Include close-up views of the corroded surface.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.4: Arrhenius Plot of Corrosion Rate\", \"subject\": \"A graph depicting the Arrhenius equation in the context of corrosion rate, with the x-axis representing inverse temperature (1/T) and the y-axis representing the natural logarithm of the corrosion rate. Label the activation energy.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: A graph depicting the Arrhenius equation in the context of corrosion rate, with the x-axis representing inverse temperature (1/T) and the y-axis representing the natural logarithm of the corrosion rate. Label the activation energy.]*"
         },
         {
           "type": "paragraph",
@@ -17853,7 +17853,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Water-in-Oil Emulsion\", \"subject\": \"Schematic representation of an emulsion, showing water droplets (dispersed phase) surrounded by oil (continuous phase). Include labels for each phase and indicate the interfacial region.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic representation of an emulsion, showing water droplets (dispersed phase) surrounded by oil (continuous phase). Include labels for each phase and indicate the interfacial region.]*"
         },
         {
           "type": "paragraph",
@@ -18713,7 +18713,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Comparison of Hydraulic Fluids\", \"subject\": \"A bar graph comparing the cost, fire resistance, cooling capacity, and viscosity of petroleum-based hydraulic fluids and high-water-content fluids.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: A bar graph comparing the cost, fire resistance, cooling capacity, and viscosity of petroleum-based hydraulic fluids and high-water-content fluids.]*"
         },
         {
           "type": "paragraph",
@@ -18852,7 +18852,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "2.4 Examples of Hydraulic Circuits"
         },
         {
@@ -18868,7 +18868,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "2.5 Conclusion"
         },
         {
@@ -19328,7 +19328,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Proportional Pressure Relief"
         },
         {
@@ -19678,7 +19678,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Sequence Valve"
         },
         {
@@ -19892,11 +19892,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Direct-Acting Pressure Reducing Valve\", \"subject\": \"Cutaway diagram of a direct-acting pressure reducing valve showing the spool, spring, upstream pressure, and downstream pressure. Label all components.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cutaway diagram of a direct-acting pressure reducing valve showing the spool, spring, upstream pressure, and downstream pressure. Label all components.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Pressure Reducing Valve Circuit\", \"subject\": \"Hydraulic circuit diagram using a pressure reducing valve to protect a low-pressure actuator from a high-pressure source.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Hydraulic circuit diagram using a pressure reducing valve to protect a low-pressure actuator from a high-pressure source.]*"
         },
         {
           "type": "paragraph",
@@ -20088,7 +20088,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Flow Control Valves"
         },
         {
@@ -21006,7 +21006,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "2. Pump"
         },
         {
@@ -21621,11 +21621,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.5: Pump Curve and System Curve\", \"subject\": \"A graph showing a pump curve and a system curve. The x-axis should represent flow rate (Q), and the y-axis should represent head (H). The pump curve should be a decreasing curve, and the system curve should be an increasing curve. The point where the two curves intersect should be clearly marked as the operating point.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: A graph showing a pump curve and a system curve. The x-axis should represent flow rate (Q), and the y-axis should represent head (H). The pump curve should be a decreasing curve, and the system curve should be an increasing curve. The point where the two curves intersect should be clearly marked as the operating point.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.6: System Curves for Different Pipe Diameters\", \"subject\": \"A graph showing multiple system curves for different pipe diameters. The x-axis should represent flow rate (Q), and the y-axis should represent head (H). The curves should show that smaller pipe diameters result in higher head losses for a given flow rate, and the curves should be clearly labeled with the corresponding pipe diameters.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: A graph showing multiple system curves for different pipe diameters. The x-axis should represent flow rate (Q), and the y-axis should represent head (H). The curves should show that smaller pipe diameters result in higher head losses for a given flow rate, and the curves should be clearly labeled with the corresponding pipe diameters.]*"
         },
         {
           "type": "heading",
@@ -21947,7 +21947,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "3. Prime Movers"
         },
         {
@@ -22015,7 +22015,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Carnot Engine Schematic\", \"subject\": \"Schematic of a Carnot engine showing a hot reservoir at temperature Th, a cold reservoir at temperature Tc, the engine itself, heat flow Qh from the hot reservoir to the engine, heat flow Qc from the engine to the cold reservoir, and work output W from the engine.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic of a Carnot engine showing a hot reservoir at temperature Th, a cold reservoir at temperature Tc, the engine itself, heat flow Qh from the hot reservoir to the engine, heat flow Qc from the engine to the cold reservoir, and work output W from the engine.]*"
         },
         {
           "type": "paragraph",
@@ -22505,19 +22505,19 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.5: Gas Turbine Engine Schematic\", \"subject\": \"Schematic diagram of a gas turbine engine, showing the compressor, combustion chamber, turbine, and exhaust nozzle. Arrows indicate the direction of airflow.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a gas turbine engine, showing the compressor, combustion chamber, turbine, and exhaust nozzle. Arrows indicate the direction of airflow.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.6: Brayton Cycle T-s Diagram\", \"subject\": \"T-s diagram for the Brayton cycle. The diagram shows four processes: isentropic compression (1-2), constant pressure heat addition (2-3), isentropic expansion (3-4), and constant pressure heat rejection (4-1). Axis labels are Temperature (T) and Entropy (s).\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: T-s diagram for the Brayton cycle. The diagram shows four processes: isentropic compression (1-2), constant pressure heat addition (2-3), isentropic expansion (3-4), and constant pressure heat rejection (4-1). Axis labels are Temperature (T) and Entropy (s).]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.7: Steam Turbine Power Plant Schematic\", \"subject\": \"Schematic diagram of a steam turbine power plant, showing the boiler, turbine, condenser, pump, and associated piping. Arrows indicate the flow of water and steam.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a steam turbine power plant, showing the boiler, turbine, condenser, pump, and associated piping. Arrows indicate the flow of water and steam.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.8: Rankine Cycle T-s Diagram\", \"subject\": \"T-s diagram for the Rankine cycle. The diagram shows four processes: pumping (1-2), constant pressure heat addition (2-3), isentropic expansion (3-4), and constant pressure heat rejection (4-1). Axis labels are Temperature (T) and Entropy (s).\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: T-s diagram for the Rankine cycle. The diagram shows four processes: pumping (1-2), constant pressure heat addition (2-3), isentropic expansion (3-4), and constant pressure heat rejection (4-1). Axis labels are Temperature (T) and Entropy (s).]*"
         },
         {
           "type": "paragraph",
@@ -22764,15 +22764,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.9: Horizontal Axis Wind Turbine\", \"subject\": \"Schematic diagram of a horizontal axis wind turbine, showing the rotor blades, nacelle, tower, and generator. Arrows indicate the direction of wind flow.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a horizontal axis wind turbine, showing the rotor blades, nacelle, tower, and generator. Arrows indicate the direction of wind flow.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.10: Wind Turbine Power Curve\", \"subject\": \"Graph illustrating the power curve of a typical wind turbine. The x-axis represents wind speed, and the y-axis represents power output. The curve shows a cut-in speed, a rated power region, and a cut-out speed.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: Graph illustrating the power curve of a typical wind turbine. The x-axis represents wind speed, and the y-axis represents power output. The curve shows a cut-in speed, a rated power region, and a cut-out speed.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.11: Solar PV Cell Schematic\", \"subject\": \"Schematic diagram of a solar PV cell, showing the semiconductor layers (n-type and p-type), contacts, and the electron-hole generation process. Arrows indicate the direction of electron flow.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a solar PV cell, showing the semiconductor layers (n-type and p-type), contacts, and the electron-hole generation process. Arrows indicate the direction of electron flow.]*"
         },
         {
           "type": "paragraph",
@@ -23505,7 +23505,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Calculate the Cyclic Prefix Duration:"
         },
         {
@@ -23816,7 +23816,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.1: Generic Wireless Communication System\", \"subject\": \"Block diagram of a generic wireless communication system showing transmitter, channel, and receiver. Label key components such as modulator, demodulator, amplifier, antenna, and channel impairments.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram of a generic wireless communication system showing transmitter, channel, and receiver. Label key components such as modulator, demodulator, amplifier, antenna, and channel impairments.]*"
         },
         {
           "type": "example_problem",
@@ -24899,7 +24899,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Section 1: Introduction to Braham\u2019s Hydraulic Press"
         },
         {
@@ -24936,11 +24936,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Schematic Diagram of a Basic Hydraulic Press\", \"subject\": \"A schematic diagram of a hydraulic press, showing two cylinders of different sizes connected by a pipe. The smaller cylinder has a piston with area A1, and the larger cylinder has a piston with area A2. Label the input force F1 on the small piston, and the output force F2 on the large piston. Include a fluid reservoir and valves.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 1.1: Schematic Diagram of a Basic Hydraulic Press](/data/output/assets/ai_generated/ai_A_schematic_diagram_of_a_hydra.png)"
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Section 2: Mathematical Analysis of the Hydraulic Press"
         },
         {
@@ -25255,7 +25255,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Laminar and Turbulent Flow"
         },
         {
@@ -25322,7 +25322,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Reynolds Number"
         },
         {
@@ -25448,7 +25448,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Darcy's Equation"
         },
         {
@@ -25615,7 +25615,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Losses in Pipes"
         },
         {
@@ -25633,7 +25633,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Laminar vs. Turbulent Flow Visualization\", \"subject\": \"A side-by-side illustration showing laminar flow as smooth, layered movement and turbulent flow as chaotic, swirling movement. Include velocity profiles for each.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A side-by-side illustration showing laminar flow as smooth, layered movement and turbulent flow as chaotic, swirling movement. Include velocity profiles for each.]*"
         },
         {
           "type": "paragraph",
@@ -25762,7 +25762,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the average velocity:"
         },
         {
@@ -25858,7 +25858,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the average velocity:"
         },
         {
@@ -25997,7 +25997,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Moody Chart\", \"subject\": \"A detailed illustration of the Moody chart, clearly labeling the axes (Reynolds number and friction factor) and different regions of flow. Highlight the transition zone and the region of complete turbulence.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A detailed illustration of the Moody chart, clearly labeling the axes (Reynolds number and friction factor) and different regions of flow. Highlight the transition zone and the region of complete turbulence.]*"
         },
         {
           "type": "paragraph",
@@ -26510,7 +26510,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Common Pipe Fittings\", \"subject\": \"An illustration showing various common pipe fittings (elbows, tees, valves, expansions, contractions) with labels indicating their respective loss coefficient (K) values or ranges.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: An illustration showing various common pipe fittings (elbows, tees, valves, expansions, contractions) with labels indicating their respective loss coefficient (K) values or ranges.]*"
         },
         {
           "type": "paragraph",
@@ -26931,7 +26931,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Pipe System Schematic\", \"subject\": \"A schematic diagram of a simple pipe system, including a pump, pipe sections with different diameters, fittings, valves, and elevation changes. Label key parameters like pressure, velocity, and elevation at different points in the system.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A schematic diagram of a simple pipe system, including a pump, pipe sections with different diameters, fittings, valves, and elevation changes. Label key parameters like pressure, velocity, and elevation at different points in the system.]*"
         },
         {
           "type": "example_problem",
@@ -26947,7 +26947,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the average velocity:"
         },
         {
@@ -27081,7 +27081,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Head Loss in Horizontal Pipe\", \"subject\": \"Schematic of a horizontal pipe section with fluid flowing from left to right. Show pressure gauges at two points along the pipe (P1 and P2), with P1 > P2. Indicate the pipe length L and diameter D. Label the velocity V.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic of a horizontal pipe section with fluid flowing from left to right. Show pressure gauges at two points along the pipe (P1 and P2), with P1 > P2. Indicate the pipe length L and diameter D. Label the velocity V.]*"
         },
         {
           "type": "example_problem",
@@ -27454,7 +27454,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Laminar Velocity Profile\", \"subject\": \"A pipe cross-section showing the parabolic velocity profile for laminar flow. The maximum velocity is at the center of the pipe, and the velocity gradually decreases to zero at the pipe wall.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A pipe cross-section showing the parabolic velocity profile for laminar flow. The maximum velocity is at the center of the pipe, and the velocity gradually decreases to zero at the pipe wall.]*"
         },
         {
           "type": "example_problem",
@@ -28150,7 +28150,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Wireless Communication System Block Diagram\", \"subject\": \"A block diagram illustrating a wireless communication system from transmitter to receiver, highlighting signal impairments such as path loss, fading, interference, and noise at various points in the channel.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A block diagram illustrating a wireless communication system from transmitter to receiver, highlighting signal impairments such as path loss, fading, interference, and noise at various points in the channel.]*"
         },
         {
           "type": "paragraph",
@@ -28740,11 +28740,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Flow Separation Behind a Valve\", \"subject\": \"Illustration showing a valve in a pipe, with flow lines indicating flow separation and the formation of eddies downstream of the valve. Highlight the turbulent region with swirling arrows.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Illustration showing a valve in a pipe, with flow lines indicating flow separation and the formation of eddies downstream of the valve. Highlight the turbulent region with swirling arrows.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Comparison of Elbow Designs\", \"subject\": \"Side-by-side comparison of a sharp 90-degree elbow and a smooth 90-degree elbow. Show streamlines of flow through each elbow. The sharp elbow should show significant flow separation and eddy formation, while the smooth elbow should show more streamlined flow.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Side-by-side comparison of a sharp 90-degree elbow and a smooth 90-degree elbow. Show streamlines of flow through each elbow. The sharp elbow should show significant flow separation and eddy formation, while the smooth elbow should show more streamlined flow.]*"
         },
         {
           "type": "heading",
@@ -29452,15 +29452,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Pressure distribution within a centrifugal pump\", \"subject\": \"An illustration showing the pressure distribution inside a centrifugal pump. Highlight the low-pressure region at the impeller inlet (eye), the gradual pressure increase as the fluid moves through the impeller vanes, and the pressure increase in the volute or diffuser as the fluid velocity decreases.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: An illustration showing the pressure distribution inside a centrifugal pump. Highlight the low-pressure region at the impeller inlet (eye), the gradual pressure increase as the fluid moves through the impeller vanes, and the pressure increase in the volute or diffuser as the fluid velocity decreases.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Pump suction system schematic\", \"subject\": \"A schematic diagram of a pump suction system, including a reservoir, suction pipe, and the pump inlet. Label the following parameters: suction pressure (P_suction), suction velocity (V_suction), elevation difference between the reservoir surface and the pump inlet, and the vapor pressure of the liquid. Indicate the points where these parameters are measured.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A schematic diagram of a pump suction system, including a reservoir, suction pipe, and the pump inlet. Label the following parameters: suction pressure (P_suction), suction velocity (V_suction), elevation difference between the reservoir surface and the pump inlet, and the vapor pressure of the liquid. Indicate the points where these parameters are measured.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Centrifugal pump performance curves\", \"subject\": \"A graph showing typical performance curves for a centrifugal pump. The graph should include three curves: Head vs. Flow Rate, Efficiency vs. Flow Rate, and Power vs. Flow Rate. Label the axes clearly and indicate the best efficiency point (BEP) on the efficiency curve.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: A graph showing typical performance curves for a centrifugal pump. The graph should include three curves: Head vs. Flow Rate, Efficiency vs. Flow Rate, and Power vs. Flow Rate. Label the axes clearly and indicate the best efficiency point (BEP) on the efficiency curve.]*"
         },
         {
           "type": "example_problem",
@@ -29969,7 +29969,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Power Proportional to Diameter Cubed:"
         },
         {
@@ -30189,7 +30189,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Hydraulic Circuit with Relief Valve\", \"subject\": \"A schematic diagram of a simple hydraulic circuit including a positive displacement pump, a pressure relief valve, a closed valve downstream of the pump, and a reservoir. Arrows indicate the flow path when the closed valve is blocking flow and the relief valve is open, diverting flow back to the reservoir.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A schematic diagram of a simple hydraulic circuit including a positive displacement pump, a pressure relief valve, a closed valve downstream of the pump, and a reservoir. Arrows indicate the flow path when the closed valve is blocking flow and the relief valve is open, diverting flow back to the reservoir.]*"
         },
         {
           "type": "example_problem",
@@ -30396,11 +30396,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: External Gear Pump Cross-Section\", \"subject\": \"Cross-sectional view of an external gear pump showing fluid flow path from inlet to outlet. Label gears, housing, inlet port, outlet port, direction of rotation and pressure relief grooves.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.1: External Gear Pump Cross-Section](/data/output/assets/ai_generated/ai_Cross_sectional_view_of_an_ext.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Gear Meshing Detail\", \"subject\": \"Detailed view of gear meshing showing involute tooth profile and trapped volume.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Detailed view of gear meshing showing involute tooth profile and trapped volume.]*"
         },
         {
           "type": "paragraph",
@@ -31108,7 +31108,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the pump displacement per revolution:"
         },
         {
@@ -31284,15 +31284,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Fixed Displacement Unbalanced Vane Pump\", \"subject\": \"Cross-sectional view of a fixed displacement unbalanced vane pump, clearly showing the rotor, vanes, stator with its eccentricity, inlet port, and outlet port. Arrows indicate fluid flow direction.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a fixed displacement unbalanced vane pump, clearly showing the rotor, vanes, stator with its eccentricity, inlet port, and outlet port. Arrows indicate fluid flow direction.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Variable Displacement Unbalanced Vane Pump\", \"subject\": \"Cross-sectional view of a variable displacement unbalanced vane pump, illustrating how the stator position is adjusted to change eccentricity and therefore displacement. Arrows indicate fluid flow direction.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 2.2: Variable Displacement Unbalanced Vane Pump](/data/output/assets/ai_generated/ai_Cross_sectional_view_of_a_vari.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.3: Schematic Symbols for Unbalanced Vane Pumps\", \"subject\": \"Schematic symbol of an unbalanced vane pump (both fixed and variable displacement variations). Fixed pump symbol shows a circle with an arrow pointing from inlet to outlet. The variable pump symbol is identical, but the arrow also has a diagonal line through it.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic symbol of an unbalanced vane pump (both fixed and variable displacement variations). Fixed pump symbol shows a circle with an arrow pointing from inlet to outlet. The variable pump symbol is identical, but the arrow also has a diagonal line through it.]*"
         },
         {
           "type": "heading",
@@ -31968,7 +31968,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Axial Piston Pump Schematic\", \"subject\": \"Schematic diagram of an axial piston pump showing the swashplate, pistons, cylinder block, inlet and outlet ports, and flow direction. Label the key components such as the swashplate angle, piston stroke, and direction of rotation.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of an axial piston pump showing the swashplate, pistons, cylinder block, inlet and outlet ports, and flow direction. Label the key components such as the swashplate angle, piston stroke, and direction of rotation.]*"
         },
         {
           "type": "heading",
@@ -31981,7 +31981,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Radial Piston Pump Schematic\", \"subject\": \"Schematic diagram of a radial piston pump showing the rotating cylinder block, pistons, stationary cam ring, inlet and outlet ports, and flow direction. Highlight the radial arrangement of pistons and the interaction with the cam ring.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a radial piston pump showing the rotating cylinder block, pistons, stationary cam ring, inlet and outlet ports, and flow direction. Highlight the radial arrangement of pistons and the interaction with the cam ring.]*"
         }
       ]
     },
@@ -33342,11 +33342,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Bent-Axis Pump Schematic\", \"subject\": \"A detailed cross-sectional view of a bent-axis piston pump, clearly showing the drive shaft, cylinder block, pistons, piston rods, ball and socket joints, offset angle (labeled $\\theta$), piston circle diameter (labeled $D$), and piston stroke (labeled $S$). Include labels for all components.\", \"type\": \"technical illustration\"}]"
+          "text": "![Bent-Axis Pump Schematic](/data/output/assets/ai_generated/ai_A_detailed_cross_sectional_vie.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Piston Motion Diagram\", \"subject\": \"A simplified diagram illustrating the sinusoidal motion of a single piston as the cylinder block rotates. Plot piston position vs. rotation angle.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: A simplified diagram illustrating the sinusoidal motion of a single piston as the cylinder block rotates. Plot piston position vs. rotation angle.]*"
         },
         {
           "type": "paragraph",
@@ -33596,11 +33596,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Swash Plate Pump Schematic\", \"subject\": \"A detailed cross-sectional view of a swash plate piston pump, clearly showing the drive shaft, cylinder block, pistons, swash plate, swash plate angle (labeled $\\alpha$), and the radial distance from the cylinder block axis to the piston (labeled $R$). Include labels for all components.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Malformed Art Request]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Swash Plate Motion Diagram\", \"subject\": \"Illustrate how the swash plate causes the pistons to reciprocate as the cylinder block rotates.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Illustrate how the swash plate causes the pistons to reciprocate as the cylinder block rotates.]*"
         },
         {
           "type": "paragraph",
@@ -34036,7 +34036,7 @@
         },
         {
           "type": "paragraph",
-          "text": "{\\centering [NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Positive Displacement Pump Leakage\", \"subject\": \"Schematic diagram of a generic positive displacement pump, illustrating the input shaft, displacement chamber, and output flow. Arrows should indicate leakage paths within the pump, such as around gears, vanes, or pistons.\", \"type\": \"schematic\"}] }"
+          "text": "{\\centering *[Image generation failed for: Schematic diagram of a generic positive displacement pump, illustrating the input shaft, displacement chamber, and output flow. Arrows should indicate leakage paths within the pump, such as around gears, vanes, or pistons.]* }"
         },
         {
           "type": "paragraph",
@@ -34273,7 +34273,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Energy Flow Diagram of a Pump\", \"subject\": \"A visual representation of energy conversion within a pump, showing input power, hydraulic power, and losses due to leakage, friction, and turbulence. The diagram should clearly label each energy component and the corresponding efficiency.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A visual representation of energy conversion within a pump, showing input power, hydraulic power, and losses due to leakage, friction, and turbulence. The diagram should clearly label each energy component and the corresponding efficiency.]*"
         },
         {
           "type": "paragraph",
@@ -34621,7 +34621,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Fluid Power System Efficiency Block Diagram\", \"subject\": \"Block diagram of a fluid power system starting with input power, a hydraulic pump block, a hydraulic motor block, output power, and labeled arrows between each block showing volumetric efficiency, mechanical efficiency, and overall efficiency.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram of a fluid power system starting with input power, a hydraulic pump block, a hydraulic motor block, output power, and labeled arrows between each block showing volumetric efficiency, mechanical efficiency, and overall efficiency.]*"
         },
         {
           "type": "paragraph",
@@ -35214,7 +35214,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Hydraulic Pump Leakage Paths\", \"subject\": \"Schematic diagram of a hydraulic pump showing internal leakage paths between the high-pressure and low-pressure sides, as well as external leakage paths from the pump housing to the environment. Arrows indicate the direction of leakage flow (Q_leakage), actual flow (Q_actual), and theoretical flow (Q_theoretical).\", \"type\": \"schematic\"}]"
+          "text": "![Figure 3.2: Hydraulic Pump Leakage Paths](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_hydraul.png)"
         },
         {
           "type": "paragraph",
@@ -35590,7 +35590,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.3: Hydraulic Motor Friction Sources\", \"subject\": \"Cutaway diagram of a hydraulic motor showing internal components such as pistons, vanes, and bearings. Arrows indicate areas where friction occurs, highlighting fluid friction and mechanical friction between moving parts.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 3.3: Hydraulic Motor Friction Sources](/data/output/assets/ai_generated/ai_Cutaway_diagram_of_a_hydraulic.png)"
         },
         {
           "type": "paragraph",
@@ -36092,7 +36092,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.5: Fixed vs. Variable Displacement Pumps\", \"subject\": \"Comparison diagram showing the operating principles of a fixed displacement pump and a variable displacement pump. The fixed displacement pump delivers a constant flow rate regardless of demand, while the variable displacement pump adjusts its flow rate to match the demand, highlighting the energy-saving benefits of the latter.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Comparison diagram showing the operating principles of a fixed displacement pump and a variable displacement pump. The fixed displacement pump delivers a constant flow rate regardless of demand, while the variable displacement pump adjusts its flow rate to match the demand, highlighting the energy-saving benefits of the latter.]*"
         },
         {
           "type": "example_problem",
@@ -36141,7 +36141,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.6: Hydraulic System Efficiency Improvement\", \"subject\": \"Diagram illustrating a specific hydraulic system application, such as an industrial press, with key components labeled (pump, motor, valves, cylinders). The diagram highlights efficiency improvement measures implemented in the system, such as using a variable displacement pump and optimizing pipe routing.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Diagram illustrating a specific hydraulic system application, such as an industrial press, with key components labeled (pump, motor, valves, cylinders). The diagram highlights efficiency improvement measures implemented in the system, such as using a variable displacement pump and optimizing pipe routing.]*"
         },
         {
           "type": "heading",
@@ -36764,11 +36764,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Shannon's Channel Capacity Theorem\", \"subject\": \"Illustration of Shannon's channel capacity theorem, showing the relationship between bandwidth, SNR, and capacity. A graph plotting capacity vs. SNR for different bandwidths.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: Illustration of Shannon's channel capacity theorem, showing the relationship between bandwidth, SNR, and capacity. A graph plotting capacity vs. SNR for different bandwidths.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Communication System with Channel Coding\", \"subject\": \"Block diagram of a generic communication system including a channel encoder and decoder, showing the source, channel encoder, modulator, channel, demodulator, channel decoder, and destination.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram of a generic communication system including a channel encoder and decoder, showing the source, channel encoder, modulator, channel, demodulator, channel decoder, and destination.]*"
         },
         {
           "type": "heading",
@@ -36977,11 +36977,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Multiple Access Time-Frequency Diagrams\", \"subject\": \"Time-frequency diagrams illustrating FDMA, TDMA, and OFDMA, showing how the available time and frequency resources are divided among multiple users.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Time-frequency diagrams illustrating FDMA, TDMA, and OFDMA, showing how the available time and frequency resources are divided among multiple users.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.2: CDMA Transmitter/Receiver\", \"subject\": \"Block diagram of a simplified CDMA transmitter and receiver, showing spreading and despreading using orthogonal codes.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram of a simplified CDMA transmitter and receiver, showing spreading and despreading using orthogonal codes.]*"
         },
         {
           "type": "heading",
@@ -37228,7 +37228,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Calculate the displacement volume per revolution ($V_d$):"
         },
         {
@@ -37339,7 +37339,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Cross-Sectional View of a Sliding Vane Pump\", \"subject\": \"Cross-sectional view of a sliding vane pump, showing the rotor, vanes, cam ring, inlet port, and outlet port. Illustrate the movement of the vanes as the rotor rotates.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a sliding vane pump, showing the rotor, vanes, cam ring, inlet port, and outlet port. Illustrate the movement of the vanes as the rotor rotates.]*"
         },
         {
           "type": "paragraph",
@@ -37434,7 +37434,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Generic Wireless Communication System\", \"subject\": \"A block diagram illustrating a wireless communication system. The diagram contains three primary blocks: a 'Transmitter' block, a 'Channel' block, and a 'Receiver' block. The 'Transmitter' block includes components like 'Encoder,' 'Modulator,' and 'Transmit Antenna.' The 'Channel' block represents the wireless medium, incorporating 'Noise' and 'Interference.' The 'Receiver' block contains components like 'Receive Antenna,' 'Demodulator,' and 'Decoder.' Arrows indicate the flow of signals through the system.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A block diagram illustrating a wireless communication system. The diagram contains three primary blocks: a 'Transmitter' block, a 'Channel' block, and a 'Receiver' block. The 'Transmitter' block includes components like 'Encoder,' 'Modulator,' and 'Transmit Antenna.' The 'Channel' block represents the wireless medium, incorporating 'Noise' and 'Interference.' The 'Receiver' block contains components like 'Receive Antenna,' 'Demodulator,' and 'Decoder.' Arrows indicate the flow of signals through the system.]*"
         },
         {
           "type": "heading",
@@ -38448,7 +38448,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Double-Acting Cylinder Cross-Section\", \"subject\": \"Cross-sectional diagram of a double-acting hydraulic cylinder, clearly labeling the piston, rod, cylinder bore, hydraulic fluid inlet/outlet ports, and seals. Annotate the direction of force for extension and retraction strokes. Indicate the effective area for both extension (piston area) and retraction (piston area minus rod area).\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 2.2: Double-Acting Cylinder Cross-Section](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_d.png)"
         },
         {
           "type": "example_problem",
@@ -38464,7 +38464,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the piston area:"
         },
         {
@@ -38628,7 +38628,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the piston area (extension):"
         },
         {
@@ -38768,11 +38768,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.3: Hydraulic Gear Motor - Exploded View\", \"subject\": \"Exploded view diagram of a hydraulic gear motor, clearly showing the gears (driving gear and driven gear), housing, inlet/outlet ports, and shaft. Illustrate the direction of fluid flow and gear rotation. Label the high-pressure and low-pressure sides of the motor.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Exploded view diagram of a hydraulic gear motor, clearly showing the gears (driving gear and driven gear), housing, inlet/outlet ports, and shaft. Illustrate the direction of fluid flow and gear rotation. Label the high-pressure and low-pressure sides of the motor.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.4: Hydraulic Vane Motor - Cross Section\", \"subject\": \"Simplified cross-sectional diagram showing the operating principle of a hydraulic vane motor. Show the rotor, vanes, stator, inlet and outlet ports, and the direction of rotation. Illustrate how the pressurized fluid acts on the vanes to create rotation.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Simplified cross-sectional diagram showing the operating principle of a hydraulic vane motor. Show the rotor, vanes, stator, inlet and outlet ports, and the direction of rotation. Illustrate how the pressurized fluid acts on the vanes to create rotation.]*"
         },
         {
           "type": "example_problem",
@@ -39183,7 +39183,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the work done per cycle:"
         },
         {
@@ -39251,7 +39251,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Circuit Components:"
         },
         {
@@ -39307,7 +39307,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Wireless Communication Systems"
         },
         {
@@ -39325,7 +39325,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Generic Wireless Communication System\", \"subject\": \"Block diagram of a generic wireless communication system showing transmitter, channel, and receiver. The transmitter block includes source coding, channel coding, modulation, and RF front-end. The wireless channel block represents path loss, fading, and interference. The receiver block includes RF front-end, demodulation, channel decoding, and source decoding.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram of a generic wireless communication system showing transmitter, channel, and receiver. The transmitter block includes source coding, channel coding, modulation, and RF front-end. The wireless channel block represents path loss, fading, and interference. The receiver block includes RF front-end, demodulation, channel decoding, and source decoding.]*"
         },
         {
           "type": "example_problem",
@@ -39455,7 +39455,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Channel Capacity vs. SNR\", \"subject\": \"Illustration of the relationship between channel capacity, bandwidth, and SNR, showing the Shannon limit. The x-axis represents SNR, and the y-axis represents channel capacity. The curve illustrates the theoretical limit of channel capacity as a function of SNR.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: Illustration of the relationship between channel capacity, bandwidth, and SNR, showing the Shannon limit. The x-axis represents SNR, and the y-axis represents channel capacity. The curve illustrates the theoretical limit of channel capacity as a function of SNR.]*"
         },
         {
           "type": "example_problem",
@@ -39527,7 +39527,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Wireless Communication Systems"
         },
         {
@@ -39825,15 +39825,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: AM, FM, and PM Waveforms\", \"subject\": \"Waveforms illustrating AM, FM, and PM modulation. Show a message signal and the corresponding modulated carrier wave for each modulation technique. Clearly label the amplitude, frequency, and phase variations.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Waveforms illustrating AM, FM, and PM modulation. Show a message signal and the corresponding modulated carrier wave for each modulation technique. Clearly label the amplitude, frequency, and phase variations.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: QPSK, 16-QAM, and 64-QAM Constellation Diagrams\", \"subject\": \"Constellation diagrams for QPSK, 16-QAM, and 64-QAM modulation schemes. Show the signal points in the complex plane, and label the corresponding bit patterns.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Constellation diagrams for QPSK, 16-QAM, and 64-QAM modulation schemes. Show the signal points in the complex plane, and label the corresponding bit patterns.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.3: OFDM Transmitter and Receiver\", \"subject\": \"Block diagram of an OFDM transmitter and receiver. Show the main components, including the serial-to-parallel converter, IFFT/FFT, guard interval insertion/removal, and modulator/demodulator.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 3.3: OFDM Transmitter and Receiver](/data/output/assets/ai_generated/ai_Block_diagram_of_an_OFDM_trans.png)"
         },
         {
           "type": "paragraph",
@@ -40789,11 +40789,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Single Cylinder in Cross-Flow\", \"subject\": \"Schematic of a single cylinder in cross-flow, showing the formation of the boundary layer, separation point, and wake region. Include labels for key parameters like flow velocity (U), cylinder diameter (D), and pressure distribution around the cylinder.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Schematic of a single cylinder in cross-flow, showing the formation of the boundary layer, separation point, and wake region. Include labels for key parameters like flow velocity (U), cylinder diameter (D), and pressure distribution around the cylinder.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.2: Vortex Shedding\", \"subject\": \"Illustration of vortex shedding behind a cylinder, depicting the alternating formation and shedding of vortices in the wake (Karman vortex street).\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Illustration of vortex shedding behind a cylinder, depicting the alternating formation and shedding of vortices in the wake (Karman vortex street).]*"
         },
         {
           "type": "paragraph",
@@ -41117,7 +41117,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.1: Basic Hydraulic System\", \"subject\": \"A schematic diagram of a basic hydraulic system. It should show a reservoir containing hydraulic fluid, a pump drawing fluid from the reservoir, a pressure relief valve, a control valve (e.g., a 4-way valve), connecting lines/hoses, and a hydraulic cylinder. Arrows should indicate the direction of fluid flow throughout the system.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 5.1: Basic Hydraulic System](/data/output/assets/ai_generated/ai_A_schematic_diagram_of_a_basic.png)"
         },
         {
           "type": "paragraph",
@@ -41657,11 +41657,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.5: Two-Stage Telescoping Cylinder\", \"subject\": \"A cross-sectional view of a two-stage telescoping cylinder in both retracted and extended positions. The diagram should clearly label each stage (piston and barrel), the fluid ports, and show the direction of fluid flow for both extension and retraction. Indicate the relative movement of each stage during extension.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A cross-sectional view of a two-stage telescoping cylinder in both retracted and extended positions. The diagram should clearly label each stage (piston and barrel), the fluid ports, and show the direction of fluid flow for both extension and retraction. Indicate the relative movement of each stage during extension.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.6: Telescoping Cylinder in a Dump Truck\", \"subject\": \"An illustration of a multi-stage telescoping cylinder used in a dump truck application to lift the truck bed. The diagram should show the cylinder mounted beneath the truck bed and extending to raise it. Highlight the long stroke capability of the telescoping cylinder.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: An illustration of a multi-stage telescoping cylinder used in a dump truck application to lift the truck bed. The diagram should show the cylinder mounted beneath the truck bed and extending to raise it. Highlight the long stroke capability of the telescoping cylinder.]*"
         },
         {
           "type": "paragraph",
@@ -42358,7 +42358,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Directional Control Valves"
         },
         {
@@ -42772,15 +42772,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Solenoid-Actuated Four-Way Valve\", \"subject\": \"A cutaway view of a solenoid-actuated four-way valve, showing the solenoid coil, armature, valve spool, and fluid flow paths. Label the key components.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A cutaway view of a solenoid-actuated four-way valve, showing the solenoid coil, armature, valve spool, and fluid flow paths. Label the key components.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.2: Pilot-Operated Four-Way Valve\", \"subject\": \"A schematic diagram of a pilot-operated four-way valve, showing the pilot pressure line, pilot valve, main valve spool, and fluid flow paths. Label the key components.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A schematic diagram of a pilot-operated four-way valve, showing the pilot pressure line, pilot valve, main valve spool, and fluid flow paths. Label the key components.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.3: Mechanically Actuated Valve\", \"subject\": \"A diagram illustrating a mechanically actuated valve with a cam follower. Show the cam, follower, valve spool, and fluid flow paths. Label the key components.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A diagram illustrating a mechanically actuated valve with a cam follower. Show the cam, follower, valve spool, and fluid flow paths. Label the key components.]*"
         },
         {
           "type": "example_problem",
@@ -43855,7 +43855,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Single-Stage Pressure Relief Valve Cross-Section\", \"subject\": \"A detailed cross-sectional view of a single-stage pressure relief valve. Show the poppet, spring, adjustment screw, inlet port, and outlet port clearly labeled. Include fluid flow paths at cracking pressure (small flow) and full flow (large flow) to illustrate valve operation. Use color-coding to differentiate between high-pressure and low-pressure regions.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.2: Single-Stage Pressure Relief Valve Cross-Section](/data/output/assets/ai_generated/ai_A_detailed_cross_sectional_vie.png)"
         },
         {
           "type": "example_problem",
@@ -43975,11 +43975,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Compound Pressure Relief Valve Cross-Section\", \"subject\": \"A detailed cross-sectional view of a compound pressure relief valve. Show the pilot stage, main stage piston, orifices, inlet port, outlet port, tank port, and remote control port clearly labeled. Use color-coding to differentiate between high-pressure, low-pressure, and pilot pressure regions. Include flow paths to illustrate the valve's operation.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.3: Compound Pressure Relief Valve Cross-Section](/data/output/assets/ai_generated/ai_A_detailed_cross_sectional_vie.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.4: Compound Relief Valve Block Diagram\", \"subject\": \"A simplified block diagram illustrating the two-stage operation of the compound relief valve. Show the pilot stage and main stage as separate blocks with interconnecting lines representing the hydraulic connection and control flow. Highlight the interaction between the two stages.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 1.4: Compound Relief Valve Block Diagram](/data/output/assets/ai_generated/ai_A_simplified_block_diagram_ill.png)"
         }
       ]
     },
@@ -44210,7 +44210,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Spring-Loaded Pressure Relief Valve\", \"subject\": \"Cross-sectional view of a typical spring-loaded pressure relief valve. Label key components: valve body, poppet, spring, adjustment screw, inlet port, outlet port, and pressure tap.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a typical spring-loaded pressure relief valve. Label key components: valve body, poppet, spring, adjustment screw, inlet port, outlet port, and pressure tap.]*"
         },
         {
           "type": "paragraph",
@@ -44271,7 +44271,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Pressure Relief Valve Schematics\", \"subject\": \"Schematic symbol for a pressure relief valve, both normally closed and normally open configurations.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic symbol for a pressure relief valve, both normally closed and normally open configurations.]*"
         },
         {
           "type": "example_problem",
@@ -45088,11 +45088,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.8: Hydraulic Circuit with Sequence Valve\", \"subject\": \"Schematic diagram of a hydraulic circuit using a sequence valve to control two actuators in a specific order. Show the pump, sequence valve, actuator 1, actuator 2, and any other relevant components.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 1.8: Hydraulic Circuit with Sequence Valve](/data/output/assets/ai_generated/ai_Schematic_diagram_of_a_hydraul.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.9: Sequence Valve Internal Construction\", \"subject\": \"Internal construction diagram of a typical sequence valve, showing the poppet, spring, pilot pressure connection, and flow paths.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Internal construction diagram of a typical sequence valve, showing the poppet, spring, pilot pressure connection, and flow paths.]*"
         },
         {
           "type": "heading",
@@ -45347,7 +45347,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Sequence Valve Cross-Section\", \"subject\": \"A cross-sectional diagram of a typical sequence valve, clearly labeling the pilot port, control piston, main poppet, spring, vent port, inlet port, and outlet port. Show the flow path in both the closed and open states.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A cross-sectional diagram of a typical sequence valve, clearly labeling the pilot port, control piston, main poppet, spring, vent port, inlet port, and outlet port. Show the flow path in both the closed and open states.]*"
         },
         {
           "type": "paragraph",
@@ -45605,7 +45605,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Counterbalance Valve."
         },
         {
@@ -45622,11 +45622,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Counterbalance Valve Circuit\", \"subject\": \"A hydraulic circuit diagram showing a vertical cylinder controlled by a counterbalance valve and a directional control valve (DCV). Clearly label the primary and secondary ports of the counterbalance valve, the DCV, the cylinder ports, and the hydraulic power unit.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A hydraulic circuit diagram showing a vertical cylinder controlled by a counterbalance valve and a directional control valve (DCV). Clearly label the primary and secondary ports of the counterbalance valve, the DCV, the cylinder ports, and the hydraulic power unit.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Counterbalance Valve Cutaway\", \"subject\": \"A detailed cross-sectional view of a counterbalance valve, highlighting the spool, spring, check valve, and pressure-sensing mechanism.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.3: Counterbalance Valve Cutaway](/data/output/assets/ai_generated/ai_A_detailed_cross_sectional_vie.png)"
         },
         {
           "type": "paragraph",
@@ -46117,7 +46117,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Wireless Communication Systems"
         },
         {
@@ -46862,7 +46862,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Multipath Fading\", \"subject\": \"Illustration of multipath fading in a wireless environment, showing multiple signal paths between a transmitter and receiver due to reflections from buildings and other objects. Some paths arrive in phase, strengthening the signal, while others arrive out of phase, weakening it.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Illustration of multipath fading in a wireless environment, showing multiple signal paths between a transmitter and receiver due to reflections from buildings and other objects. Some paths arrive in phase, strengthening the signal, while others arrive out of phase, weakening it.]*"
         },
         {
           "type": "heading",
@@ -47206,7 +47206,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Identify the given parameters:"
         },
         {
@@ -47504,15 +47504,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: AM, FM, and PM Waveforms\", \"subject\": \"Three graphs displaying Amplitude Modulation (AM), Frequency Modulation (FM), and Phase Modulation (PM) waveforms respectively, all modulated by the same simple sine wave.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: Three graphs displaying Amplitude Modulation (AM), Frequency Modulation (FM), and Phase Modulation (PM) waveforms respectively, all modulated by the same simple sine wave.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Constellation Diagrams\", \"subject\": \"Constellation diagrams for Binary Phase Shift Keying (BPSK), Quadrature Phase Shift Keying (QPSK), and 16-Quadrature Amplitude Modulation (16-QAM). BPSK has two points, QPSK has four points, and 16-QAM has sixteen points.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Constellation diagrams for Binary Phase Shift Keying (BPSK), Quadrature Phase Shift Keying (QPSK), and 16-Quadrature Amplitude Modulation (16-QAM). BPSK has two points, QPSK has four points, and 16-QAM has sixteen points.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.3: OFDM Transmitter Block Diagram\", \"subject\": \"A block diagram of an OFDM transmitter, showing the serial-to-parallel conversion, subcarrier mapping, IFFT, cyclic prefix insertion, and digital-to-analog conversion.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A block diagram of an OFDM transmitter, showing the serial-to-parallel conversion, subcarrier mapping, IFFT, cyclic prefix insertion, and digital-to-analog conversion.]*"
         },
         {
           "type": "heading",
@@ -47918,11 +47918,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: FDMA Illustration\", \"subject\": \"Illustration of Frequency Division Multiple Access (FDMA), showing different users accessing different frequency bands of the channel. The diagram shows a frequency spectrum divided into several non-overlapping frequency bands, each labeled with a user (User 1, User 2, User 3, etc.)\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Illustration of Frequency Division Multiple Access (FDMA), showing different users accessing different frequency bands of the channel. The diagram shows a frequency spectrum divided into several non-overlapping frequency bands, each labeled with a user (User 1, User 2, User 3, etc.)]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: TDMA Illustration\", \"subject\": \"Illustration of Time Division Multiple Access (TDMA), showing different users accessing the channel at different time slots within a repeating frame structure. The diagram shows a timeline divided into frames, and each frame is further divided into time slots, each allocated to a user.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Illustration of Time Division Multiple Access (TDMA), showing different users accessing the channel at different time slots within a repeating frame structure. The diagram shows a timeline divided into frames, and each frame is further divided into time slots, each allocated to a user.]*"
         },
         {
           "type": "paragraph",
@@ -48091,7 +48091,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Weight-Loaded Accumulator\", \"subject\": \"Cross-sectional view of a weight-loaded accumulator, showing the cylinder, piston, weight, oil port, and labeling of key dimensions (piston diameter, weight height, cylinder height)\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a weight-loaded accumulator, showing the cylinder, piston, weight, oil port, and labeling of key dimensions (piston diameter, weight height, cylinder height)]*"
         },
         {
           "type": "paragraph",
@@ -48253,7 +48253,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Spring-Loaded Accumulator\", \"subject\": \"Cross-sectional view of a spring-loaded accumulator, showing the cylinder, piston, spring, oil port, and labeling of key dimensions (piston diameter, spring length, spring compression)\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a spring-loaded accumulator, showing the cylinder, piston, spring, oil port, and labeling of key dimensions (piston diameter, spring length, spring compression)]*"
         },
         {
           "type": "paragraph",
@@ -48861,7 +48861,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Piston Displacement vs. Crank Angle\", \"subject\": \"Graph showing piston displacement vs. crank angle for different connecting rod length-to-crank radius ratios (L/r = 3, 4, 5).\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: Graph showing piston displacement vs. crank angle for different connecting rod length-to-crank radius ratios (L/r = 3, 4, 5).]*"
         },
         {
           "type": "example_problem",
@@ -50177,7 +50177,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Piston Cooling with Oil Jets\", \"subject\": \"Cross-sectional view of a piston with oil jets for under-crown cooling, showing the oil flow path.\", \"type\": \"technical illustration\"}] [NEW_DIAGRAM: {\"caption\": \"Figure 4.2: Forced Lubrication System\", \"subject\": \"Schematic diagram of a forced lubrication system in an engine, showing the oil pump, oil filter, and oil galleries.\", \"type\": \"schematic\"}] [NEW_DIAGRAM: {\"caption\": \"Figure 4.3: Oil Film Between Piston Ring and Cylinder Wall\", \"subject\": \"Illustration of the oil film between a piston ring and the cylinder wall.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 4.1: Piston Cooling with Oil Jets](/data/output/assets/ai_generated/ai_Cross_sectional_view_of_a_pist.png) *[Image generation failed for: Schematic diagram of a forced lubrication system in an engine, showing the oil pump, oil filter, and oil galleries.]* *[Image generation failed for: Illustration of the oil film between a piston ring and the cylinder wall.]*"
         },
         {
           "type": "paragraph",
@@ -51283,7 +51283,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Piston-Type Accumulator Cross-Section\", \"subject\": \"A cross-sectional view of a piston-type accumulator. Clearly show the cylinder, piston, seals (O-rings), gas chamber, oil port, and threaded lock ring. Indicate the pressure on both sides of the piston (P_oil and P_gas) and the direction of piston movement.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A cross-sectional view of a piston-type accumulator. Clearly show the cylinder, piston, seals (O-rings), gas chamber, oil port, and threaded lock ring. Indicate the pressure on both sides of the piston (P_oil and P_gas) and the direction of piston movement.]*"
         },
         {
           "type": "paragraph",
@@ -52101,7 +52101,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Basic Wireless Communication System\", \"subject\": \"Block diagram illustrating a basic wireless communication system. The diagram should show a transmitter block, a channel block (with fading and noise), and a receiver block. The transmitter block should include encoding, modulation, and power amplification. The receiver block should include demodulation, decoding, and signal processing.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram illustrating a basic wireless communication system. The diagram should show a transmitter block, a channel block (with fading and noise), and a receiver block. The transmitter block should include encoding, modulation, and power amplification. The receiver block should include demodulation, decoding, and signal processing.]*"
         },
         {
           "type": "paragraph",
@@ -54536,7 +54536,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Hydraulic Intensifier Schematic\", \"subject\": \"Cross-sectional schematic of a hydraulic intensifier showing two cylinders of different diameters connected by a common piston. Indicate input pressure $P_0$ acting on area $A_0$ and output pressure $P_1$ acting on area $A_1$. Arrows should clearly indicate the direction of force and fluid flow.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional schematic of a hydraulic intensifier showing two cylinders of different diameters connected by a common piston. Indicate input pressure $P_0$ acting on area $A_0$ and output pressure $P_1$ acting on area $A_1$. Arrows should clearly indicate the direction of force and fluid flow.]*"
         },
         {
           "type": "paragraph",
@@ -55089,7 +55089,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.3: Regenerative Hydraulic Circuit\", \"subject\": \"Schematic of a regenerative hydraulic circuit showing a double-acting cylinder with both ends connected to the directional control valve (DCV) in a way that allows flow from the rod end to contribute to the flow at the blank end during extension. Clearly indicate $Q_p$, $Q_R$, $A_p$, $A_R$, and the direction of flow during extension.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic of a regenerative hydraulic circuit showing a double-acting cylinder with both ends connected to the directional control valve (DCV) in a way that allows flow from the rod end to contribute to the flow at the blank end during extension. Clearly indicate $Q_p$, $Q_R$, $A_p$, $A_R$, and the direction of flow during extension.]*"
         },
         {
           "type": "paragraph",
@@ -55710,7 +55710,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.3: Mechanically Linked Cylinders\", \"subject\": \"Schematic diagram of two hydraulic cylinders mechanically linked with a tie rod, ensuring synchronized movement. Label cylinders 1 and 2, piston rods, tie rod, and connection points.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of two hydraulic cylinders mechanically linked with a tie rod, ensuring synchronized movement. Label cylinders 1 and 2, piston rods, tie rod, and connection points.]*"
         },
         {
           "type": "paragraph",
@@ -56026,11 +56026,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.6: Pneumatic Cylinder in Pick-and-Place Robot\", \"subject\": \"Illustration of a pneumatic cylinder used in a pick-and-place robot, showing the cylinder extending and retracting to move an object. Label the cylinder, robot arm, gripper, and workpiece.\", \"type\": \"illustration\"}]"
+          "text": "*[Image generation failed for: Illustration of a pneumatic cylinder used in a pick-and-place robot, showing the cylinder extending and retracting to move an object. Label the cylinder, robot arm, gripper, and workpiece.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.7: Pneumatic Circuit\", \"subject\": \"Diagram of a pneumatic circuit controlling a double-acting cylinder, including a compressor, air filter, pressure regulator, lubricator, directional control valve, and cylinder. Label all components and show airflow direction.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Diagram of a pneumatic circuit controlling a double-acting cylinder, including a compressor, air filter, pressure regulator, lubricator, directional control valve, and cylinder. Label all components and show airflow direction.]*"
         },
         {
           "type": "paragraph",
@@ -57278,7 +57278,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Molecular Representation of Gas\", \"subject\": \"Molecular representation of a gas in a container showing the average kinetic energy of the molecules increasing with temperature.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Molecular representation of a gas in a container showing the average kinetic energy of the molecules increasing with temperature.]*"
         },
         {
           "type": "paragraph",
@@ -57592,7 +57592,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Reciprocating Piston Compressor\", \"subject\": \"Cross-sectional view of a reciprocating piston compressor showing key components (piston, cylinder, valves).\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a reciprocating piston compressor showing key components (piston, cylinder, valves).]*"
         },
         {
           "type": "list",
@@ -57963,7 +57963,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Compressor"
         },
         {
@@ -58286,11 +58286,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: Cross-sectional diagram of a typical pressure regulator showing the poppet valve, diaphragm, spring, and adjustment screw. Illustrate the flow path and how the regulator maintains constant downstream pressure.]"
+          "text": "![Cross-sectional diagram of a typical...](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_t.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: Graph showing the relationship between downstream pressure and flow rate for a pressure regulator, illustrating pressure droop.]"
+          "text": "![Graph showing the relationship between...](/data/output/assets/ai_generated/ai_Graph_showing_the_relationship.png)"
         },
         {
           "type": "heading",
@@ -58328,11 +58328,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: Cross-sectional diagram of a typical lubricator showing the venturi, oil reservoir, and oil adjustment needle valve. Illustrate the flow path and how oil is added to the air stream.]"
+          "text": "![Cross-sectional diagram of a typical...](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_t.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: Illustration of the different oil droplet sizes produced by micro-fog and oil-fog lubricators.]"
+          "text": "*[Image generation failed for: Illustration of the different oil droplet sizes produced by micro-fog and oil-fog lubricators.]*"
         },
         {
           "type": "heading",
@@ -58370,11 +58370,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: Cutaway diagram of a porous metal muffler showing the porous material and the airflow path.]"
+          "text": "*[Image generation failed for: Cutaway diagram of a porous metal muffler showing the porous material and the airflow path.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: Illustration of the sound waves being attenuated by a muffler.]"
+          "text": "*[Image generation failed for: Illustration of the sound waves being attenuated by a muffler.]*"
         },
         {
           "type": "heading",
@@ -58412,11 +58412,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: Schematic diagram of a refrigerated air dryer showing the compressor, condenser, evaporator, and drain.]"
+          "text": "*[Image generation failed for: Schematic diagram of a refrigerated air dryer showing the compressor, condenser, evaporator, and drain.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: Schematic diagram of a desiccant air dryer showing the desiccant bed and the regeneration cycle.]"
+          "text": "*[Image generation failed for: Schematic diagram of a desiccant air dryer showing the desiccant bed and the regeneration cycle.]*"
         },
         {
           "type": "heading",
@@ -58443,7 +58443,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Pneumatic System Block Diagram\", \"subject\": \"A block diagram of a pneumatic system. It shows a compressor connected to a receiver tank. The receiver tank is connected to a fluid conditioner unit which contains a filter, regulator, and lubricator. The output of the fluid conditioner unit goes to an actuator (e.g., a cylinder). The fluid conditioner unit is highlighted to emphasize its role.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A block diagram of a pneumatic system. It shows a compressor connected to a receiver tank. The receiver tank is connected to a fluid conditioner unit which contains a filter, regulator, and lubricator. The output of the fluid conditioner unit goes to an actuator (e.g., a cylinder). The fluid conditioner unit is highlighted to emphasize its role.]*"
         },
         {
           "type": "paragraph",
@@ -58455,7 +58455,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: In-Line Filter Cutaway\", \"subject\": \"A cutaway diagram of an in-line pneumatic filter. The diagram should clearly show the airflow path, the filter element (e.g., pleated paper or sintered bronze), the contaminant collection bowl at the bottom, and the baffling system designed to prevent contaminants from re-entering the air stream.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A cutaway diagram of an in-line pneumatic filter. The diagram should clearly show the airflow path, the filter element (e.g., pleated paper or sintered bronze), the contaminant collection bowl at the bottom, and the baffling system designed to prevent contaminants from re-entering the air stream.]*"
         }
       ]
     },
@@ -58528,11 +58528,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.4: Pressure Regulator Cross-Section\", \"subject\": \"A cross-sectional diagram of a typical pressure regulator. The diagram should clearly show the inlet port, outlet port, poppet valve, diaphragm, spring, adjustment screw, and the flow path of air through the regulator. Arrows should indicate the direction of airflow.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A cross-sectional diagram of a typical pressure regulator. The diagram should clearly show the inlet port, outlet port, poppet valve, diaphragm, spring, adjustment screw, and the flow path of air through the regulator. Arrows should indicate the direction of airflow.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.5: Pressure Regulator Performance Curve\", \"subject\": \"A graph showing the relationship between downstream pressure and flow rate for a pressure regulator. The graph should illustrate the concept of pressure droop, where the downstream pressure decreases as the flow rate increases. Include example data points.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: A graph showing the relationship between downstream pressure and flow rate for a pressure regulator. The graph should illustrate the concept of pressure droop, where the downstream pressure decreases as the flow rate increases. Include example data points.]*"
         },
         {
           "type": "example_problem",
@@ -58643,11 +58643,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.8: Porous Metal Muffler\", \"subject\": \"A cutaway diagram of a porous metal muffler. The diagram should show the porous metal material and the airflow path through the muffler.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A cutaway diagram of a porous metal muffler. The diagram should show the porous metal material and the airflow path through the muffler.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.9: Sound Wave Attenuation\", \"subject\": \"An illustration depicting sound waves being attenuated by a muffler. The illustration should show the sound waves entering the muffler and exiting with reduced amplitude.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: An illustration depicting sound waves being attenuated by a muffler. The illustration should show the sound waves entering the muffler and exiting with reduced amplitude.]*"
         },
         {
           "type": "example_problem",
@@ -58713,11 +58713,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.10: Refrigerated Air Dryer\", \"subject\": \"A schematic diagram of a refrigerated air dryer. The diagram should show the compressor, condenser, evaporator, and drain.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A schematic diagram of a refrigerated air dryer. The diagram should show the compressor, condenser, evaporator, and drain.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.11: Desiccant Air Dryer\", \"subject\": \"A schematic diagram of a desiccant air dryer. The diagram should show the desiccant bed and the regeneration cycle, including the flow of dry air for regeneration.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A schematic diagram of a desiccant air dryer. The diagram should show the desiccant bed and the regeneration cycle, including the flow of dry air for regeneration.]*"
         },
         {
           "type": "example_problem",
@@ -58803,7 +58803,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Basic Pneumatic System\", \"subject\": \"Schematic diagram of a basic pneumatic system, showing an air compressor with an aftercooler and dryer, an air receiver (reservoir), a pressure regulator, a directional control valve (DCV), a pneumatic actuator (cylinder), a lubricator and a filter. Include connecting airlines.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a basic pneumatic system, showing an air compressor with an aftercooler and dryer, an air receiver (reservoir), a pressure regulator, a directional control valve (DCV), a pneumatic actuator (cylinder), a lubricator and a filter. Include connecting airlines.]*"
         },
         {
           "type": "example_problem",
@@ -59133,11 +59133,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.4: Pneumatic Lubricator\", \"subject\": \"Cross-sectional diagram of a pneumatic lubricator, showing the inlet port, outlet port, venturi, oil reservoir, drip tube, sight dome, and adjustment screw. Label each component clearly.\", \"type\": \"technical illustration\"}]"
+          "text": "![Figure 1.4: Pneumatic Lubricator](/data/output/assets/ai_generated/ai_Cross_sectional_diagram_of_a_p.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.5: Oil Mist Distribution\", \"subject\": \"Illustration of oil mist distribution in a pneumatic system, showing the difference in travel distance between coarse and fine particles. Include examples of pneumatic components at various distances from the lubricator.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Illustration of oil mist distribution in a pneumatic system, showing the difference in travel distance between coarse and fine particles. Include examples of pneumatic components at various distances from the lubricator.]*"
         },
         {
           "type": "example_problem",
@@ -59529,7 +59529,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Sound Pressure Level (SPL) in Decibels (dB):"
         },
         {
@@ -59977,7 +59977,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Pneumatic System Components and Actuators"
         },
         {
@@ -59999,7 +59999,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Typical Pneumatic System Schematic\", \"subject\": \"A schematic diagram of a pneumatic system, clearly showing the compressor, air receiver, FRL unit, directional control valves, and actuators (cylinders and rotary actuators) interconnected by pneumatic lines. Label each component clearly.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A schematic diagram of a pneumatic system, clearly showing the compressor, air receiver, FRL unit, directional control valves, and actuators (cylinders and rotary actuators) interconnected by pneumatic lines. Label each component clearly.]*"
         },
         {
           "type": "heading",
@@ -60287,7 +60287,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Single and Double Acting Cylinders\", \"subject\": \"A cutaway view of both single-acting and double-acting pneumatic cylinders. Show the internal piston, seals, air ports, and spring (for the single-acting cylinder). Clearly label each component.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A cutaway view of both single-acting and double-acting pneumatic cylinders. Show the internal piston, seals, air ports, and spring (for the single-acting cylinder). Clearly label each component.]*"
         },
         {
           "type": "heading",
@@ -61300,7 +61300,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Calculate the force required:"
         },
         {
@@ -61376,7 +61376,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Pneumatic Rotary Actuator\", \"subject\": \"Exploded view of a pneumatic rotary actuator, showing the cylinder heads, floating pistons, rack and pinion mechanism, and output shaft.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Exploded view of a pneumatic rotary actuator, showing the cylinder heads, floating pistons, rack and pinion mechanism, and output shaft.]*"
         },
         {
           "type": "example_problem",
@@ -61470,7 +61470,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the force required:"
         },
         {
@@ -61646,7 +61646,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Calculate Displacement:"
         },
         {
@@ -61997,7 +61997,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "4. Select a Valve:"
         },
         {
@@ -62037,7 +62037,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Identify Required Air Quality:"
         },
         {
@@ -62760,15 +62760,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Generic Wireless Communication System\", \"subject\": \"A block diagram showing a transmitter encoding data, modulating a carrier, and transmitting over a channel with added noise. The receiver then receives the signal, demodulates it, and decodes the data. Label each block clearly. Include encoding/decoding, modulation/demodulation.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A block diagram showing a transmitter encoding data, modulating a carrier, and transmitting over a channel with added noise. The receiver then receives the signal, demodulates it, and decodes the data. Label each block clearly. Include encoding/decoding, modulation/demodulation.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Electromagnetic Spectrum Allocation\", \"subject\": \"An illustration of the electromagnetic spectrum ranging from extremely low frequencies to gamma rays, highlighting frequency bands allocated for specific wireless communication technologies such as cellular, Wi-Fi, Bluetooth, FM radio, and satellite communication. Annotate the relevant frequency ranges for each technology.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: An illustration of the electromagnetic spectrum ranging from extremely low frequencies to gamma rays, highlighting frequency bands allocated for specific wireless communication technologies such as cellular, Wi-Fi, Bluetooth, FM radio, and satellite communication. Annotate the relevant frequency ranges for each technology.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Graphical Representation of the Friis Transmission Equation\", \"subject\": \"A diagram visually representing the Friis Transmission Equation. Show a transmitting antenna radiating power, and a receiving antenna at distance d capturing a portion of that power. Indicate Pt, Pr, Gt, Gr, and lambda on the diagram.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A diagram visually representing the Friis Transmission Equation. Show a transmitting antenna radiating power, and a receiving antenna at distance d capturing a portion of that power. Indicate Pt, Pr, Gt, Gr, and lambda on the diagram.]*"
         }
       ]
     },
@@ -62845,7 +62845,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Symbol Error Probability for M-ary PSK (MPSK):"
         },
         {
@@ -62890,7 +62890,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Spectral Efficiency of M-QAM Modulation:"
         },
         {
@@ -62922,7 +62922,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Power Spectral Density (PSD) of a BPSK Signal:"
         },
         {
@@ -63231,15 +63231,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Constellation Diagrams\", \"subject\": \"Create a figure displaying constellation diagrams for BPSK, QPSK, 8-PSK, 16-QAM, and 64-QAM modulation schemes. Label the signal points with their corresponding bit sequences (using Gray coding). Clearly indicate the decision boundaries for each scheme.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Create a figure displaying constellation diagrams for BPSK, QPSK, 8-PSK, 16-QAM, and 64-QAM modulation schemes. Label the signal points with their corresponding bit sequences (using Gray coding). Clearly indicate the decision boundaries for each scheme.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: QAM Modulator and Demodulator\", \"subject\": \"Show a block diagram of a generic QAM modulator and demodulator. The modulator should take in-phase and quadrature components of the signal, modulate them onto cosine and sine carriers, and then sum the results. The demodulator should take the received signal, multiply it by cosine and sine carriers, and then low-pass filter the results to extract the in-phase and quadrature components.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Show a block diagram of a generic QAM modulator and demodulator. The modulator should take in-phase and quadrature components of the signal, modulate them onto cosine and sine carriers, and then sum the results. The demodulator should take the received signal, multiply it by cosine and sine carriers, and then low-pass filter the results to extract the in-phase and quadrature components.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.3: OFDM Frequency Spectrum\", \"subject\": \"Illustrate the frequency spectrum of an OFDM signal, showing multiple orthogonal subcarriers. Each subcarrier should have a sinc-like shape, and the peaks of the subcarriers should align with the nulls of the adjacent subcarriers to ensure orthogonality. Label the subcarrier spacing.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: Illustrate the frequency spectrum of an OFDM signal, showing multiple orthogonal subcarriers. Each subcarrier should have a sinc-like shape, and the peaks of the subcarriers should align with the nulls of the adjacent subcarriers to ensure orthogonality. Label the subcarrier spacing.]*"
         }
       ]
     },
@@ -63273,7 +63273,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Theoretical Introduction:"
         },
         {
@@ -63373,7 +63373,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.1: Generic Wireless Communication System\", \"subject\": \"Block diagram of a generic wireless communication system. This diagram should show the key components: Source, Encoder, Modulator, Transmitter, Channel, Receiver, Demodulator, Decoder, Destination.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram of a generic wireless communication system. This diagram should show the key components: Source, Encoder, Modulator, Transmitter, Channel, Receiver, Demodulator, Decoder, Destination.]*"
         },
         {
           "type": "heading",
@@ -63444,7 +63444,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.2: Friis Transmission\", \"subject\": \"Illustration of the Friis Transmission Equation, visually depicting the power spreading as the signal propagates from the transmitter to the receiver.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Illustration of the Friis Transmission Equation, visually depicting the power spreading as the signal propagates from the transmitter to the receiver.]*"
         },
         {
           "type": "heading",
@@ -63703,7 +63703,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 2.3: Bandwidth, SNR and Capacity\", \"subject\": \"Illustration showing the relationship between bandwidth, SNR, and channel capacity as defined by the Shannon-Hartley theorem. Use a 3D plot with axes: Bandwidth, SNR, Capacity.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: Illustration showing the relationship between bandwidth, SNR, and channel capacity as defined by the Shannon-Hartley theorem. Use a 3D plot with axes: Bandwidth, SNR, Capacity.]*"
         },
         {
           "type": "example_problem",
@@ -64398,7 +64398,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "QPSK:"
         },
         {
@@ -64950,7 +64950,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "7. Calculate wavelength for 2.4GHz:"
         },
         {
@@ -64969,7 +64969,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate range for 2.4GHz:"
         },
         {
@@ -64998,7 +64998,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.6: Wireless Communication Link\", \"subject\": \"Block diagram illustrating the components of a wireless communication link, including the transmitter, channel, and receiver, with annotations showing the relevant parameters for link budget analysis, such as transmit power, antenna gains, path loss, receiver sensitivity, and interference margin.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram illustrating the components of a wireless communication link, including the transmitter, channel, and receiver, with annotations showing the relevant parameters for link budget analysis, such as transmit power, antenna gains, path loss, receiver sensitivity, and interference margin.]*"
         },
         {
           "type": "paragraph",
@@ -65053,7 +65053,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Total Cost of Ownership Comparison\", \"subject\": \"A simple bar chart visually comparing the initial and operational costs for two different pneumatic system options (A and B) over a 5-year period. Option A should have a higher initial cost (e.g., $5000) but lower operational costs (e.g., $500/year), and vice versa for Option B (e.g., initial cost of $2000 and operational costs of $1200/year). The x-axis represents years (0-5), and the y-axis represents cost in dollars. The chart should clearly show that Option A has a lower TCO over the 5-year period.\", \"type\": \"graph\"}]"
+          "text": "*[Image generation failed for: A simple bar chart visually comparing the initial and operational costs for two different pneumatic system options (A and B) over a 5-year period. Option A should have a higher initial cost (e.g., $5000) but lower operational costs (e.g., $500/year), and vice versa for Option B (e.g., initial cost of $2000 and operational costs of $1200/year). The x-axis represents years (0-5), and the y-axis represents cost in dollars. The chart should clearly show that Option A has a lower TCO over the 5-year period.]*"
         },
         {
           "type": "example_problem",
@@ -65069,7 +65069,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the TCO for Option A:"
         },
         {
@@ -66147,7 +66147,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate Annual Air Loss for Each Leak:"
         },
         {
@@ -66346,7 +66346,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate the initial operating pressure (absolute):"
         },
         {
@@ -66403,7 +66403,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "4. Calculate Air Loss with increased pressure:"
         },
         {
@@ -67061,7 +67061,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Convert pressure drop to lb/ft\u00b2:"
         },
         {
@@ -67143,7 +67143,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Understand the $C_v$ Equation"
         },
         {
@@ -67715,11 +67715,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Vacuum Cup Lifting System\", \"subject\": \"A diagram illustrating a vacuum cup lifting a flat sheet. Show the vacuum cup, the flat sheet, the pressure distribution around the cup, and arrows indicating the lifting force. Label the atmospheric pressure and the vacuum pressure inside the cup.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: A diagram illustrating a vacuum cup lifting a flat sheet. Show the vacuum cup, the flat sheet, the pressure distribution around the cup, and arrows indicating the lifting force. Label the atmospheric pressure and the vacuum pressure inside the cup.]*"
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Suction Cup Mechanics - Force Calculation"
         },
         {
@@ -67728,7 +67728,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Suction Cup Adhering to a Flat Surface\", \"subject\": \"Cross-sectional view of a suction cup adhering to a flat surface, clearly showing Do, Di, Patm, Psuction, and the resulting force vector F. Label the effective area Aeffective.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a suction cup adhering to a flat surface, clearly showing Do, Di, Patm, Psuction, and the resulting force vector F. Label the effective area Aeffective.]*"
         },
         {
           "type": "paragraph",
@@ -67790,7 +67790,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Suction Cup Adhering to a Curved Surface\", \"subject\": \"Cross-sectional view of a suction cup adhering to a curved (spherical) surface, showing the angle of contact \u03b8, Do, Di, Patm, Psuction, and the resulting force vector F. Highlight the projected area.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a suction cup adhering to a curved (spherical) surface, showing the angle of contact \u03b8, Do, Di, Patm, Psuction, and the resulting force vector F. Highlight the projected area.]*"
         },
         {
           "type": "paragraph",
@@ -68176,15 +68176,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: 3/2 Valve\", \"subject\": \"Schematic symbol and internal configuration of a 3/2 normally closed valve, showing airflow in both states.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic symbol and internal configuration of a 3/2 normally closed valve, showing airflow in both states.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: 5/2 Valve\", \"subject\": \"Schematic symbol and internal configuration of a 5/2 valve, showing airflow in both states.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic symbol and internal configuration of a 5/2 valve, showing airflow in both states.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.3: Valve Actuation Methods\", \"subject\": \"Illustration of different valve actuation methods (manual lever, push button, solenoid).\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Illustration of different valve actuation methods (manual lever, push button, solenoid).]*"
         },
         {
           "type": "example_problem",
@@ -68382,23 +68382,23 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.1: Coanda Effect\", \"subject\": \"Schematic diagram illustrating the Coanda effect.\", \"type\": \"schematic\"}]"
+          "text": "![Figure 5.1: Coanda Effect](/data/output/assets/ai_generated/ai_Schematic_diagram_illustrating.png)"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.2: Fluidic Amplifier\", \"subject\": \"Internal configuration of a fluidic amplifier, showing the power jet, control ports, and output ports.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Internal configuration of a fluidic amplifier, showing the power jet, control ports, and output ports.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.3: Fluidic OR/NOR Gate\", \"subject\": \"Symbol and truth table for a fluidic OR/NOR gate.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Symbol and truth table for a fluidic OR/NOR gate.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.4: Fluidic AND/NAND Gate\", \"subject\": \"Symbol and truth table for a fluidic AND/NAND gate.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Symbol and truth table for a fluidic AND/NAND gate.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.5: Fluidic Flip-Flop\", \"subject\": \"Symbol and truth table for a fluidic flip-flop.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Symbol and truth table for a fluidic flip-flop.]*"
         },
         {
           "type": "example_problem",
@@ -68551,11 +68551,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 7.1: PLC Control Example\", \"subject\": \"Illustration showing a PLC connected to sensors (limit switches, pressure sensor) and actuators (solenoid valves) in a pneumatic system.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Illustration showing a PLC connected to sensors (limit switches, pressure sensor) and actuators (solenoid valves) in a pneumatic system.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 7.2: Ladder Logic Example\", \"subject\": \"Ladder logic diagram for controlling a simple pneumatic cylinder (A+A-).\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Ladder logic diagram for controlling a simple pneumatic cylinder (A+A-).]*"
         },
         {
           "type": "example_problem",
@@ -69155,7 +69155,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Fluid Power Circuit Design: Sequential circuit design for simple applications using classic, cascade, step counter, logic with Karnaugh- Veitch Mapping and combinational circuit design methods."
         },
         {
@@ -69188,7 +69188,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Safety interlock: AND Function"
         },
         {
@@ -69209,12 +69209,12 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Safety interlock: AND Function"
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Inverse Operation: NOT Function"
         },
         {
@@ -70223,11 +70223,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Fluidic Logic Gates\", \"subject\": \"Schematic diagrams of fluidic AND, OR, NOT, NAND, NOR, and XOR gates, illustrating the arrangement of wall attachment devices and the flow paths for different input combinations. Clearly label input and output pressures.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagrams of fluidic AND, OR, NOT, NAND, NOR, and XOR gates, illustrating the arrangement of wall attachment devices and the flow paths for different input combinations. Clearly label input and output pressures.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.2: Complex Fluidic Circuit\", \"subject\": \"Example of a more complex fluidic circuit, such as a half-adder or a flip-flop, constructed from basic fluidic logic gates.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Example of a more complex fluidic circuit, such as a half-adder or a flip-flop, constructed from basic fluidic logic gates.]*"
         },
         {
           "type": "example_problem",
@@ -70304,7 +70304,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Determine the minimum output pressure required to switch the driven gates:"
         },
         {
@@ -70559,12 +70559,12 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "DESIGN OF PNEUMATIC CIRCUITS"
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Speed Control Circuits"
         },
         {
@@ -70709,7 +70709,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "4. Calculate the required orifice area (A):"
         },
         {
@@ -70969,7 +70969,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.3: Synchronizing circuit using a flow divider\", \"subject\": \"Hydraulic circuit diagram illustrating a synchronizing circuit using a flow divider valve to control two single-acting cylinders. Show the pump, pressure relief valve, flow divider, directional control valve, and cylinders.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Hydraulic circuit diagram illustrating a synchronizing circuit using a flow divider valve to control two single-acting cylinders. Show the pump, pressure relief valve, flow divider, directional control valve, and cylinders.]*"
         }
       ]
     },
@@ -71186,7 +71186,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Convert Pressure to Pascals:"
         },
         {
@@ -71229,7 +71229,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Regenerative Circuit"
         },
         {
@@ -71238,7 +71238,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.5: Regenerative hydraulic circuit\", \"subject\": \"Hydraulic circuit diagram illustrating a regenerative circuit using a directional control valve to redirect the fluid from the rod end to the piston end of the cylinder. Show the pump, pressure relief valve, directional control valve, and cylinder.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Hydraulic circuit diagram illustrating a regenerative circuit using a directional control valve to redirect the fluid from the rod end to the piston end of the cylinder. Show the pump, pressure relief valve, directional control valve, and cylinder.]*"
         },
         {
           "type": "heading",
@@ -71319,7 +71319,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "4. Calculate the Effective Area:"
         },
         {
@@ -71453,7 +71453,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "4. Calculate the Effective Area:"
         },
         {
@@ -71629,7 +71629,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Pump Unloading Circuit"
         },
         {
@@ -71642,7 +71642,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 5.6: Pump unloading circuit\", \"subject\": \"Hydraulic circuit diagram illustrating a pump unloading circuit using an unloading valve connected in parallel with the main hydraulic circuit. Show the pump, pressure relief valve, unloading valve, directional control valve, and actuator.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Hydraulic circuit diagram illustrating a pump unloading circuit using an unloading valve connected in parallel with the main hydraulic circuit. Show the pump, pressure relief valve, unloading valve, directional control valve, and actuator.]*"
         },
         {
           "type": "heading",
@@ -71703,7 +71703,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Convert Flow Rate to m\u00b3/s:"
         },
         {
@@ -71783,11 +71783,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Hydraulic Cylinders in Series\", \"subject\": \"Schematic of two hydraulic cylinders connected in series. Cylinder 1 has piston area A1 and rod area Ar1. Cylinder 2 has piston area A2 and rod area Ar2. The flow direction is indicated with arrows, and pressure points P1 and P2 are labeled.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic of two hydraulic cylinders connected in series. Cylinder 1 has piston area A1 and rod area Ar1. Cylinder 2 has piston area A2 and rod area Ar2. The flow direction is indicated with arrows, and pressure points P1 and P2 are labeled.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Hydraulic Circuit with Flow Divider/Combiner\", \"subject\": \"Schematic of a hydraulic circuit incorporating a flow divider/combiner to synchronize two cylinders. The pump supplies fluid to the flow divider, which splits the flow equally between the two cylinders. Relief valves are shown for overload protection.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic of a hydraulic circuit incorporating a flow divider/combiner to synchronize two cylinders. The pump supplies fluid to the flow divider, which splits the flow equally between the two cylinders. Relief valves are shown for overload protection.]*"
         },
         {
           "type": "paragraph",
@@ -72005,7 +72005,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Convert Pressure to Pascals"
         },
         {
@@ -72037,11 +72037,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: Fail-Safe Circuit with Pilot-Operated Check Valve\", \"subject\": \"Schematic of a fail-safe circuit using a pilot-operated check valve to prevent cylinder retraction in case of hydraulic line rupture. The check valve is shown in both normal (open) and failure (closed) modes. Arrows indicate fluid flow direction. The pilot line is labeled.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic of a fail-safe circuit using a pilot-operated check valve to prevent cylinder retraction in case of hydraulic line rupture. The check valve is shown in both normal (open) and failure (closed) modes. Arrows indicate fluid flow direction. The pilot line is labeled.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.4: Overload Valve Mechanism\", \"subject\": \"Detailed view of the overload valve mechanism (Valve 3 in the original text) showing the spring offset and blocked configurations. The diagram illustrates how the valve interacts with the pilot line to Valve 1.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Detailed view of the overload valve mechanism (Valve 3 in the original text) showing the spring offset and blocked configurations. The diagram illustrates how the valve interacts with the pilot line to Valve 1.]*"
         },
         {
           "type": "paragraph",
@@ -72345,15 +72345,15 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.5: Open-Circuit Hydrostatic Transmission\", \"subject\": \"Detailed schematic of an open-circuit hydrostatic transmission, showing the pump drawing fluid from the reservoir, the hydraulic motor, and the return line to the reservoir. Label all components (pump, motor, reservoir, relief valve, filters).\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Detailed schematic of an open-circuit hydrostatic transmission, showing the pump drawing fluid from the reservoir, the hydraulic motor, and the return line to the reservoir. Label all components (pump, motor, reservoir, relief valve, filters).]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.6: Closed-Circuit Hydrostatic Transmission\", \"subject\": \"Detailed schematic of a closed-circuit hydrostatic transmission, showing the pump, motor, charge pump, and relief valves. Highlight the fluid flow path in both forward and reverse directions.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Detailed schematic of a closed-circuit hydrostatic transmission, showing the pump, motor, charge pump, and relief valves. Highlight the fluid flow path in both forward and reverse directions.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.7: Axial Piston Pump\", \"subject\": \"Cutaway view of a typical axial piston pump used in hydrostatic transmissions, illustrating the swash plate mechanism and piston movement.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cutaway view of a typical axial piston pump used in hydrostatic transmissions, illustrating the swash plate mechanism and piston movement.]*"
         },
         {
           "type": "paragraph",
@@ -72567,7 +72567,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Mechanical Hydraulic Servo Valve"
         },
         {
@@ -72679,7 +72679,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Closed-Loop Transfer Function:"
         },
         {
@@ -72966,7 +72966,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Electro Hydraulic Servo Valves"
         },
         {
@@ -72990,7 +72990,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Input Voltage and Torque Motor Armature Displacement:"
         },
         {
@@ -73279,7 +73279,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "5. Analyze the Nyquist plot (a standard task in control systems theory) to verify that the Nyquist plot does not encircle the -1 point."
         }
       ]
@@ -73327,7 +73327,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Coil Current and Armature Force:"
         },
         {
@@ -73406,7 +73406,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Calculate Armature Force"
         },
         {
@@ -73590,7 +73590,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Closed-Loop Electrohydraulic Servo System\", \"subject\": \"Block diagram illustrating a generic closed-loop electrohydraulic servo system. Show the command signal, servo amplifier, EHSV, hydraulic actuator, load, feedback sensor, and summing junction.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram illustrating a generic closed-loop electrohydraulic servo system. Show the command signal, servo amplifier, EHSV, hydraulic actuator, load, feedback sensor, and summing junction.]*"
         },
         {
           "type": "paragraph",
@@ -73668,7 +73668,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: Proportional Spool Valve Cross-Section\", \"subject\": \"Cross-sectional view of a typical proportional spool valve. Label the spool, valve body, solenoid, spring, and hydraulic ports.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a typical proportional spool valve. Label the spool, valve body, solenoid, spring, and hydraulic ports.]*"
         },
         {
           "type": "example_problem",
@@ -74053,7 +74053,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Spool Designs\", \"subject\": \"Schematic diagrams illustrating zero-lap, overlapped, and underlapped spool designs. Clearly show the relative positions of the spool lands and valve ports.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Schematic diagrams illustrating zero-lap, overlapped, and underlapped spool designs. Clearly show the relative positions of the spool lands and valve ports.]*"
         },
         {
           "type": "example_problem",
@@ -74268,7 +74268,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: EHSV with Spool Position Feedback\", \"subject\": \"Block diagram illustrating an EHSV with spool position feedback. Show the open-loop transfer function, feedback transfer function, summing junction, and controller.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram illustrating an EHSV with spool position feedback. Show the open-loop transfer function, feedback transfer function, summing junction, and controller.]*"
         },
         {
           "type": "paragraph",
@@ -74284,7 +74284,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.2: Spool Valve with LVDT\", \"subject\": \"Schematic diagram showing the integration of a linear transducer (e.g., LVDT) with a spool valve for position feedback.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Schematic diagram showing the integration of a linear transducer (e.g., LVDT) with a spool valve for position feedback.]*"
         },
         {
           "type": "example_problem",
@@ -75613,7 +75613,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "On/Off Valve Response"
         },
         {
@@ -75644,7 +75644,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Robotic Welding Requirements"
         },
         {
@@ -76256,7 +76256,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Understanding the effect of back pressure:"
         },
         {
@@ -76346,11 +76346,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.6: Proportional Directional Control Valve Cross-Section\", \"subject\": \"Cross-sectional view of a proportional directional control valve. Label the main spool, pilot ports (X and Y), control spring, solenoids 1 and 2, and the flow paths (P to A, P to B, A to T, B to T). Show the direction of fluid flow when solenoid 1 is energized.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Cross-sectional view of a proportional directional control valve. Label the main spool, pilot ports (X and Y), control spring, solenoids 1 and 2, and the flow paths (P to A, P to B, A to T, B to T). Show the direction of fluid flow when solenoid 1 is energized.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.7: Notched Spool Design\", \"subject\": \"Illustrate the notched design of the main spool lands and how this design enables proportional flow control.\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Illustrate the notched design of the main spool lands and how this design enables proportional flow control.]*"
         },
         {
           "type": "example_problem",
@@ -76366,7 +76366,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Direction Control"
         },
         {
@@ -76397,7 +76397,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Excavator Arm Control Requirements:"
         },
         {
@@ -76483,7 +76483,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: OR Gate with Parallel Valves\", \"subject\": \"Schematic diagram of an OR gate implemented with three parallel 3/2-way valves. Label input ports A and B, and output port C. Show pressure source and exhaust ports. The valves are normally closed. The diagram should clearly show how pressure from either A or B will flow through the open valve to the output C.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of an OR gate implemented with three parallel 3/2-way valves. Label input ports A and B, and output port C. Show pressure source and exhaust ports. The valves are normally closed. The diagram should clearly show how pressure from either A or B will flow through the open valve to the output C.]*"
         },
         {
           "type": "paragraph",
@@ -76491,7 +76491,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.2: OR Gate with Shuttle Valves\", \"subject\": \"Schematic diagram of an OR gate implemented with one directional valve and two shuttle valves. Label input ports A and B, and output port S. Show pressure source and exhaust ports. The diagram should illustrate how pressure from either A or B will shift the shuttle valve to allow flow to output S.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of an OR gate implemented with one directional valve and two shuttle valves. Label input ports A and B, and output port S. Show pressure source and exhaust ports. The diagram should illustrate how pressure from either A or B will shift the shuttle valve to allow flow to output S.]*"
         },
         {
           "type": "paragraph",
@@ -76511,7 +76511,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Identify the knowns:"
         },
         {
@@ -76602,7 +76602,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Recall the OR gate logic:"
         },
         {
@@ -76734,7 +76734,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Identify the inputs and outputs:"
         },
         {
@@ -76816,7 +76816,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.3: NOT Gate Schematic\", \"subject\": \"Schematic diagram of a NOT gate implemented with a 3/2-way normally closed valve. Label input port A and output port C. Show pressure source and exhaust ports. Show that when Input A is not pressurized, Output C is pressurized. When Input A is pressurized, Output C is vented to atmosphere.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a NOT gate implemented with a 3/2-way normally closed valve. Label input port A and output port C. Show pressure source and exhaust ports. Show that when Input A is not pressurized, Output C is pressurized. When Input A is pressurized, Output C is vented to atmosphere.]*"
         },
         {
           "type": "paragraph",
@@ -76836,7 +76836,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Identify the knowns:"
         },
         {
@@ -76896,7 +76896,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Recall the NOT gate logic:"
         },
         {
@@ -77033,7 +77033,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.4: Memory Circuit with Pilot Valves\", \"subject\": \"Schematic diagram of a memory circuit implemented with two 3/2-way valves and a pilot-operated valve. Label input ports A and B, and output ports C and D. Show how a momentary pressure pulse at A will cause the pilot-operated valve to switch and remain in that state, even after the pressure at A is removed. Similarly, show how a pressure pulse at B will switch the valve back to its original state.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a memory circuit implemented with two 3/2-way valves and a pilot-operated valve. Label input ports A and B, and output ports C and D. Show how a momentary pressure pulse at A will cause the pilot-operated valve to switch and remain in that state, even after the pressure at A is removed. Similarly, show how a pressure pulse at B will switch the valve back to its original state.]*"
         },
         {
           "type": "paragraph",
@@ -77041,7 +77041,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.5: Memory Circuit with Double-Piloted Valves\", \"subject\": \"Schematic diagram of a memory circuit implemented with two three-way, double-piloted valves. Label the pilot ports for set and reset. Indicate how pressure at the set pilot will cause the valve to switch to a certain position, and how pressure at the reset pilot will cause it to switch back.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of a memory circuit implemented with two three-way, double-piloted valves. Label the pilot ports for set and reset. Indicate how pressure at the set pilot will cause the valve to switch to a certain position, and how pressure at the reset pilot will cause it to switch back.]*"
         },
         {
           "type": "paragraph",
@@ -77218,11 +77218,11 @@
         },
         {
           "type": "paragraph",
-          "text": "NEW_DIAGRAM: {\"caption\": \"Figure 1.6: MPL Circuit Controlling Two Cylinders\", \"subject\": \"Schematic diagram of an MPL circuit controlling two double-acting cylinders, showing the START valve, limit valves, and pilot valves. Label each component clearly, including V1 (START valve), 1/2, 1/3, 1/5 pilot valves, V4 and V6 limit valves, and the two double-acting cylinders. Show the pneumatic connections between the valves and cylinders.\", \"type\": \"schematic\"}"
+          "text": "*[Image generation failed for: Schematic diagram of an MPL circuit controlling two double-acting cylinders, showing the START valve, limit valves, and pilot valves. Label each component clearly, including V1 (START valve), 1/2, 1/3, 1/5 pilot valves, V4 and V6 limit valves, and the two double-acting cylinders. Show the pneumatic connections between the valves and cylinders.]*"
         },
         {
           "type": "paragraph",
-          "text": "NEW_DIAGRAM: {\"caption\": \"Figure 1.7: Timing Diagram for MPL Circuit\", \"subject\": \"Timing diagram illustrating the sequence of cylinder extensions and retractions in the MPL circuit. The diagram should show the state of each cylinder (extended or retracted) over time, as well as the activation of the START valve and limit switches. Clearly label the axes and events.\", \"type\": \"graph\"}"
+          "text": "*[Image generation failed for: Timing diagram illustrating the sequence of cylinder extensions and retractions in the MPL circuit. The diagram should show the state of each cylinder (extended or retracted) over time, as well as the activation of the START valve and limit switches. Clearly label the axes and events.]*"
         },
         {
           "type": "example_problem",
@@ -77274,7 +77274,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.8: MPL Circuit with Added Features\", \"subject\": \"Schematic diagram of an MPL circuit controlling a double-acting cylinder, including speed control valves, pressure regulators, and safety interlocks. Show the placement of flow control valves for speed adjustment, a pressure regulator to maintain consistent pressure, and a safety interlock valve that can cut off the air supply in an emergency.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic diagram of an MPL circuit controlling a double-acting cylinder, including speed control valves, pressure regulators, and safety interlocks. Show the placement of flow control valves for speed adjustment, a pressure regulator to maintain consistent pressure, and a safety interlock valve that can cut off the air supply in an emergency.]*"
         },
         {
           "type": "paragraph",
@@ -77314,7 +77314,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Identify the knowns:"
         },
         {
@@ -77396,7 +77396,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "1. Identify Knowns"
         },
         {
@@ -77465,7 +77465,7 @@
       "sections": [
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "Presence Sensing Button and Guard in Place"
         },
         {
@@ -77649,7 +77649,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 1.1: Generic Wireless Communication System\", \"subject\": \"Block diagram of a generic wireless communication system showing the key components: Source, Encoder, Modulator, Transmitter, Channel, Receiver, Demodulator, Decoder, Destination. Indicate noise injection in the channel.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram of a generic wireless communication system showing the key components: Source, Encoder, Modulator, Transmitter, Channel, Receiver, Demodulator, Decoder, Destination. Indicate noise injection in the channel.]*"
         },
         {
           "type": "example_problem",
@@ -77995,7 +77995,7 @@
         },
         {
           "type": "heading",
-          "level": 1,
+          "level": 2,
           "text": "4.1 Signal Cancellation Techniques"
         },
         {
@@ -78004,7 +78004,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Signal Cancellation Block Diagram\", \"subject\": \"Block diagram illustrating the signal cancellation process. The diagram should show an input signal s(t), a cancellation signal c(t), an adder (or subtractor) block, and an output (residual) signal r(t). Label each component clearly. Add a feedback loop to represent adaptive cancellation techniques, with a block labeled Adaptive Filter adjusting c(t) based on r(t).\", \"type\": \"technical illustration\"}]"
+          "text": "*[Image generation failed for: Block diagram illustrating the signal cancellation process. The diagram should show an input signal s(t), a cancellation signal c(t), an adder (or subtractor) block, and an output (residual) signal r(t). Label each component clearly. Add a feedback loop to represent adaptive cancellation techniques, with a block labeled Adaptive Filter adjusting c(t) based on r(t).]*"
         },
         {
           "type": "paragraph",
@@ -78184,7 +78184,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.2: Capacitive Memory Cell with Charge Cancellation\", \"subject\": \"Simplified schematic of a capacitive memory cell with a charge cancellation circuit. Show the capacitor, the read/write transistor, and a circuit block representing the charge cancellation mechanism. Illustrate the flow of charge during the cancellation process.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Simplified schematic of a capacitive memory cell with a charge cancellation circuit. Show the capacitor, the read/write transistor, and a circuit block representing the charge cancellation mechanism. Illustrate the flow of charge during the cancellation process.]*"
         },
         {
           "type": "paragraph",
@@ -78574,7 +78574,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.4: Pneumatic OR Gate and Cylinder Control\", \"subject\": \"Pneumatic circuit diagram showing the OR gate (shuttle valve) connected to a double-acting pneumatic cylinder. Include pressure sources, directional control valves, and labeling of all components. Illustrate the flow of air when either input A or input B is activated.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Pneumatic circuit diagram showing the OR gate (shuttle valve) connected to a double-acting pneumatic cylinder. Include pressure sources, directional control valves, and labeling of all components. Illustrate the flow of air when either input A or input B is activated.]*"
         },
         {
           "type": "paragraph",
@@ -79346,7 +79346,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 3.1: Hydraulic Circuit with Memory Device\", \"subject\": \"Schematic of a hydraulic circuit showing a double-acting cylinder, directional control valve, AND gate, and a pilot-operated check valve acting as the MEMORY device. Highlight the fluid path during cylinder extension, emphasizing the role of the check valve in maintaining pressure. Show the AND gate taking two inputs and providing a signal to pilot open the check valve.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Schematic of a hydraulic circuit showing a double-acting cylinder, directional control valve, AND gate, and a pilot-operated check valve acting as the MEMORY device. Highlight the fluid path during cylinder extension, emphasizing the role of the check valve in maintaining pressure. Show the AND gate taking two inputs and providing a signal to pilot open the check valve.]*"
         },
         {
           "type": "list",
@@ -79394,7 +79394,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.1: Basic Sequential Control System Block Diagram\", \"subject\": \"A block diagram showing a sequential control system. The inputs are Start/Stop signals and sensor data. The blocks include a Controller, Memory, Actuators, and Plant. The outputs are System state and actuator commands.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: A block diagram showing a sequential control system. The inputs are Start/Stop signals and sensor data. The blocks include a Controller, Memory, Actuators, and Plant. The outputs are System state and actuator commands.]*"
         },
         {
           "type": "example_problem",
@@ -79758,11 +79758,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.6: Complex Sequential Control System\", \"subject\": \"Complete hydraulic circuit diagram showing a complex sequential control system with multiple cylinders, valves, and limit switches. Highlight the flow paths and signal interconnections.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Complete hydraulic circuit diagram showing a complex sequential control system with multiple cylinders, valves, and limit switches. Highlight the flow paths and signal interconnections.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.7: Troubleshooting Flowchart\", \"subject\": \"Flowchart illustrating the troubleshooting process for a sequential control system. The flowchart should show the steps to identify and resolve common problems.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Flowchart illustrating the troubleshooting process for a sequential control system. The flowchart should show the steps to identify and resolve common problems.]*"
         }
       ]
     },
@@ -79933,11 +79933,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.8: PLC Block Diagram\", \"subject\": \"Block diagram of a PLC, showing the CPU, input modules, output modules, and power supply.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Block diagram of a PLC, showing the CPU, input modules, output modules, and power supply.]*"
         },
         {
           "type": "paragraph",
-          "text": "[NEW_DIAGRAM: {\"caption\": \"Figure 4.9: PLC Cylinder Control\", \"subject\": \"Conceptual diagram showing how a PLC can be used to control a hydraulic/pneumatic cylinder, replacing the traditional limit valves and directional control valve arrangement.\", \"type\": \"schematic\"}]"
+          "text": "*[Image generation failed for: Conceptual diagram showing how a PLC can be used to control a hydraulic/pneumatic cylinder, replacing the traditional limit valves and directional control valve arrangement.]*"
         },
         {
           "type": "example_problem",

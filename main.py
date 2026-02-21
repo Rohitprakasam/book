@@ -440,6 +440,17 @@ def main(
     else:
         print(f"\n   ✅ All {len(chunks)} sections structured successfully")
 
+    # 3.5 Robust Chapter Demotion
+    # Since Phase 1 chunks randomly, Phase 2 treats every chunk as a new 'Chapter 1'
+    # Demote fake chapters to sections so they nest properly under the real ones
+    for chapter in full_structure.get("sections", []):
+        if chapter.get("type") == "chapter":
+            for sec in chapter.get("sections", []):
+                if sec.get("type") == "heading" and sec.get("level") == 1:
+                    heading_text = sec.get("text", "").lower()
+                    if not any(k in heading_text for k in ["chapter ", "unit ", "module ", "part "]):
+                        sec["level"] = 2
+
     # 4. Save JSON structure (json_path already declared above at checkpoint section)
     json_path.write_text(json.dumps(full_structure, indent=2), encoding="utf-8")
     print(f"📄 JSON saved: {json_path}")

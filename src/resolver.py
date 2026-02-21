@@ -298,63 +298,62 @@ def generate_textbook_diagram(subject: str, theme_config: dict, save_path: Path)
 
 def resolve_art_tags(text: str, theme_config: dict = None) -> str:
     """
-    Finds [NEW_DIAGRAM] JSON tags, generates images, and replaces tags with markdown links.
+    Finds [NEW_DIAGRAM] tags (even malformed ones), generates images, and replaces tags.
     """
     if theme_config is None:
         theme_config = {}
 
-    matches = []
-    pattern_json = None
+    # Forgiving Regex Suite
+    # 1. Matches nicely formatted JSON with or without brackets: [NEW_DIAGRAM: {...}] or NEW_DIAGRAM: {...}
+    pattern_json_tag = r'\[?NEW_DIAGRAM:\s*(\{.*?\})\]?'
+    # 2. Matches plain text descriptions (no JSON): [NEW_DIAGRAM: Cross-sectional diagram of...]
+    pattern_text_tag = r'\[NEW_DIAGRAM:\s*([^\{].*?)\]'
 
-    # Pattern 1: Tagged [NEW_DIAGRAM: {...}]
-    pattern_tag = r'\[NEW_DIAGRAM:\s*(\{.*?\})\s*\]'
-    matches.extend(list(re.finditer(pattern_tag, text, re.DOTALL)))
-
-    # Pattern 2: Raw JSON blocks (Fallback)
-    if not matches:
-        pattern_json = r'(\{\s*"subject":\s*".*?",\s*"type":\s*".*?"\s*\})'
-        matches.extend(list(re.finditer(pattern_json, text, re.DOTALL)))
-
-    if not matches:
-        print("[Art Dept] No [NEW_DIAGRAM] tags or JSON blocks found.")
+    matches_json = list(re.finditer(pattern_json_tag, text, re.DOTALL))
+    matches_text = list(re.finditer(pattern_text_tag, text, re.DOTALL))
+    
+    total_matches = len(matches_json) + len(matches_text)
+    if total_matches == 0:
         return text
 
-    print(f"[Art Dept] Found {len(matches)} diagram requests — generating assets…")
     AI_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
 
-    def replacement_func(match):
+    def generate_and_link(subject: str, caption: str) -> str:
+        safe_subject = re.sub(r'[^a-zA-Z0-9]', '_', subject)[:30]
+        filename = f"ai_{safe_subject}.png"
+        save_path = AI_ASSETS_DIR / filename
+
+        if save_path.exists():
+            return f"![{caption}](/data/output/assets/ai_generated/{filename})"
+
+        success = generate_textbook_diagram(subject, theme_config, save_path)
+        if success:
+            return f"![{caption}](/data/output/assets/ai_generated/{filename})"
+        else:
+            return f"*[Image generation failed for: {subject}]*"
+
+    # First, replace JSON-formatted tags
+    def replace_json(match):
         try:
-            art_request = json.loads(match.group(1))
+            art_request = json.loads(match.group(1).replace('\n', ' '))
             subject = art_request.get("subject", "Engineering diagram")
-            caption = art_request.get("caption", None)
-
-            if not caption:
-                caption = " ".join(subject.split()[:5]) + "..."
-
-            safe_subject = re.sub(r'[^a-zA-Z0-9]', '_', subject)[:30]
-            filename = f"ai_{safe_subject}.png"
-            save_path = AI_ASSETS_DIR / filename
-
-            # Check if exists to avoid re-gen (caching)
-            if save_path.exists():
-                print(f"  ♻️  Using cached: {filename}")
-                return f"![{caption}](/data/output/assets/ai_generated/{filename})"
-
-            success = generate_textbook_diagram(subject, theme_config, save_path)
-
-            if success:
-                return f"![{caption}](/data/output/assets/ai_generated/{filename})"
-            else:
-                return f"*[Image generation failed for: {subject}]*"
-
+            caption = art_request.get("caption", " ".join(subject.split()[:5]) + "...")
+            return generate_and_link(subject, caption)
         except json.JSONDecodeError:
-            print("  ⚠️ Malformed JSON in NEW_DIAGRAM tag")
-            return "*[Malformed Art Request]*"
+            # Fallback: Treat the malformed JSON string as the subject itself
+            raw_text = match.group(1).strip()
+            return generate_and_link(raw_text, "Diagram")
 
-    # Apply replacements for both patterns
-    text = re.sub(pattern_tag, replacement_func, text, flags=re.DOTALL)
-    if pattern_json:
-        text = re.sub(pattern_json, replacement_func, text, flags=re.DOTALL)
+    text = re.sub(pattern_json_tag, replace_json, text, flags=re.DOTALL)
+
+    # Second, replace Plain-Text formatted tags
+    def replace_text(match):
+        subject = match.group(1).strip()
+        caption = " ".join(subject.split()[:5]) + "..."
+        return generate_and_link(subject, caption)
+
+    text = re.sub(pattern_text_tag, replace_text, text, flags=re.DOTALL)
+
     return text
 
 
