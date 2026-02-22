@@ -228,6 +228,8 @@ def main(
                 else:
                     config = {"configurable": {"thread_id": str(uuid.uuid4())}}
                     
+                    target_chars = max(int(1800000 / total), len(chunk) * 4)
+                    
                     # Ensure initial state has all required keys
                     initial_state = {
                         "current_chunk": chunk,
@@ -235,6 +237,7 @@ def main(
                         "analysis": "",
                         "expanded_chunk": "",
                         "feedback": "",
+                        "target_chars": target_chars,
                     }
 
                     try:
@@ -450,16 +453,16 @@ def main(
     else:
         print(f"\n   ✅ All {len(chunks)} sections structured successfully")
 
-    # 3.5 Robust Chapter Demotion
-    # Since Phase 1 chunks randomly, Phase 2 treats every chunk as a new 'Chapter 1'
-    # Demote fake chapters to sections so they nest properly under the real ones
-    for chapter in full_structure.get("sections", []):
-        if chapter.get("type") == "chapter":
-            for sec in chapter.get("sections", []):
-                if sec.get("type") == "heading" and sec.get("level") == 1:
-                    heading_text = sec.get("text", "").lower()
-                    if not any(k in heading_text for k in ["chapter ", "unit ", "module ", "part "]):
-                        sec["level"] = 2
+    # 3.5 Robust Chapter Demotion (DISABLED)
+    # Disabled: This was aggressively demoting valid Unit headings if they
+    # lacked exact keywords, ruining the final LaTeX chapter numbering.
+    # for chapter in full_structure.get("sections", []):
+    #     if chapter.get("type") == "chapter":
+    #         for sec in chapter.get("sections", []):
+    #             if sec.get("type") == "heading" and sec.get("level") == 1:
+    #                 heading_text = sec.get("text", "").lower()
+    #                 if not any(k in heading_text for k in ["chapter ", "unit ", "module ", "part "]):
+    #                     sec["level"] = 2
 
     # 3.6 Resolve Image Tags & Generate Diagrams (PHASE 3 Integration)
     from src.resolver import resolve_art_tags, resolve_original_assets
@@ -490,6 +493,13 @@ def main(
     # 4. Save JSON structure (json_path already declared above at checkpoint section)
     json_path.write_text(json.dumps(full_structure, indent=2), encoding="utf-8")
     print(f"📄 JSON saved: {json_path}")
+    
+    # QA CHECK: Validation Agent
+    try:
+        from src.checker import run_qa_check
+        run_qa_check(str(json_path), str(OUTPUT_DIR))
+    except Exception as e:
+        print(f"⚠️ QA Checker failed to execute: {e}")
 
     # 5. Render LaTeX
     latex_parts = []
@@ -548,6 +558,21 @@ def main(
     latex_body = re.sub(r'\\(n[a-zA-Z]*)', fix_n_command, latex_body)
     latex_body = re.sub(r'\\(t[a-zA-Z]*)', fix_t_command, latex_body)
 
+    # Fix math commands illegally nested inside \text{} (e.g. \text{J/(kg\cdot K)})
+    def fix_math_in_text(match):
+        inner = match.group(1)
+        math_symbols = ['cdot', 'times', 'Delta', 'Omega', 'Sigma', 'pi', 'mu', 'alpha', 'beta', 'gamma', 'theta']
+        for sym in math_symbols:
+            # Prevent double replacing if already wrapped
+            inner = inner.replace('$\\' + sym + '$', '\\' + sym)
+            inner = inner.replace('\\' + sym, '$\\' + sym + '$')
+        return '\\text{' + inner + '}'
+
+    latex_body = re.sub(r'\\text\{([^{}]+)\}', fix_math_in_text, latex_body)
+    
+    # Strip any LaTeX macros that got cut off right before an end block (e.g. \c \n \end{equation})
+    latex_body = re.sub(r'\\[a-zA-Z]+\s*\n\s*\\end\{', '\n\\\\end{', latex_body)
+
     full_latex = template_content.replace("$body$", latex_body)
     full_latex = full_latex.replace("$title$", "BookEducate Book")
     full_latex = full_latex.replace("$author$", "BookEducate Engine")
@@ -558,21 +583,21 @@ def main(
     tex_out.write_text(full_latex, encoding="utf-8")
     print(f"✅ LaTeX Generated: {tex_out}")
 
-    # 7. Compile PDF (Fix #20: use separate variable name)
-    print("🚀 Compiling PDF with pdflatex...")
+    # 7. Compile PDF
+    print("🚀 Compiling PDF with xelatex...")
     output_pdf = OUTPUT_DIR / "BookEducate.pdf"
     try:
-        # Run twice for TOC/refs
-        for pass_num in (1, 2):
-            print(f"   Pass {pass_num}/2...")
+        # Run three times for TOC/refs and huge page numbering alignment
+        for pass_num in (1, 2, 3):
+            print(f"   Pass {pass_num}/3...")
             result = subprocess.run(
-                ["pdflatex", "-interaction=nonstopmode",
+                ["xelatex", "-interaction=nonstopmode",
                  "-output-directory", str(OUTPUT_DIR), str(tex_out)],
                 capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=120
             )
             if result.returncode != 0:
                 # Log errors but DON'T crash — nonstopmode continues past errors
-                print(f"   ⚠️ pdflatex pass {pass_num} had warnings/errors (see .log)")
+                print(f"   ⚠️ xelatex pass {pass_num} had warnings/errors (see .log)")
 
         if output_pdf.exists() and output_pdf.stat().st_size > 0:
             size_mb = output_pdf.stat().st_size / (1024 * 1024)
@@ -588,9 +613,9 @@ def main(
                     print(f"   | {line}")
 
     except subprocess.TimeoutExpired:
-        print("❌ pdflatex timed out after 120 seconds.")
+        print("❌ xelatex timed out after 120 seconds.")
     except FileNotFoundError:
-        print("❌ pdflatex not found. Please install MiKTeX or TeX Live.")
+        print("❌ xelatex not found. Please install MiKTeX or TeX Live.")
 
     save_state(4, {"total_chunks": total})
 

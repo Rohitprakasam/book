@@ -1,0 +1,222 @@
+Section 0: L2 OBJECTIVES:
+Section 0: L2 Zeroth and First Law of Thermodynamics
+Section 2: L2 Second Law of Thermodynamics
+Section 4: L2 Availability and Applications of the Second Law
+Section 6: L2 Properties of Steam (Steam Tables and Mollier Char
+Section 8: L2 Thermodynamic Systems, Properties, and Processes
+Section 9: L2 Thermodynamic Equilibrium and Zeroth Law
+Section 11: L2 Temperature Scales
+Section 11: L2 Displacement Work and P-V Diagram
+Section 13: L2 First Law of Thermodynamics – Closed Systems
+Section 14: L2 First Law of Thermodynamics – Open Systems (Steady
+Section 15: L2 Section 2.1: Heat Engines
+Section 16: L2 Section 2.2: Refrigerators and Heat Pumps
+Section 17: L2 Section 2.3: Statements of the Second Law and Thei
+Section 18: L2 Section 2.4: Carnot Cycle
+Section 20: L2 Section 2.5: Reversed Carnot Cycle
+Section 21: L2 Section 2.6: Performance – Carnot Cycle and Revers
+Section 22: L2 Section 2.7: Clausius Inequality
+Section 24: L2 Section 1: Introduction to the Second Law of Therm
+Section 26: L2 Section 2: Availability (Exergy) and Irreversibili
+Section 27: L6 Availability (Exergy) for a Closed System
+Section 27: L6 Availability (Exergy) for an Open System
+Section 27: L6 Gouy-Stodola Theorem
+Section 29: L2 Section 3: High-Grade and Low-Grade Energy
+Section 31: L1 UNIT IV PROPERTIES OF PURE SUBSTANCES
+Section 31: L2 Section 1: Introduction to Thermodynamic Propertie
+Section 32: L6 Specific Volume
+Section 32: L6 Enthalpy
+Section 32: L6 Entropy
+Section 35: L2 Section 3: PVT Surface
+Section 36: L2 Section 4: Determination of Dryness Fraction
+Section 38: L2 Section 5: Calculation of Work Done and Heat Trans
+Section 40: L2 Properties of Ideal Gas, Real Gas – Comparison
+Section 40: L3 Ideal Gases
+Section 40: L3 Real Gases
+Section 40: L3 Compressibility
+Section 41: L3 Conditions for Ideal Gas Behavior
+Section 41: L3 Importance in Engineering Applications
+Section 41: L3 Derivation of the Ideal Gas Law
+Section 43: L3 The Ideal Gas Law: A Simple Model
+Section 43: L3 The van der Waals Equation: A Refined Model
+Section 43: L3 Physical Significance of van der Waals Constants *
+Section 43: L3 Other Equations of State
+Section 43: L3 Derivation of the van der Waals Equation
+Section 44: L3 Determining van der Waals Constants from Critical 
+Section 44: L3 The Virial Equation of State
+Section 46: L2 Reduced Properties – Compressibility Factor – Prin
+Section 46: L3 Reduced Properties
+Section 46: L3 The Principle of Corresponding States
+Section 46: L3 The Generalized Compressibility Chart
+Section 47: L3 Limitations of the Generalized Compressibility Cha
+Section 49: L3 Theoretical Foundations
+Section 49: L4 Channel Capacity
+Section 49: L3 Mathematical Derivations
+Section 49: L4 Friis Transmission Equation
+Section 49: L4 Simplified Path Loss Model
+Section 50: L4 Shannon-Hartley Theorem
+Section 50: L4 Signal-to-Noise Ratio (SNR)
+Section 50: L3 Example Problems
+Section 52: L2 Thermodynamics
+Section 53: L2 System, Surroundings, and Boundary
+Section 54: L2 Types of Thermodynamic Systems
+Section 55: L2 Closed System:
+Section 55: L2 Open System:
+Section 55: L2 Isolated System:
+Section 58: L3 The Boltzmann Distribution
+Section 58: L2 Derivation from First Principles
+Section 59: L3 Boltzmann's Entropy Equation
+Section 60: L3 Macroscopic vs. Microscopic Approaches - Expanded
+Section 61: L3 Thermodynamic Equilibrium
+Section 62: L2 Chemical Potential
+Section 62: L2 Equilibrium Condition in a Closed System
+Section 63: L3 State Variables and Equations of State
+Section 64: L2 Van der Waals Equation of State
+Section 64: L2 Isothermal Compressibility
+Section 65: L2 Properties of Thermodynamic Systems
+Section 65: L4 Theoretical Introduction:
+Section 65: L4 Mathematical Derivations Needed:
+Section 66: L4 Mirror Problems:
+Section 66: L4 Key Takeaways:
+Section 66: L2 Intensive and Extensive Properties
+Section 66: L4 Theoretical Introduction:
+Section 67: L4 Mathematical Derivations Needed:
+Section 67: L4 Mirror Problems:
+Section 68: L4 Key Takeaways:
+Section 68: L2 Thermodynamic Processes
+Section 68: L4 Theoretical Introduction:
+Section 68: L4 Mathematical Derivations Needed:
+Section 69: L2 Isothermal Process Work Done:
+Section 69: L2 Isobaric Process Work Done:
+Section 69: L4 Mirror Problems:
+Section 70: L4 Key Takeaways:
+Section 70: L2 Thermodynamic Cycles
+Section 70: L4 Theoretical Introduction:
+Section 71: L4 Mathematical Derivations Needed:
+Section 71: L4 Mirror Problems:
+Section 73: L2 Heat:
+Section 73: L2 Work:
+Section 73: L2 Types of work interaction:
+Section 73: L2 Point and Path functions:
+Section 73: L3 Irreversibility: A Deeper Dive
+Section 76: L3 Causes of Irreversibility: A Quantitative Approach
+Section 78: L3 Point and Path Functions: Applications and Signifi
+Section 80: L2 Zeroth Law of Thermodynamics
+Section 81: L2 Principles of Thermometry
+Section 83: L2 Scales of Temperature
+Section 85: L2 Joule’s experiment
+Section 86: L2 InternalEnergy
+Section 92: L2 Sign Conventions
+Section 95: L3 UNIT-I
+Section 95: L4 Aircraft Applications
+Section 95: L4 Defense Industries
+Section 95: L4 Thermal Power Plants
+Section 96: L4 What is meant by thermodynamic equilibrium? Explai
+Section 97: L4 What is meant by SFEE and derive it and reduce it 
+Section 99: L4 Write about constant volume gas Thermometer? Why i
+Section 100: L4 Distinguish between macroscopic and microscopic po
+Section 101: L4 Discuss Quasi Static process, what are its charact
+Section 102: L4 Discuss First law of thermodynamics, explain Joule
+Section 103: L3 Tutorial Questions
+Section 104: L1 Chapter 3: Heat Engines, Heat Pumps, and the Secon
+Section 104: L2 3.1 Heat Engines
+Section 105: L3 3.1.1 The Carnot Efficiency
+Section 106: L2 3.2 Heat Pumps and Refrigerators
+Section 107: L3 3.2.1 Coefficient of Performance (COP)
+Section 109: L2 3.3 Second Law of Thermodynamics
+Section 109: L3 3.3.1 Kelvin-Planck Statement
+Section 110: L3 3.3.2 Clausius Statement
+Section 110: L3 3.3.3 Equivalence of Kelvin-Planck and Clausius St
+Section 110: L3 3.3.4 Entropy and the Second Law
+Section 111: L2 Introduction to Thermodynamics and the Laws
+Section 111: L2 Work and Heat
+Section 113: L2 Statements of the Second Law of Thermodynamics
+Section 113: L2 Equivalence of Kelvin-Planck and Clausius Statemen
+Section 114: L2 Violation of Clausius implies Violation of Kelvin-
+Section 114: L2 Violation of Kelvin-Planck implies Violation of Cl
+Section 114: L2 Carnot Cycle
+Section 115: L2 Entropy and the Principle of Increase of Entropy
+Section 116: L2 Entropy Change for Ideal Gas Processes
+Section 118: L2 Thermodynamic potentials
+Section 118: L2 Assignment questions
+Section 118: L2 Tutorial questions
+Section 119: L2 1. Introduction to Entropy and the Second Law of T
+Section 119: L3 1.1. Mathematical Foundation of Entropy
+Section 119: L4 1.1.1 Boltzmann's Entropy Equation
+Section 119: L4 1.1.2 Clausius Inequality
+Section 119: L4 1.1.3 Entropy Change
+Section 120: L2 2. Thermodynamic Potentials
+Section 121: L3 2.1. Mathematical Definitions and Fundamental Prop
+Section 121: L4 2.1.1 Definitions
+Section 121: L4 2.1.2 Fundamental Property Relations
+Section 122: L2 3. Maxwell Relations
+Section 122: L3 3.1. Derivation of Maxwell Relations
+Section 124: L2 4. Third Law of Thermodynamics
+Section 124: L3 4.1. Statements of the Third Law
+Section 124: L3 4.2. Implications of the Third Law
+Section 125: L2 Pure substance
+Section 132: L3 Introduction to Phase Change and Quality
+Section 133: L4 Mathematical Derivations: Quality and Mixture Prop
+Section 133: L5 Specific Volume of a Two-Phase Mixture
+Section 133: L5 Specific Internal Energy of a Two-Phase Mixture
+Section 133: L5 Specific Enthalpy of a Two-Phase Mixture
+Section 134: L5 Specific Entropy of a Two-Phase Mixture
+Section 134: L5 Clausius-Clapeyron Equation
+Section 135: L3 Phase Change Processes at Constant Pressure
+Section 136: L4 Mathematical Derivations: Saturation and Latent He
+Section 137: L3 Enthalpy-Entropy (H-S) Chart (Mollier Diagram)
+Section 138: L4 Mathematical Derivations: Mollier Diagram Applicat
+Section 139: L2 Saturation States
+Section 139: L2 Typeof Steam
+Section 139: L2 MeasurementofSteam Quality:
+Section 139: L2 TypesofCalorimetersusedformeasurementofSteam Quali
+Section 139: L2 BarrelCalorimeter
+Section 139: L2 Separating Calorimeter
+Section 139: L3 Introduction to Enthalpy and its Applications
+Section 141: L3 Saturation States and Steam Quality
+Section 143: L3 Calorimetric Measurement of Steam Quality - Barrel
+Section 145: L3 Calorimetric Measurement of Steam Quality - Separa
+Section 146: L2 Throttling Calorimeter
+Section 147: L2 Advantages and Disadvantages
+Section 148: L2 Combined Separating and Throttling Calorimeter
+Section 150: L2 Example Problems Elaboration
+Section 154: L2 Heat Transfer and Phase Changes
+Section 157: L2 Ideal Gas Laws
+Section 159: L2 Throttling and Free Expansion Processes
+Section 161: L2 van der Waals Equation of State
+Section 164: L2 Virial Equation of State
+Section 164: L2 Theoretical Introduction:
+Section 166: L2 Compressibility Factor and Corresponding States Pr
+Section 168: L3 Total Mixture Properties
+Section 168: L3 Mass and Mole Fractions
+Section 168: L3 Dalton's Law of Partial Pressures
+Section 168: L3 Amagat's Law of Partial Volumes
+Section 169: L3 Ideal Gas Law Derivation
+Section 170: L3 Dalton's Law Derivation
+Section 170: L3 Amagat's Law Derivation
+Section 171: L3 Mole Fraction:
+Section 171: L3 Mass Fraction:
+Section 174: L2 Clausius-Clapeyron Equation Derivation
+Section 178: L2 OttoCycle
+Section 179: L2 The Compression Ratio
+Section 184: L3 AIR STANDARD DUAL CYCLE
+Section 185: L2 The Brayton cycle
+Section 185: L2 The Diesel cycle
+Section 194: L3 Brayton Cycle Applications and Modifications
+Section 196: L2 4. Differentiate between Otto cycle, Diesel cycle,
+Section 197: L2 5. With p-V and T-s diagrams derive the efficiency
+Section 199: L2 6. An engine working on the Otto cycle has a volum
+Section 200: L2 7. In a Diesel cycle, air at 0.1 MPa and 300 K is 
+Section 201: L2 8. An air-standard Diesel cycle has a compression 
+Section 203: L2 UNIT-II
+Section 203: L2 UNIT-II Expansion:
+Section 204: L2 Mathematical Derivations Needed:
+Section 208: L2 Maxwell's Equations (Thermodynamic Relations):
+Section 209: L2 UNIT-IV
+Section 209: L2 UNIT-V
+Section 209: L2 PROJECTS
+Section 210: L2 Section 4.1: Introduction to Psychrometrics
+Section 211: L2 Dalton's Law of Partial Pressures:
+Section 211: L2 Humidity Ratio (ω):
+Section 213: L2 Section 4.2: Adiabatic Saturation and Evaporative 
+Section 215: L2 Section 4.3: Mixing of Air Streams

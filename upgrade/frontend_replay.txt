@@ -1,0 +1,63 @@
+done work use gitclone too use this repo : https://github.com/Rohitprakasam/bookforge-docs.git
+
+## 📋 Backend Developer Integration Report — BookEducate 5.0
+
+### Architecture Overview
+
+The frontend is a **React + TypeScript SPA** (Vite, Tailwind CSS) that communicates with a Python backend at **`http://localhost:3030`**. CORS must allow the Vite dev server origin (typically `localhost:5173` or `localhost:8080`).
+
+---
+
+### Endpoints the Frontend Calls
+
+| # | Method | Endpoint | Content-Type | Purpose |
+|---|--------|----------|-------------|---------|
+| 1 | `POST` | `/api/v1/generate` | `multipart/form-data` | Upload source file + config |
+| 2 | `GET` | `/api/v1/jobs/{job_id}/progress` | `text/event-stream` (SSE) | Real-time progress streaming |
+| 3 | `GET` | `/api/v1/jobs/{job_id}/logs` | `application/json` | Paginated log polling (every 3s) |
+| 4 | `GET` | `/api/v1/jobs/{job_id}/download` | `application/pdf` | Binary PDF download |
+
+---
+
+### 1. `POST /api/v1/generate`
+- **Form fields:** `file` (binary), `config` (stringified JSON: `{ book_subject, book_persona, target_pages }`)
+- **Expected 202:** `{ status: "processing", job_id: "...", message: "..." }`
+- **Expected 400:** `{ status: "error", error_code: "...", message: "..." }`
+- Frontend navigates to `/job/{job_id}` on success
+
+### 2. `GET /api/v1/jobs/{job_id}/progress` (SSE)
+- Frontend opens an `EventSource` connection
+- Each `data:` message must be valid JSON: `{ job_id, progress_percentage, current_phase, current_task, status }`
+- `status` values: `"running"`, `"completed"`, `"failed"`
+- On `"failed"`, include `error: { code, phase_failed_in, message, is_recoverable }`
+- Frontend auto-reconnects on SSE errors
+
+### 3. `GET /api/v1/jobs/{job_id}/logs`
+- **Query param:** `?cursor=...` (opaque string for pagination)
+- **Response:** `{ job_id, logs: [{ timestamp, level, source, message }], next_cursor }`
+- `level` values: `"INFO"`, `"WARN"`, `"ERROR"`
+- Frontend polls every **3 seconds**
+
+### 4. `GET /api/v1/jobs/{job_id}/download`
+- Return `Content-Type: application/pdf` with `Content-Disposition: attachment`
+- Frontend triggers native browser download via ``
+
+---
+
+### CORS Requirements
+The backend must allow:
+- **Origins:** `http://localhost:5173`, `http://localhost:8080` (Vite dev servers)
+- **Methods:** `GET, POST, OPTIONS`
+- **Headers:** `Content-Type`
+
+### Frontend Files Reference
+| File | Purpose |
+|------|---------|
+| `src/services/api.ts` | All API calls (fetch + SSE) |
+| `src/types/api.ts` | TypeScript interfaces matching API contracts |
+| `src/pages/Index.tsx` | Upload page (calls `POST /generate`) |
+| `src/pages/JobProgress.tsx` | Progress page (SSE + log polling + download) |
+
+Test the UI end-to-end
+Add mock/demo mode
+Add form validation

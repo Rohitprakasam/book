@@ -16,7 +16,7 @@ from pathlib import Path
 
 import os
 
-MAX_CHUNK_CHARS = int(os.getenv("MAX_CHUNK_CHARS", "4000"))
+MAX_CHUNK_CHARS = int(os.getenv("MAX_CHUNK_CHARS", "800"))
 
 
 def _split_by_chapter(text: str) -> list[str]:

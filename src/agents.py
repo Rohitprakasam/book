@@ -88,7 +88,8 @@ You are a {BOOK_PERSONA} focusing on \
 for a 600-page, publication-ready engineering textbook.
 
 Read the provided chapter text carefully. Your task is to create a \
-DETAILED EXPANSION PLAN that will guide the Drafter agent.
+DETAILED EXPANSION PLAN that will guide the Drafter agent. The Drafter MUST produce a MASSIVE expansion of this chunk, aiming for at least {TARGET_CHARS} characters.
+
 
 For each section you identify, your plan MUST specify:
 
@@ -146,9 +147,12 @@ def analyst_node(state: BookState) -> dict:
             model=model,
             timeout=LLM_TIMEOUT,
             messages=[
-                {"role": "system", "content": ANALYST_SYSTEM_PROMPT.format(
-                    BOOK_PERSONA=os.getenv("BOOK_PERSONA", "Elite Professor specializing in the subject matter"),
-                    BOOK_SUBJECT=os.getenv("BOOK_SUBJECT", "Engineering"),
+                {"role": "system", "content": ANALYST_SYSTEM_PROMPT.replace(
+                    "{BOOK_PERSONA}", os.getenv("BOOK_PERSONA", "Elite Professor specializing in the subject matter")
+                ).replace(
+                    "{BOOK_SUBJECT}", os.getenv("BOOK_SUBJECT", "Engineering")
+                ).replace(
+                    "{TARGET_CHARS}", str(state.get("target_chars", 8000))
                 )},
                 {
                     "role": "user",
@@ -193,7 +197,7 @@ def analyst_node(state: BookState) -> dict:
 # ──────────────────────────────────────────────
 DRAFTER_SYSTEM_PROMPT = """You are an Expert Engineering Textbook Author. You will receive a discrete text chunk extracted from a Source_Manuscript.
 
-Your task is to EXPAND this text chunk by 5x while maintaining zero hallucinations and absolute mathematical precision.
+Your objective is to produce a MASSIVE expansion of this text chunk to meet a strict length requirement. The final textbook MUST be at least 600 pages. To achieve your portion of this goal, you MUST expand this text chunk to be AT LEAST {TARGET_CHARS} characters long while maintaining zero hallucinations and absolute mathematical precision.
 
 Expansion Rules:
 
@@ -201,9 +205,11 @@ Expansion Rules:
 
 2. Context: Add relevant historical context or real-world industrial applications for every concept.
 
-3. Step-by-Step: If a mathematical formula is present, scramble the variables to ensure copyright compliance, derive it from first principles, and provide 2 step-by-step example problems. DO NOT invent fake formulas.
+3. Step-by-Step: Derive mathematical formulas from first principles, and provide 2 step-by-step example problems. You MUST use standard scientific notation (e.g., $W$ for Work, $Q$ for Heat, $U$ for Internal Energy). Do NOT arbitrarily scramble variables.
 
-4. Art Direction Rules:
+4. Singular Focus (Anti-Repetition): DO NOT repeat broad, high-level introductory concepts (e.g., re-explaining the First Law or Ideal Gas Law) unless they are the direct focus of the input chunk. Focus strictly on deeply expanding the specific sub-topics present in the Source_Chunk without copying outside content.
+
+5. Art Direction Rules:
    - If the source text contains `[ORIGINAL_ASSET: filepath]` tags, YOU MUST PRESERVE THEM EXACTLY AS THEY ARE in your expanded output. Do not alter or remove them.
    - Whenever an entirely NEW visual aid is necessary to explain a complex mechanism, insert an Image Request block in exact JSON format. DO NOT use standard Markdown image links.
    - "caption": A short, title-case name for the figure (e.g., "Figure 1.2: Hydraulic Gear Pump").
@@ -247,12 +253,12 @@ def drafter_node(state: BookState) -> dict:
     # Validate inputs
     if not chunk or len(chunk.strip()) == 0:
         print("[Drafter] ⚠️ Empty chunk received, returning as-is")
-        return {"expanded_chunk": chunk, "revision_count": state.get("revision_count", 0)}
+        return {"expanded_chunk": chunk, "revision_count": state.get("revision_count", 0) + 1}
     
     # If analysis indicates an error, skip expansion
-    if analysis and analysis.startswith("Error:"):
+    if analysis and analysis.startswith("Error: Analyst"):
         print("[Drafter] ⚠️ Analyst failed, skipping expansion")
-        return {"expanded_chunk": chunk, "revision_count": state.get("revision_count", 0)}
+        return {"expanded_chunk": chunk, "revision_count": state.get("revision_count", 0) + 1}
 
     # --- Load Transcribed Math (OCR Data) ---
     math_context = ""
@@ -295,8 +301,9 @@ def drafter_node(state: BookState) -> dict:
             response = litellm.completion(
                 model=model,
                 timeout=LLM_TIMEOUT,
+                max_tokens=8192,
                 messages=[
-                    {"role": "system", "content": DRAFTER_SYSTEM_PROMPT},
+                    {"role": "system", "content": DRAFTER_SYSTEM_PROMPT.replace("{TARGET_CHARS}", str(state.get("target_chars", 8000)))},
                     {
                         "role": "user",
                         "content": (
@@ -359,7 +366,7 @@ CRITIC_SYSTEM_PROMPT = """You are a strict Textbook Editor. Review the Drafter's
 
 Rejection Criteria (Return to Drafter if any are met):
 
-Low Effort: If the generated text is not at least 4x to 5x the length of the original source chunk, REJECT it with feedback to add more case studies or step-by-step examples.
+Low Effort: If the generated text is not at least {TARGET_CHARS} characters long, REJECT it with feedback to add more case studies, historical context, or step-by-step examples. You MUST enforce the length requirement.
 
 Hallucination: If the Drafter introduced mathematical formulas NOT derived from the Source_Manuscript, REJECT it.
 
@@ -389,17 +396,30 @@ def critic_node(state: BookState) -> dict:
         return {"feedback": "APPROVED"}
 
     # ── Low-Effort Check ──
-    ratio = len(expanded) / max(len(original), 1)
-    if ratio < MIN_EXPANSION_RATIO:
+    target_chars = state.get("target_chars", 8000)
+    if len(expanded) < target_chars:
         rejection = (
-            f"LOW EFFORT: The expanded text is only {ratio:.1f}x the original "
-            f"({len(expanded):,} vs {len(original):,} chars). "
-            f"You MUST produce at least {MIN_EXPANSION_RATIO}x expansion. "
+            f"LOW EFFORT: The expanded text is only {len(expanded):,} characters long, "
+            f"which is below the strict requirement of {target_chars:,} characters. "
+            "You MUST produce a much longer expansion. "
             "Go deeper: add more derivations, more mirror problems with "
             "randomized values, more [NEW_DIAGRAM: ...] tags. "
             "Do not summarize — DERIVE and EXPAND."
         )
-        print(f"[Critic] ❌ Low effort ({ratio:.1f}x) — forcing re-draft")
+        print(f"[Critic] ❌ Low effort ({len(expanded):,} vs {target_chars:,} chars) — forcing re-draft")
+        return {"feedback": rejection}
+
+    # ── Cut-off / Truncation Check ──
+    # If the LLM hit a token limit, it usually ends mid-word, mid-sentence, or mid-equation.
+    clean_ends = ('.', '!', '?', '"', "'", '```', '}', ']', ')', '_', '*')
+    if expanded and not expanded.strip().endswith(clean_ends):
+        rejection = (
+            "TRUNCATION DETECTED: The text abruptly cuts off at the very end. "
+            "You likely hit the maximum output token limit. "
+            "You MUST rewrite the ending to ensure it finishes its thought cleanly with proper punctuation or closing tags like \\end{equation}."
+        )
+        clipped_end = expanded.strip()[-10:].replace("\n", " ")
+        print(f"[Critic] ❌ Cut-off detected (ends with '{clipped_end}') — forcing re-draft")
         return {"feedback": rejection}
 
     # ── Artifact Check ──
@@ -421,7 +441,7 @@ def critic_node(state: BookState) -> dict:
             model=model,
             timeout=LLM_TIMEOUT,
             messages=[
-                {"role": "system", "content": CRITIC_SYSTEM_PROMPT},
+                {"role": "system", "content": CRITIC_SYSTEM_PROMPT.replace("{TARGET_CHARS}", str(state.get("target_chars", 8000)))},
                 {
                     "role": "user",
                     "content": (
@@ -458,7 +478,8 @@ def critic_node(state: BookState) -> dict:
         print(f"[Critic] ⚠️ Failed to extract content: {e}. Approving by default.")
         return {"feedback": "APPROVED"}
 
-    is_approved = feedback.upper().startswith("APPROVED")
+    is_approved = "APPROVED" in feedback.upper()
+    ratio = len(expanded) / max(len(original), 1)
 
     if is_approved:
         print(f"[Critic] ✅ APPROVED ({ratio:.1f}x expansion)")

@@ -80,7 +80,8 @@ Rules:
    - `## Heading` -> Level 2
    - `### Heading` -> Level 3
    - Do NOT promote all headers to Level 1.
-"""
+6. **NO HEADING NUMBERS:** Strip explicit numbers (like "1.1", "3.2.", "A.") from the beginning of heading strings. Provide only the text words of the heading.
+7. **MATH SPACING:** Ensure there is a space before and after inline math ($x$). Do not squish words together like "Typeof $Steam$".
 
 def structurer_node(text_chunk: str) -> dict:
     """Convert text chunk to structured JSON. Returns dict with error key on failure."""
@@ -166,6 +167,26 @@ def structurer_node(text_chunk: str) -> dict:
                         if attempt < max_retries - 1:
                             time.sleep(base_delay * (attempt + 1))
                             continue
+                            
+                # Post-processing to strip explicit heading numbers and fix formatting spaces
+                def clean_json_node(node):
+                    if isinstance(node, dict):
+                        if node.get("type") == "heading" and "text" in node:
+                            text = node["text"]
+                            # Strip things like "1.", "3.2.", "A." from the start
+                            node["text"] = re.sub(r"^([A-Z0-9]+\.)+\s*", "", text).strip()
+                        elif node.get("type") == "paragraph" and "text" in node:
+                            # Ensure spaces around inline math to fix TOC missing space bugs
+                            node["text"] = re.sub(r"([a-zA-Z])\$", r"\1 $", node["text"])
+                            node["text"] = re.sub(r"\$([a-zA-Z])", r"$ \1", node["text"])
+                            
+                        for v in node.values():
+                            clean_json_node(v)
+                    elif isinstance(node, list):
+                        for item in node:
+                            clean_json_node(item)
+                            
+                clean_json_node(parsed)
                 
                 return parsed
             except json.JSONDecodeError as json_err:

@@ -212,7 +212,8 @@ def resolve_original_assets(text: str) -> str:
             return f"![Enhanced Figure]({web_path})"
         else:
             print(f"[Art Dept] ⚠️ Asset not found: {full_extracted_path}")
-            return f"![Missing Asset]({rel_path})"
+            # Empty out the tag so no ugly 'Missing Asset' text appears in the final book
+            return ""
 
     resolved = re.sub(pattern, _replacer, text)
     original_count = len(re.findall(pattern, text))
@@ -338,7 +339,20 @@ def resolve_art_tags(text: str, theme_config: dict = None) -> str:
         if success:
             return f"![{caption}](/data/output/assets/ai_generated/{filename})"
         else:
-            return f"*[Image generation failed for: {subject}]*"
+            # Generate a distinct placeholder directly via Pillow so LaTeX compilation doesn't fail
+            # on a missing image or render ugly failure text.
+            try:
+                from PIL import Image, ImageDraw, ImageFont
+                img = Image.new('RGB', (1920, 1080), color=(50, 50, 50))
+                d = ImageDraw.Draw(img)
+                text_to_draw = f"Placeholder Image\\n\\nCaption: {caption}\\n\\n(AI Generation Failed/Rate Limited)"
+                d.text((100, 500), text_to_draw, fill=(255, 255, 255))
+                img.save(save_path)
+                print(f"  ⚠️ Generated fallback placeholder for {filename}")
+                return f"![{caption}](/data/output/assets/ai_generated/{filename})"
+            except Exception as e:
+                # Absolute worst case fallback if pillow crashes (shouldn't happen)
+                return f"*[Image generation failed for: {caption}]*"
 
     # First, replace JSON-formatted tags
     def replace_json(match):

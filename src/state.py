@@ -37,3 +37,4 @@ class BookState(TypedDict, total=False):
     expanded_chunk: str
     feedback: str
     revision_count: int
+    target_chars: int

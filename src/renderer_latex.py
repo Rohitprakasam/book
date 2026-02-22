@@ -20,12 +20,16 @@ def escape_latex(text: str) -> str:
         '~': r'\textasciitilde{}',
         '^': r'\textasciicircum{}',
     }
-    return "".join(replacements.get(c, c) for c in text)
+    escaped = "".join(replacements.get(c, c) for c in text)
+    # Neutralize rogue list items that the LLM hallucinated outside of list environments
+    escaped = escaped.replace(r'\item', r'\textbullet{} ')
+    return escaped
 
 def auto_balance_braces(text: str) -> str:
     """
     Ensures that curly braces {} are balanced. If the LLM generated an unclosed 
     bracket inside a block (e.g. `\text{`), this appends `}` to prevent Emergency Stops.
+    If it generated an extra closing brace, this prepends `{` to prevent fatal group errors.
     """
     if not text: return ""
     open_braces = text.count('{') - text.count(r'\{')
@@ -33,6 +37,8 @@ def auto_balance_braces(text: str) -> str:
     net_braces = open_braces - close_braces
     if net_braces > 0:
         return text + "}" * net_braces
+    elif net_braces < 0:
+        return "{" * (-net_braces) + text
     return text
 
 def render_mixed_content_latex(text: str) -> str:
@@ -165,7 +171,10 @@ def render_section_latex(section: Dict[str, Any]) -> str:
         title = auto_balance_braces(escape_latex(section.get("title", "Example Problem")))
         prob_stmt = auto_balance_braces(render_mixed_content_latex(section.get("problem_statement", "")))
         steps = section.get("solution_steps") or []
-        
+        # Clean up repetitive prefix if the LLM auto-generated it
+        if prob_stmt.lower().startswith("problem statement:"):
+            prob_stmt = prob_stmt[18:].strip()
+            
         # Using standard breakable environment defined in template
         latex = [
             f"\\begin{{exampleproblem}}[{title}]",
